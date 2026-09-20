@@ -3,6 +3,7 @@
 # 🛡️ OmniTrace AI
 ### Autonomous Enterprise Fraud Intelligence & Explainable Risk Governance Platform
 
+[![Live Demo](https://img.shields.io/badge/Live%20Production%20Demo-Render.com-00E5FF?style=for-the-badge&logo=render&logoColor=white)](https://zidio-p2-omnitrace-ai-enterprise-fraud.onrender.com)
 [![Python Version](https://img.shields.io/badge/Python-3.10%20%7C%203.11%20%7C%203.12-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
 [![FastAPI Framework](https://img.shields.io/badge/FastAPI-0.109%2B-009688?style=for-the-badge&logo=fastapi&logoColor=white)](https://fastapi.tiangolo.com/)
 [![Ensemble Engine](https://img.shields.io/badge/Champion%20Ensemble-CatBoost%20%2B%20LightGBM-FF6F00?style=for-the-badge&logo=apachespark&logoColor=white)](https://catboost.ai/)
@@ -15,6 +16,11 @@
   <b>A bank-grade, sub-millisecond fraud defense sentinel combining dual supervised/unsupervised machine learning ensembles, Tree-SHAP mathematical explainability, Cytoscape syndicate topological clustering, and statutory FIU-IND Suspicious Transaction Reporting (STR) under Section 12 of the Prevention of Money Laundering Act (PMLA), 2002.</b>
 </p>
 
+> 🚀 **Live Production Deployment**:  
+> Experience OmniTrace AI live in production at: **[https://zidio-p2-omnitrace-ai-enterprise-fraud.onrender.com](https://zidio-p2-omnitrace-ai-enterprise-fraud.onrender.com)**  
+> *(Fully functional cloud instance hosting the FastAPI intelligence engine, 9 pre-trained ML models, Tree-SHAP explainability, and live WebSocket telemetry)*
+
+[Live Demo](https://zidio-p2-omnitrace-ai-enterprise-fraud.onrender.com) •
 [Key Capabilities](#-key-capabilities) •
 [System Architecture](#-system-architecture) •
 [ML Benchmark Leaderboard](#-machine-learning-benchmark-leaderboard) •
@@ -163,7 +169,17 @@ OmniTrace AI is engineered to satisfy strict regulatory compliance frameworks go
 
 ## 🚀 Installation & Quickstart
 
-### Prerequisites
+### 🌐 Instant Access: Live Production Demo
+No local setup required. You can immediately access the live cloud environment:
+* **Interactive Web Platform**: [https://zidio-p2-omnitrace-ai-enterprise-fraud.onrender.com](https://zidio-p2-omnitrace-ai-enterprise-fraud.onrender.com)
+* **Live API Swagger Documentation**: [https://zidio-p2-omnitrace-ai-enterprise-fraud.onrender.com/docs](https://zidio-p2-omnitrace-ai-enterprise-fraud.onrender.com/docs)
+* **ReDoc Technical Schema**: [https://zidio-p2-omnitrace-ai-enterprise-fraud.onrender.com/redoc](https://zidio-p2-omnitrace-ai-enterprise-fraud.onrender.com/redoc)
+
+---
+
+### Local Environment Setup
+
+#### Prerequisites
 * **Python 3.10, 3.11, or 3.12**
 * **Git**
 * Modern web browser (Chrome, Edge, Firefox, Brave, Safari)
