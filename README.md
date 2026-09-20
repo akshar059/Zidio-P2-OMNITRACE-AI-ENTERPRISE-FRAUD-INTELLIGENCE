@@ -26,7 +26,7 @@
 [ML Benchmark Leaderboard](#-machine-learning-benchmark-leaderboard) •
 [14 Intelligence Subsystems](#-the-14-intelligence-subsystems) •
 [Regulatory & Statutory Mandate](#-regulatory-compliance--statutory-mandate) •
-[Installation & Quickstart](#-installation--quickstart) •
+[Live Cloud Deployment](#-live-cloud-deployment--access) •
 [API Specification](#-api-specification) •
 [Verification Suite](#-automated-verification-suite)
 
@@ -167,59 +167,13 @@ OmniTrace AI is engineered to satisfy strict regulatory compliance frameworks go
 
 ---
 
-## 🚀 Installation & Quickstart
+## 🚀 Live Cloud Deployment & Access
 
-### 🌐 Instant Access: Live Production Demo
-No local setup required. You can immediately access the live cloud environment:
-* **Interactive Web Platform**: [https://zidio-p2-omnitrace-ai-enterprise-fraud.onrender.com](https://zidio-p2-omnitrace-ai-enterprise-fraud.onrender.com)
-* **Live API Swagger Documentation**: [https://zidio-p2-omnitrace-ai-enterprise-fraud.onrender.com/docs](https://zidio-p2-omnitrace-ai-enterprise-fraud.onrender.com/docs)
-* **ReDoc Technical Schema**: [https://zidio-p2-omnitrace-ai-enterprise-fraud.onrender.com/redoc](https://zidio-p2-omnitrace-ai-enterprise-fraud.onrender.com/redoc)
+OmniTrace AI is continuously deployed and actively running as an enterprise cloud service. No local installation or environment configuration is required:
 
----
-
-### Local Environment Setup
-
-#### Prerequisites
-* **Python 3.10, 3.11, or 3.12**
-* **Git**
-* Modern web browser (Chrome, Edge, Firefox, Brave, Safari)
-
-### 1. Clone Repository
-```bash
-git clone https://github.com/akshar059/Zidio-P2-OMNITRACE-AI-ENTERPRISE-FRAUD-INTELLIGENCE.git
-cd Zidio-P2-OMNITRACE-AI-ENTERPRISE-FRAUD-INTELLIGENCE
-```
-
-### 2. Create and Activate Virtual Environment
-```bash
-# Windows:
-python -m venv venv
-.\venv\Scripts\activate
-
-# macOS / Linux:
-python3 -m venv venv
-source venv/bin/activate
-```
-
-### 3. Install Production Dependencies
-```bash
-pip install --upgrade pip
-pip install -r requirements.txt
-```
-
-### 4. Launch OmniTrace AI Platform
-```bash
-python start_server.py
-```
-*Or launch with direct Uvicorn configuration:*
-```bash
-python -m uvicorn backend.main:app --host 127.0.0.1 --port 8000 --reload
-```
-
-### 5. Access the Platform
-* **Web Dashboard**: Open [`http://127.0.0.1:8000`](http://127.0.0.1:8000) in your browser.
-* **Interactive Swagger API Docs**: Open [`http://127.0.0.1:8000/docs`](http://127.0.0.1:8000/docs).
-* **ReDoc Technical Schema**: Open [`http://127.0.0.1:8000/redoc`](http://127.0.0.1:8000/redoc).
+* 🌐 **Interactive Web Platform**: [https://zidio-p2-omnitrace-ai-enterprise-fraud.onrender.com](https://zidio-p2-omnitrace-ai-enterprise-fraud.onrender.com)
+* 📖 **Live Interactive Swagger API Docs**: [https://zidio-p2-omnitrace-ai-enterprise-fraud.onrender.com/docs](https://zidio-p2-omnitrace-ai-enterprise-fraud.onrender.com/docs)
+* 📑 **Live ReDoc Technical Specification**: [https://zidio-p2-omnitrace-ai-enterprise-fraud.onrender.com/redoc](https://zidio-p2-omnitrace-ai-enterprise-fraud.onrender.com/redoc)
 
 ---
 
