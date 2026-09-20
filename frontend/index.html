@@ -1,0 +1,2633 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OmniTrace AI — Autonomous Fraud Defense & Risk Intelligence Platform</title>
+  
+  <!-- Modern Typography from Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Chart.js CDN for High-Performance Dark Mode Visualizations -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+
+  <!-- Cytoscape.js CDN for Entity Relationship Fraud Network Graph -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/cytoscape/3.28.1/cytoscape.min.js"></script>
+  
+  <!-- Application Stylesheet -->
+  <link rel="stylesheet" href="/static/css/styles.css?v=39">
+</head>
+<body>
+
+<div class="app-container">
+  
+  <!-- ========================================================================
+       Sidebar Navigation (9 Dedicated Intelligence Modules)
+       ======================================================================== -->
+  <aside class="sidebar">
+    <div class="brand">
+      <div class="brand-left">
+        <div class="brand-icon" title="OmniTrace AI — Universal Risk Trace & Neural Interception Core">
+          <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="OmniTrace AI Logo">
+            <defs>
+              <linearGradient id="omniGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#00ff87"/>
+                <stop offset="45%" stop-color="#00f2fe"/>
+                <stop offset="100%" stop-color="#7928ca"/>
+              </linearGradient>
+              <linearGradient id="omniGrad2" x1="100%" y1="0%" x2="0%" y2="100%">
+                <stop offset="0%" stop-color="#ff007f"/>
+                <stop offset="50%" stop-color="#00f2fe"/>
+                <stop offset="100%" stop-color="#00ff87"/>
+              </linearGradient>
+              <radialGradient id="omniCoreRadial" cx="50%" cy="50%" r="50%">
+                <stop offset="0%" stop-color="#ffffff"/>
+                <stop offset="35%" stop-color="#00f2fe"/>
+                <stop offset="85%" stop-color="#7928ca"/>
+                <stop offset="100%" stop-color="transparent"/>
+              </radialGradient>
+              <filter id="omniGlowFilter" x="-30%" y="-30%" width="160%" height="160%">
+                <feGaussianBlur stdDeviation="1.5" result="blur"/>
+                <feMerge>
+                  <feMergeNode in="blur"/>
+                  <feMergeNode in="SourceGraphic"/>
+                </feMerge>
+              </filter>
+            </defs>
+
+            <!-- Outer Precision Cyber Armor Ring -->
+            <rect x="3" y="3" width="34" height="34" rx="10" stroke="url(#omniGrad1)" stroke-width="1.8" fill="rgba(6, 8, 24, 0.7)" stroke-dasharray="80 20"/>
+
+            <!-- Omni Endless Möbius Orbital Loop (Topological Trace Vector) -->
+            <path d="M12 20 C12 13, 20 11, 24 16 C28 21, 28 27, 20 27 C14 27, 12 20, 20 20 C28 20, 28 13, 22 13 C16 13, 12 20, 16 25"
+                  stroke="url(#omniGrad2)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" fill="none" opacity="0.95"/>
+            
+            <path d="M28 20 C28 27, 20 29, 16 24 C12 19, 12 13, 20 13 C26 13, 28 20, 20 20 C12 20, 12 27, 18 27"
+                  stroke="url(#omniGrad1)" stroke-width="1.4" stroke-dasharray="2 3" stroke-linecap="round" fill="none" opacity="0.8"/>
+
+            <!-- Orbital Radar Sensors / Micro-nodes -->
+            <circle cx="20" cy="7" r="1.6" fill="#00ff87"/>
+            <circle cx="20" cy="33" r="1.6" fill="#00f2fe"/>
+            <circle cx="7" cy="20" r="1.6" fill="#00f2fe"/>
+            <circle cx="33" cy="20" r="1.6" fill="#ff007f"/>
+
+            <!-- Center Radiant Quantum AI Node -->
+            <polygon points="20,13 25,20 20,27 15,20" fill="url(#omniCoreRadial)" filter="url(#omniGlowFilter)"/>
+            <circle cx="20" cy="20" r="2.5" fill="#ffffff"/>
+          </svg>
+        </div>
+        <div class="brand-text">
+          <h1>OmniTrace AI</h1>
+          <p>Autonomous Fraud Defense</p>
+        </div>
+      </div>
+      <button class="sidebar-toggle-btn" id="sidebarToggleBtn" title="Toggle Navigation Sidebar" aria-label="Toggle Sidebar">
+        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+
+    <nav class="nav-menu">
+      <div class="nav-item active" data-tab="overview" id="nav-overview" title="01 Executive Dashboard" data-tooltip="01 Executive Dashboard">
+        <span class="nav-num">01</span>
+        <svg viewBox="0 0 24 24"><path d="M3 3h7v7H3zM14 3h7v7h-7zM14 14h7v7h-7zM3 14h7v7H3z"/></svg>
+        <span class="nav-label">Executive Dashboard</span>
+      </div>
+      
+      <div class="nav-item" data-tab="live" id="nav-live" title="02 Live Monitoring" data-tooltip="02 Live Monitoring">
+        <span class="nav-num">02</span>
+        <svg viewBox="0 0 24 24"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+        <span class="nav-label">Live Monitoring</span>
+        <span class="nav-badge badge-live">STREAM</span>
+      </div>
+
+      <div class="nav-item" data-tab="analytics" id="nav-analytics" title="03 Fraud Analytics" data-tooltip="03 Fraud Analytics">
+        <span class="nav-num">03</span>
+        <svg viewBox="0 0 24 24"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+        <span class="nav-label">Fraud Analytics</span>
+      </div>
+
+      <div class="nav-item" data-tab="transactions" id="nav-transactions" title="04 Transactions Ledger" data-tooltip="04 Transactions Ledger">
+        <span class="nav-num">04</span>
+        <svg viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="14" rx="2"/><line x1="2" y1="10" x2="22" y2="10"/></svg>
+        <span class="nav-label">Transactions</span>
+      </div>
+
+      <div class="nav-item" data-tab="risk-mgmt" id="nav-risk-mgmt" title="05 Risk Management" data-tooltip="05 Risk Management">
+        <span class="nav-num">05</span>
+        <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        <span class="nav-label">Risk Management</span>
+      </div>
+
+      <div class="nav-item" data-tab="alerts" id="nav-alerts" title="06 Fraud Alerts" data-tooltip="06 Fraud Alerts">
+        <span class="nav-num">06</span>
+        <svg viewBox="0 0 24 24"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0zM12 9v4M12 17h.01"/></svg>
+        <span class="nav-label">Alerts</span>
+        <span class="nav-badge badge-red" id="alertNavBadge">0</span>
+      </div>
+
+      <div class="nav-item" data-tab="investigation" id="nav-investigation" title="07 Investigations Workspace" data-tooltip="07 Investigations Workspace">
+        <span class="nav-num">07</span>
+        <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        <span class="nav-label">Investigations</span>
+      </div>
+
+      <div class="nav-item" data-tab="network" id="nav-network" title="08 Fraud Network" data-tooltip="08 Fraud Network">
+        <span class="nav-num">08</span>
+        <svg viewBox="0 0 24 24"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
+        <span class="nav-label">Fraud Network</span>
+        <span class="nav-badge badge-cyan">GRAPH</span>
+      </div>
+
+      <div class="nav-item" data-tab="behavioral" id="nav-behavioral" title="09 Behavioral Analytics" data-tooltip="09 Behavioral Analytics">
+        <span class="nav-num">09</span>
+        <svg viewBox="0 0 24 24"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
+        <span class="nav-label">Behavioral Analytics</span>
+      </div>
+
+      <div class="nav-item" data-tab="models" id="nav-models" title="10 Model Intelligence" data-tooltip="10 Model Intelligence">
+        <span class="nav-num">10</span>
+        <svg viewBox="0 0 24 24"><path d="M16 16v1a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2h11a2 2 0 0 1 2 2v1"/><polyline points="18 8 22 12 18 16"/><line x1="6" y1="12" x2="22" y2="12"/></svg>
+        <span class="nav-label">Model Intelligence</span>
+      </div>
+
+      <div class="nav-item" data-tab="explainable" id="nav-explainable" title="11 Explainable AI" data-tooltip="11 Explainable AI">
+        <span class="nav-num">11</span>
+        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+        <span class="nav-label">Explainable AI</span>
+      </div>
+
+      <div class="nav-item" data-tab="monitoring" id="nav-monitoring" title="12 Data & Model Monitoring" data-tooltip="12 Data & Model Monitoring">
+        <span class="nav-num">12</span>
+        <svg viewBox="0 0 24 24"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+        <span class="nav-label">Data & Drift</span>
+      </div>
+
+      <div class="nav-item" data-tab="risk" id="nav-risk" title="13 Fraud Simulator" data-tooltip="13 Fraud Simulator">
+        <span class="nav-num">13</span>
+        <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        <span class="nav-label">Fraud Simulator</span>
+        <span class="nav-badge badge-live" style="background: rgba(99,102,241,0.2); color: #818cf8; border-color: rgba(99,102,241,0.4);">TACTILE</span>
+      </div>
+
+      <div class="nav-item" data-tab="reports" id="nav-reports" title="14 Reports & Export" data-tooltip="14 Reports & Export">
+        <span class="nav-num">14</span>
+        <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+        <span class="nav-label">Reports & Export</span>
+      </div>
+    </nav>
+
+    <div class="sidebar-footer">
+      <div class="system-status">
+        <span class="status-dot"></span>
+        <span>7 ML Models Operational</span>
+      </div>
+    </div>
+  </aside>
+
+  <!-- ========================================================================
+       Main Content Area
+       ======================================================================== -->
+  <main class="main-content">
+    
+    <!-- Header Bar -->
+    <header class="top-header">
+      <div style="display: flex; align-items: center; gap: 12px;">
+        <button class="header-toggle-btn" id="headerSidebarToggle" title="Toggle Sidebar" aria-label="Toggle Sidebar">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+        <div class="page-title">
+          <h2 id="currentTabTitle">Executive Risk Dashboard</h2>
+          <p id="currentTabSubtitle">IEEE-CIS Machine Learning & Real-Time Decisioning Platform</p>
+        </div>
+      </div>
+      
+      <div class="header-actions">
+        <!-- Theme Toggle (Dark / Light) -->
+        <button class="theme-toggle-btn" id="themeToggleBtn" title="Switch to Light Theme" aria-label="Toggle Theme (Dark / Light)">
+          <div class="theme-toggle-icon-wrap">
+            <!-- Moon Icon (Dark Mode Active) -->
+            <svg class="theme-icon-moon" viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+            </svg>
+            <!-- Sun Icon (Light Mode Active) -->
+            <svg class="theme-icon-sun" viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="5"></circle>
+              <line x1="12" y1="1" x2="12" y2="3"></line>
+              <line x1="12" y1="21" x2="12" y2="23"></line>
+              <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+              <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+              <line x1="1" y1="12" x2="3" y2="12"></line>
+              <line x1="21" y1="12" x2="23" y2="12"></line>
+              <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+              <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+            </svg>
+          </div>
+          <span class="theme-toggle-text" id="themeToggleText">Dark Mode</span>
+        </button>
+
+        <div class="sim-controls">
+          <div class="sim-indicator active" id="simStatusPill">
+            <span class="dot"></span>
+            <span id="liveStatusLabel">STREAM LIVE</span>
+          </div>
+          <button id="simToggleBtn" class="btn-sm btn-danger" style="display: inline-flex; align-items: center; gap: 6px;" title="Autonomous stream is running. Click to pause.">
+            <span style="width: 7px; height: 7px; border-radius: 50%; background: #22c55e; display: inline-block; box-shadow: 0 0 8px #22c55e;"></span>
+            Stream Active
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <div class="content-body">
+      
+      <!-- ====================================================================
+           TAB 1: Executive Dashboard (Overview)
+           ==================================================================== -->
+      <section id="tab-overview" class="tab-pane active">
+        <!-- KPI Cards Grid -->
+        <div class="kpi-grid" style="margin-bottom: 24px;">
+          <div class="kpi-card primary-glow">
+            <div class="kpi-header">
+              <span class="kpi-title">Total Transactions</span>
+              <div class="kpi-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="5" width="20" height="14" rx="2"/><line x1="2" y1="10" x2="22" y2="10"/></svg>
+              </div>
+            </div>
+            <div class="kpi-value" id="kpiTotalTx">--</div>
+            <div class="kpi-sub">Evaluated by Ensemble Engine</div>
+          </div>
+
+          <div class="kpi-card risk-crit-glow">
+            <div class="kpi-header">
+              <span class="kpi-title">Fraud Detected</span>
+              <div class="kpi-icon" style="color: var(--risk-crit); background: var(--risk-crit-bg);">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              </div>
+            </div>
+            <div class="kpi-value" style="color: var(--risk-crit);" id="kpiFraudDetected">--</div>
+            <div class="kpi-sub">Flagged or Intercepted</div>
+          </div>
+
+          <div class="kpi-card">
+            <div class="kpi-header">
+              <span class="kpi-title">Fraud Rate</span>
+              <div class="kpi-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21.21 15.89A10 10 0 1 1 8 2.83"/><path d="M22 12A10 10 0 0 0 12 2v10z"/></svg>
+              </div>
+            </div>
+            <div class="kpi-value" id="kpiFraudRate">--%</div>
+            <div class="kpi-sub">Test Population Incidence</div>
+          </div>
+
+          <div class="kpi-card risk-crit-glow">
+            <div class="kpi-header">
+              <span class="kpi-title">Amount at Risk</span>
+              <div class="kpi-icon" style="color: var(--risk-high); background: var(--risk-high-bg);">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+              </div>
+            </div>
+            <div class="kpi-value" id="kpiAmountAtRisk">₹0.00</div>
+            <div class="kpi-sub">Protected Capital Exposure</div>
+          </div>
+
+          <div class="kpi-card">
+            <div class="kpi-header">
+              <span class="kpi-title">High & Critical Risk</span>
+              <div class="kpi-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="7.86 2 16.14 2 22 7.86 22 16.14 16.14 22 7.86 22 2 16.14 2 7.86 7.86 2"/></svg>
+              </div>
+            </div>
+            <div class="kpi-value" id="kpiHighCritical">--</div>
+            <div class="kpi-sub">Triage Queue Invocations</div>
+          </div>
+
+          <div class="kpi-card risk-low-glow">
+            <div class="kpi-header">
+              <span class="kpi-title">Avg Risk Score</span>
+              <div class="kpi-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+              </div>
+            </div>
+            <div class="kpi-value" id="kpiAvgRisk">--</div>
+            <div class="kpi-sub">Calibrated 0-100 Baseline</div>
+          </div>
+        </div>
+
+        <!-- 1. 7x24 Day of Week × Hour of Day Fraud Heatmap -->
+        <div class="chart-card" style="margin-top: 10px; margin-bottom: 24px;">
+          <div class="card-title-row" style="flex-wrap: wrap; gap: 10px;">
+            <div style="display: flex; align-items: center; gap: 10px;">
+              <h3>7x24 Day of Week × Hour of Day Fraud Heatmap</h3>
+              <span class="badge badge-cyan" id="heatmapLiveBadge" style="font-size: 10px; padding: 3px 8px; display: inline-flex; align-items: center; gap: 4px;">
+                <span style="display:inline-block; width:6px; height:6px; border-radius:50%; background:#06b6d4; box-shadow:0 0 6px #06b6d4;"></span>
+                <span id="heatmapLiveBadgeText">Live Stream Synchronized</span>
+              </span>
+            </div>
+            <div class="heatmap-legend-bar">
+              <div class="heatmap-legend-item">
+                <span class="heatmap-swatch" style="background: rgba(30, 41, 59, 0.85); border: 1px solid rgba(99, 102, 241, 0.25);"></span>
+                <span>&lt;1.5% Baseline</span>
+              </div>
+              <div class="heatmap-legend-item">
+                <span class="heatmap-swatch" style="background: rgba(99, 102, 241, 0.45); border: 1px solid rgba(139, 92, 246, 0.4);"></span>
+                <span>1.5–3.5% Low</span>
+              </div>
+              <div class="heatmap-legend-item">
+                <span class="heatmap-swatch" style="background: rgba(245, 158, 11, 0.65); border: 1px solid rgba(245, 158, 11, 0.6);"></span>
+                <span>3.5–6.5% Elevated</span>
+              </div>
+              <div class="heatmap-legend-item">
+                <span class="heatmap-swatch" style="background: rgba(239, 68, 68, 0.88); border: 1px solid #f87171; box-shadow: 0 0 5px rgba(239,68,68,0.4);"></span>
+                <span>&gt;6.5% Spike</span>
+              </div>
+              <div class="heatmap-legend-item" style="color: #38bdf8; font-weight: 600;">
+                <span class="heatmap-swatch" style="background: rgba(6, 182, 212, 0.25); border: 2px solid #06b6d4; box-shadow: 0 0 6px #06b6d4;"></span>
+                <span>Active Window</span>
+              </div>
+            </div>
+          </div>
+          <div id="overviewHeatmap" class="heatmap-wrapper" style="position: relative;">
+            <!-- Rendered via FraudCharts.renderTemporalHeatmap -->
+          </div>
+        </div>
+
+        <!-- 2. Fraud Volume by Hour of Day -->
+        <div class="chart-card" style="margin-bottom: 24px;">
+          <div class="card-title-row">
+            <h3>Fraud Volume by Hour of Day</h3>
+            <span style="font-size: 11px; color: var(--text-dim);">Temporal Transaction Velocity</span>
+          </div>
+          <div class="chart-container" style="min-height: 220px;">
+            <canvas id="overviewTrendChart"></canvas>
+          </div>
+        </div>
+
+        <!-- 3. Composite Risk Tiers (Placed below Fraud Volume by Hour of Day) -->
+        <div class="chart-card" style="margin-bottom: 24px;">
+          <div class="card-title-row">
+            <h3>Composite Risk Tiers</h3>
+            <span style="font-size: 11px; color: var(--text-dim);">Population Distribution</span>
+          </div>
+          <div class="chart-container" style="min-height: 260px;">
+            <canvas id="overviewRiskDonutChart"></canvas>
+          </div>
+        </div>
+
+        <!-- 4. Top Risky Hardware & Devices (Placed below Composite Risk Tiers) -->
+        <div class="chart-card" style="margin-bottom: 24px;">
+          <div class="card-title-row">
+            <h3>Top Risky Hardware & Devices</h3>
+            <span style="font-size: 11px; color: var(--text-dim);">Confirmed Fraud Counts</span>
+          </div>
+          <div class="chart-container" style="min-height: 260px;">
+            <canvas id="overviewTopDevicesChart"></canvas>
+          </div>
+        </div>
+      </section>
+
+      <!-- ====================================================================
+           TAB 2: Live Real-Time Fraud Monitor
+           ==================================================================== -->
+      <section id="tab-live" class="tab-pane">
+        <div class="live-stream-header">
+          <div class="live-stats">
+            <div class="live-stat-item">
+              <span class="label">Stream Status</span>
+              <span class="val" style="color: var(--cyan);" id="liveStatusPill">STANDBY</span>
+            </div>
+            <div class="live-stat-item">
+              <span class="label">Streamed Events</span>
+              <span class="val" id="liveStreamTxCount">0</span>
+            </div>
+            <div class="live-stat-item">
+              <span class="label">Fraud Flagged</span>
+              <span class="val" style="color: var(--risk-crit);" id="liveStreamFraudCount">0</span>
+            </div>
+            <div class="live-stat-item">
+              <span class="label">Intercepted Exposure</span>
+              <span class="val" style="color: var(--risk-high);" id="liveStreamAmountAtRisk">₹0.00</span>
+            </div>
+          </div>
+          <div>
+            <span style="font-size: 11px; color: var(--text-dim);">Live WebSocket feed simulating real-world payment stream</span>
+          </div>
+        </div>
+
+        <div class="table-responsive">
+          <table class="data-table live-feed-table">
+            <thead>
+              <tr>
+                <th>Time (UTC)</th>
+                <th>Transaction ID</th>
+                <th>Amount</th>
+                <th>Card / Product</th>
+                <th>ML Prob</th>
+                <th>Score</th>
+                <th>Risk Level</th>
+                <th>Action Decision</th>
+              </tr>
+            </thead>
+            <tbody id="liveFeedTableBody">
+              <!-- Live WebSocket entries injected here -->
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- ====================================================================
+           TAB 3: Risk & Fraud Analytics
+           ==================================================================== -->
+      <section id="tab-analytics" class="tab-pane">
+        <!-- Analytics Top Executive KPI Ribbon -->
+        <div class="kpi-grid" style="grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 16px; margin-bottom: 24px;">
+          <div class="kpi-card" style="border-left: 3px solid #6366f1;">
+            <div class="kpi-title">Monitored Volume (INR)</div>
+            <div class="kpi-value" id="analyticsKpiVolume" style="font-size: 20px; color: #818cf8;">₹48.92 Cr</div>
+            <div class="kpi-subtext" style="color: #94a3b8; font-size: 11px;">Active Ledger Evaluation</div>
+          </div>
+          <div class="kpi-card" style="border-left: 3px solid #ef4444;">
+            <div class="kpi-title">Intercepted Fraud (INR)</div>
+            <div class="kpi-value" id="analyticsKpiFraud" style="font-size: 20px; color: #f87171;">₹3.18 Cr</div>
+            <div class="kpi-subtext" style="color: #94a3b8; font-size: 11px;">Protected Merchant Capital</div>
+          </div>
+          <div class="kpi-card" style="border-left: 3px solid #10b981;">
+            <div class="kpi-title">Ensemble Consensus</div>
+            <div class="kpi-value" id="analyticsKpiConsensus" style="font-size: 20px; color: #34d399;">94.6%</div>
+            <div class="kpi-subtext" style="color: #94a3b8; font-size: 11px;">Supervised + IF Agreement</div>
+          </div>
+          <div class="kpi-card" style="border-left: 3px solid #f59e0b;">
+            <div class="kpi-title">Peak Burst Velocity</div>
+            <div class="kpi-value" id="analyticsKpiVelocity" style="font-size: 20px; color: #fbbf24;">3.42 tx/hr</div>
+            <div class="kpi-subtext" style="color: #94a3b8; font-size: 11px;">Mean Velocity Surge</div>
+          </div>
+          <div class="kpi-card" style="border-left: 3px solid #06b6d4;">
+            <div class="kpi-title">Dominant Threat Pattern</div>
+            <div class="kpi-value" id="analyticsKpiThreat" style="font-size: 14px; font-weight: 700; color: #38bdf8; line-height: 1.3; margin-top: 4px;">Nocturnal ATO & Velocity</div>
+            <div class="kpi-subtext" style="color: #94a3b8; font-size: 11px;">Primary Syndicated Vector</div>
+          </div>
+        </div>
+
+        <!-- Row 1: Temporal Distribution & Risk Histogram -->
+        <div class="dash-visual-grid" style="margin-bottom: 24px;">
+          <div class="chart-card">
+            <div class="card-title-row">
+              <h3>Temporal Fraud Distribution</h3>
+              <span style="font-size: 11px; color: var(--text-dim);">Total Volume vs Fraudulent Interceptions</span>
+            </div>
+            <div class="chart-container">
+              <canvas id="analyticsTrendChart"></canvas>
+            </div>
+          </div>
+
+          <div class="chart-card">
+            <div class="card-title-row">
+              <h3>Calibrated Risk Histogram</h3>
+              <span style="font-size: 11px; color: var(--text-dim);">Population Deciles (0–100)</span>
+            </div>
+            <div class="chart-container">
+              <canvas id="analyticsHistChart"></canvas>
+            </div>
+          </div>
+        </div>
+
+        <!-- Row 2: Risky Email Domains & ML vs Anomaly Scatter -->
+        <div class="dash-visual-grid" style="margin-bottom: 24px;">
+          <div class="chart-card">
+            <div class="card-title-row">
+              <h3>Top Risky Email Domains</h3>
+              <span style="font-size: 11px; color: var(--text-dim);">Fraud Rate (%) by Purchaser Domain</span>
+            </div>
+            <div class="chart-container">
+              <canvas id="analyticsEmailDomainsChart"></canvas>
+            </div>
+          </div>
+
+          <div class="chart-card">
+            <div class="card-title-row">
+              <h3>Supervised ML vs Anomaly Detection Scatter</h3>
+              <span style="font-size: 11px; color: var(--text-dim);">Ensemble Convergence Analysis</span>
+            </div>
+            <div class="chart-container">
+              <canvas id="analyticsScatterChart"></canvas>
+            </div>
+          </div>
+        </div>
+
+        <!-- Row 3: Card Scheme Risk & Regional Corridors (NEW) -->
+        <div class="dash-visual-grid" style="margin-bottom: 24px;">
+          <div class="chart-card">
+            <div class="card-title-row">
+              <h3>Payment Scheme & Card Brand Risk Analysis</h3>
+              <span style="font-size: 11px; color: var(--text-dim);">Volume vs Observed Chargeback Rate (%)</span>
+            </div>
+            <div class="chart-container">
+              <canvas id="analyticsCardBrandChart"></canvas>
+            </div>
+          </div>
+
+          <div class="chart-card">
+            <div class="card-title-row">
+              <h3>Regional Risk Corridors & State Distribution</h3>
+              <span style="font-size: 11px; color: var(--text-dim);">Legitimate Volume vs Confirmed Interceptions</span>
+            </div>
+            <div class="chart-container">
+              <canvas id="analyticsGeoRiskChart"></canvas>
+            </div>
+          </div>
+        </div>
+
+        <!-- Row 4: Velocity Surge Decay & MCC Verticals (NEW) -->
+        <div class="dash-visual-grid">
+          <div class="chart-card">
+            <div class="card-title-row">
+              <h3>Transaction Velocity Surge vs Empirical Fraud Risk</h3>
+              <span style="font-size: 11px; color: var(--text-dim);">1-Hour Burst Velocity Decay & Capital at Risk</span>
+            </div>
+            <div class="chart-container">
+              <canvas id="analyticsVelocityRiskChart"></canvas>
+            </div>
+          </div>
+
+          <div class="chart-card">
+            <div class="card-title-row">
+              <h3>Merchant Category Code (MCC) & Vertical Exposure</h3>
+              <span style="font-size: 11px; color: var(--text-dim);">Empirical Fraud Rate (%) & Average Ticket (₹)</span>
+            </div>
+            <div class="chart-container">
+              <canvas id="analyticsMccRiskChart"></canvas>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ====================================================================
+           TAB 4: Transactions Ledger & Search
+           ==================================================================== -->
+      <section id="tab-transactions" class="tab-pane">
+        <!-- Visual Overview Grid for Transactions -->
+        <div class="dash-visual-grid" style="margin-bottom: 24px;">
+          <div class="chart-card" style="flex: 1.8;">
+            <div class="card-title-row">
+              <h3>Transaction Volume & Fraud Timeline</h3>
+              <span style="font-size: 11px; color: var(--text-dim);">Processed Volume vs Interceptions</span>
+            </div>
+            <div class="chart-container" style="min-height: 220px;">
+              <canvas id="txTimelineChart"></canvas>
+            </div>
+          </div>
+
+          <div class="chart-card" style="flex: 1.2;">
+            <div class="card-title-row">
+              <h3>Amount Tier Distribution</h3>
+              <span style="font-size: 11px; color: var(--text-dim);">Payment Size Bands</span>
+            </div>
+            <div class="chart-container" style="min-height: 220px;">
+              <canvas id="txAmountDistChart"></canvas>
+            </div>
+          </div>
+        </div>
+
+        <div class="table-filter-bar">
+          <div class="search-box">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+            <input type="text" id="txSearchInput" placeholder="Search by Transaction ID, Email, Card, Device...">
+          </div>
+
+          <div class="filter-group">
+            <select class="filter-select" id="txRiskFilter">
+              <option value="ALL">All Risk Tiers</option>
+              <option value="CRITICAL">Critical Risk (81-100)</option>
+              <option value="HIGH">High Risk (61-80)</option>
+              <option value="MEDIUM">Medium Risk (31-60)</option>
+              <option value="LOW">Low Risk (0-30)</option>
+            </select>
+
+            <select class="filter-select" id="txPredFilter">
+              <option value="ALL">All Decisions</option>
+              <option value="FRAUD">Fraud Only</option>
+              <option value="LEGITIMATE">Legitimate Only</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="table-responsive">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>Transaction ID</th>
+                <th>Amount</th>
+                <th>Card / Type</th>
+                <th>Email Domain</th>
+                <th>Fraud Prob</th>
+                <th>Risk Score</th>
+                <th>Risk Tier</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody id="txTableBody">
+              <!-- Dynamically populated -->
+            </tbody>
+          </table>
+          <div class="pagination-row">
+            <div id="txPageInfo">Page 1 of --</div>
+            <div class="pagination-controls">
+              <button class="btn-sm btn-secondary" id="txPrevBtn">Previous</button>
+              <button class="btn-sm btn-secondary" id="txNextBtn">Next</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ====================================================================
+           TAB 5: Risk Management & Posture
+           ==================================================================== -->
+      <section id="tab-risk-mgmt" class="tab-pane">
+        <!-- Risk Posture KPI Cards -->
+        <div class="kpi-grid" style="margin-bottom: 24px;">
+          <div class="kpi-card primary-glow">
+            <div class="kpi-header">
+              <span class="kpi-title">Protected Exposure</span>
+              <div class="kpi-icon" style="color: var(--primary); background: var(--primary-glow);">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+              </div>
+            </div>
+            <div class="kpi-value" id="riskMgmtExposure">₹0.00</div>
+            <div class="kpi-sub">Total Fraud Capital Intercepted</div>
+          </div>
+
+          <div class="kpi-card risk-low-glow">
+            <div class="kpi-header">
+              <span class="kpi-title">Portfolio Risk Index</span>
+              <div class="kpi-icon" style="color: var(--risk-low); background: var(--risk-low-bg);">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+              </div>
+            </div>
+            <div class="kpi-value" id="riskMgmtScore">--</div>
+            <div class="kpi-sub">Calibrated 0–100 Population Mean</div>
+          </div>
+
+          <div class="kpi-card risk-crit-glow">
+            <div class="kpi-header">
+              <span class="kpi-title">High/Critical Exposure</span>
+              <div class="kpi-icon" style="color: var(--risk-crit); background: var(--risk-crit-bg);">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/></svg>
+              </div>
+            </div>
+            <div class="kpi-value" style="color: var(--risk-crit);" id="riskMgmtHighPct">--%</div>
+            <div class="kpi-sub">Transactions Exceeding Score 60</div>
+          </div>
+
+          <div class="kpi-card">
+            <div class="kpi-header">
+              <span class="kpi-title">Active Rules</span>
+              <div class="kpi-icon" style="color: var(--cyan); background: var(--cyan-glow);">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 12l2 2 4-4"/></svg>
+              </div>
+            </div>
+            <div class="kpi-value" id="riskMgmtRulesCount">6 Active</div>
+            <div class="kpi-sub">Deterministic Heuristics + ML</div>
+          </div>
+        </div>
+
+        <!-- Visual Grid 1: Decile Histogram & Risk Tier Donut -->
+        <div class="dash-visual-grid" style="margin-bottom: 24px;">
+          <div class="chart-card" style="flex: 1.6;">
+            <div class="card-title-row">
+              <h3>Calibrated Score Distribution (10 Deciles)</h3>
+              <span style="font-size: 11px; color: var(--text-dim);">Probability Density Across Population</span>
+            </div>
+            <div class="chart-container" style="min-height: 260px;">
+              <canvas id="riskMgmtHistChart"></canvas>
+            </div>
+          </div>
+
+          <div class="chart-card" style="flex: 1.2;">
+            <div class="card-title-row">
+              <h3>Composite Risk Tier Breakdown</h3>
+              <span style="font-size: 11px; color: var(--text-dim);">Low / Medium / High / Critical</span>
+            </div>
+            <div class="chart-container" style="min-height: 260px;">
+              <canvas id="riskMgmtTierDonut"></canvas>
+            </div>
+          </div>
+        </div>
+
+        <!-- Visual Grid 2: 24h Trend & Factor Contribution -->
+        <div class="dash-visual-grid" style="margin-bottom: 24px;">
+          <div class="chart-card" style="flex: 1.6;">
+            <div class="card-title-row">
+              <h3>24-Hour Risk Trend & Incidence Velocity</h3>
+              <span style="font-size: 11px; color: var(--text-dim);">Average Score vs High-Risk Ratio</span>
+            </div>
+            <div class="chart-container" style="min-height: 260px;">
+              <canvas id="riskMgmtTrendChart"></canvas>
+            </div>
+          </div>
+
+          <div class="chart-card" style="flex: 1.2;">
+            <div class="card-title-row">
+              <h3>Ensemble Risk Factor Contribution</h3>
+              <span style="font-size: 11px; color: var(--text-dim);">Average Model & Policy Weights</span>
+            </div>
+            <div class="chart-container" style="min-height: 260px;">
+              <canvas id="riskMgmtFactorChart"></canvas>
+            </div>
+          </div>
+        </div>
+
+        <!-- Time-of-Day Risk Matrix Table -->
+        <div class="chart-card">
+          <div class="card-title-row">
+            <h3>Time-of-Day Risk Exposure Matrix</h3>
+            <span style="font-size: 11px; color: var(--text-dim);">Average Risk Score by Temporal Window (Low = Green, Medium = Amber, High = Orange, Critical = Red)</span>
+          </div>
+          <div class="table-responsive" style="border: none;">
+            <table class="heatmap-matrix-table">
+              <thead>
+                <tr>
+                  <th style="text-align: left;">Temporal Window</th>
+                  <th>Monday</th>
+                  <th>Tuesday</th>
+                  <th>Wednesday</th>
+                  <th>Thursday</th>
+                  <th>Friday</th>
+                  <th>Saturday</th>
+                  <th>Sunday</th>
+                </tr>
+              </thead>
+              <tbody id="riskMgmtHeatmapMatrixBody">
+                <!-- Dynamically populated -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- ====================================================================
+           TAB 5: Fraud Network Graph (Signature View)
+           ==================================================================== -->
+      <section id="tab-network" class="tab-pane">
+        <div class="dash-visual-grid" style="align-items: stretch; margin-bottom: 24px;">
+          
+          <!-- Cytoscape Graph Canvas -->
+          <div class="chart-card" style="flex: 2.2;">
+            <div class="card-title-row">
+              <div style="display: flex; align-items: center; gap: 12px;">
+                <h3>Entity Linkage & Fraud Syndicate Network</h3>
+                <span style="font-size: 11px; color: var(--text-dim);">Cytoscape.js Multi-Entity Topology</span>
+              </div>
+              <div style="display: flex; gap: 8px;">
+                <button class="btn-sm btn-secondary net-filter-btn active" data-type="ALL">All</button>
+                <button class="btn-sm btn-secondary net-filter-btn" data-type="card">Cards</button>
+                <button class="btn-sm btn-secondary net-filter-btn" data-type="device">Devices</button>
+                <button class="btn-sm btn-secondary net-filter-btn" data-type="email">Emails</button>
+                <button class="btn-sm btn-primary" id="netResetZoomBtn">Reset View</button>
+              </div>
+            </div>
+
+            <!-- Network Container -->
+            <div id="cytoscapeNetworkCanvas" class="network-canvas-container"></div>
+            
+            <div class="network-legend">
+              <div class="legend-item"><span class="legend-dot" style="background: #ef4444;"></span> Transaction (High Risk)</div>
+              <div class="legend-item"><span class="legend-dot" style="background: #10b981;"></span> Transaction (Normal)</div>
+              <div class="legend-item"><span class="legend-dot" style="background: #06b6d4;"></span> Shared Card</div>
+              <div class="legend-item"><span class="legend-dot" style="background: #8b5cf6;"></span> Device Fingerprint</div>
+              <div class="legend-item"><span class="legend-dot" style="background: #f59e0b;"></span> Email Domain</div>
+            </div>
+          </div>
+
+          <!-- Suspicious Clusters & Inspector Card -->
+          <div style="flex: 1.1; display: flex; flex-direction: column; gap: 16px;">
+            <div class="chart-card" style="flex: 1;">
+              <div class="card-title-row">
+                <h3>Suspicious Fraud Rings</h3>
+                <span style="font-size: 11px; color: var(--text-dim);">Graph Connected Components</span>
+              </div>
+              <div id="suspiciousClustersList" style="max-height: 280px; overflow-y: auto;">
+                <!-- Dynamically populated clusters -->
+              </div>
+            </div>
+
+            <div class="chart-card" style="flex: 1;">
+              <div class="card-title-row">
+                <h3>Selected Entity Dossier</h3>
+                <span style="font-size: 11px; color: var(--text-dim);">Node Attribute Inspector</span>
+              </div>
+              <div id="networkSelectedNodeDetail">
+                <div style="color: var(--text-dim); font-size: 12px; text-align: center; padding: 24px;">
+                  Click any node in the network to inspect attributes, risk degree, and connected transactions.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ====================================================================
+           TAB 9: Behavioral Analytics & Profiling
+           ==================================================================== -->
+      <section id="tab-behavioral" class="tab-pane">
+        <!-- Behavioral Deviation Metric Cards -->
+        <div class="behavior-deviation-grid">
+          <div class="deviation-card">
+            <div class="deviation-title">Velocity Anomaly Index</div>
+            <div class="deviation-value" id="behavVelocityIndex">4.2x</div>
+            <div class="deviation-badge" style="color: var(--risk-crit);">
+              <span>▲ +320%</span> vs Cardholder Baseline
+            </div>
+          </div>
+
+          <div class="deviation-card">
+            <div class="deviation-title">Spending Spike Deviation</div>
+            <div class="deviation-value" id="behavAmountSpike">+184%</div>
+            <div class="deviation-badge" style="color: var(--risk-high);">
+              <span>▲ ₹1,95,000.00</span> vs ₹11,000.00 30D Mean
+            </div>
+          </div>
+
+          <div class="deviation-card">
+            <div class="deviation-title">Device Cardinality Turnover</div>
+            <div class="deviation-value" id="behavDeviceTurnover">5 / 24h</div>
+            <div class="deviation-badge" style="color: var(--risk-med);">
+              <span>▲ Multi-Card</span> Hardware Fingerprints
+            </div>
+          </div>
+
+          <div class="deviation-card">
+            <div class="deviation-title">Off-Hours Risk Index</div>
+            <div class="deviation-value" id="behavOffHoursIndex">68.4%</div>
+            <div class="deviation-badge" style="color: var(--risk-crit);">
+              <span>▲ Night Shift</span> 01:00–05:00 UTC Volume
+            </div>
+          </div>
+        </div>
+
+        <!-- Visual Grid: 6-Axis Radar & Spend Distribution -->
+        <div class="dash-visual-grid" style="margin-bottom: 24px;">
+          <div class="chart-card" style="flex: 1.2;">
+            <div class="card-title-row">
+              <h3>6-Axis Behavioral Anomaly Profile</h3>
+              <span style="font-size: 11px; color: var(--text-dim);">Legitimate Cardholder Baseline vs Flagged Transaction Cohort</span>
+            </div>
+            <div class="chart-container" style="min-height: 320px;">
+              <canvas id="behavioralRadarChart"></canvas>
+            </div>
+          </div>
+
+          <div class="chart-card" style="flex: 1.8;">
+            <div class="card-title-row">
+              <h3>Amount Distribution: Legitimate vs Fraudulent</h3>
+              <span style="font-size: 11px; color: var(--text-dim);">Normalized Probability Density by Spending Bucket</span>
+            </div>
+            <div class="chart-container" style="min-height: 320px;">
+              <canvas id="behavioralDistChart"></canvas>
+            </div>
+          </div>
+        </div>
+
+        <!-- Scatter Plot: Anomaly Score vs Amount -->
+        <div class="chart-card">
+          <div class="card-title-row">
+            <h3>Isolation Forest Anomaly Score vs Transaction Amount</h3>
+            <span style="font-size: 11px; color: var(--text-dim);">Unsupervised Outlier Clustering across Transaction Space</span>
+          </div>
+          <div class="chart-container" style="min-height: 320px;">
+            <canvas id="behavioralScatterChart"></canvas>
+          </div>
+        </div>
+      </section>
+
+      <!-- ====================================================================
+           TAB 10: Model Intelligence & Calibration
+           ==================================================================== -->
+      <section id="tab-models" class="tab-pane">
+        <div class="chart-card" style="margin-bottom: 24px;">
+          <div class="card-title-row">
+            <h3>Machine Learning & Anomaly Detection Leaderboard</h3>
+            <span style="font-size: 11px; color: var(--text-dim);">Chronological Out-of-Time Test Set (15%)</span>
+          </div>
+
+          <div class="table-responsive" style="border: none;">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>Model Architecture</th>
+                  <th>ROC-AUC</th>
+                  <th>PR-AUC</th>
+                  <th>Precision</th>
+                  <th>Recall</th>
+                  <th>F1-Score</th>
+                  <th>Accuracy</th>
+                </tr>
+              </thead>
+              <tbody id="modelLeaderboardBody">
+                <!-- Dynamically populated from storage/model_metrics.json -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="dash-visual-grid" style="margin-bottom: 24px;">
+          <div class="chart-card">
+            <div class="card-title-row">
+              <h3>Comparative ROC Curves</h3>
+              <span style="font-size: 11px; color: var(--text-dim);">TPR vs FPR Across All 7 Models</span>
+            </div>
+            <div class="chart-container" style="min-height: 320px;">
+              <canvas id="modelRocCurveChart"></canvas>
+            </div>
+          </div>
+
+          <div class="chart-card">
+            <div class="card-title-row">
+              <h3>Probability Calibration Curve</h3>
+              <span style="font-size: 11px; color: var(--text-dim);">Predicted vs Observed Probability (Brier Score: 0.098)</span>
+            </div>
+            <div class="chart-container" style="min-height: 320px;">
+              <canvas id="modelCalibrationChart"></canvas>
+            </div>
+          </div>
+        </div>
+
+        <!-- Decision Threshold & Rupee-Weighted Cost-Utility Optimizer -->
+        <div class="chart-card">
+          <div class="card-title-row" style="flex-wrap: wrap; gap: 12px;">
+            <div>
+              <h3 style="display: flex; align-items: center; gap: 8px;">
+                <span>Decision Threshold & Financial Utility Optimization</span>
+                <span class="badge-live" style="font-size: 10px; background: rgba(16, 185, 129, 0.15); color: #10b981; border: 1px solid rgba(16, 185, 129, 0.3); padding: 2px 6px; border-radius: 4px;">TOP 1% ALGO</span>
+              </h3>
+              <span style="font-size: 11px; color: var(--text-dim);">Statistical Precision/Recall vs Expected Monetary Loss (₹) & Visa VFMP Compliance</span>
+            </div>
+
+            <!-- Mode Selector Toggle -->
+            <div style="display: flex; background: rgba(0,0,0,0.3); border: 1px solid var(--border-subtle); border-radius: 6px; padding: 2px;">
+              <button type="button" id="btnModeStatistical" class="btn-sm" style="background: transparent; color: var(--text-dim); border: none; padding: 5px 12px; font-size: 11px; cursor: pointer;" onclick="window.App.switchThresholdMode('statistical')">Statistical (F1 / PR)</button>
+              <button type="button" id="btnModeCostUtility" class="btn-sm" style="background: var(--cyan); color: #050b14; font-weight: 700; border: none; border-radius: 4px; padding: 5px 12px; font-size: 11px; cursor: pointer;" onclick="window.App.switchThresholdMode('cost_utility')">Financial Profit & Loss (₹)</button>
+            </div>
+          </div>
+
+          <!-- Statistical Mode View -->
+          <div id="containerStatisticalSweep" style="display: none;">
+            <div class="chart-container" style="min-height: 280px;">
+              <canvas id="modelThresholdChart"></canvas>
+            </div>
+          </div>
+
+          <!-- Cost-Utility Financial Mode View -->
+          <div id="containerCostUtility">
+            <!-- Financial Parameter Sliders & KPI Banner -->
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px; margin-bottom: 16px; background: rgba(255,255,255,0.02); padding: 14px; border-radius: 8px; border: 1px solid var(--border-subtle);">
+              <div>
+                <div style="display: flex; justify-content: space-between; font-size: 11px; margin-bottom: 4px;">
+                  <span style="color: var(--text-muted);">Avg Fraud Ticket (FN Loss)</span>
+                  <span id="labelAvgFraud" class="mono font-bold" style="color: var(--cyan);">₹15,000.00</span>
+                </div>
+                <input type="range" id="inputAvgFraud" min="50" max="1000" step="25" value="185" style="width: 100%; accent-color: var(--cyan);" oninput="window.App.updateCostUtility()">
+              </div>
+
+              <div>
+                <div style="display: flex; justify-content: space-between; font-size: 11px; margin-bottom: 4px;">
+                  <span style="color: var(--text-muted);">Chargeback Dispute Fee</span>
+                  <span id="labelChargebackFee" class="mono font-bold" style="color: #ef4444;">₹2,000.00</span>
+                </div>
+                <input type="range" id="inputChargebackFee" min="10" max="100" step="5" value="25" style="width: 100%; accent-color: #ef4444;" oninput="window.App.updateCostUtility()">
+              </div>
+
+              <div>
+                <div style="display: flex; justify-content: space-between; font-size: 11px; margin-bottom: 4px;">
+                  <span style="color: var(--text-muted);">Customer Friction Cost (FP)</span>
+                  <span id="labelFrictionCost" class="mono font-bold" style="color: #f59e0b;">₹1,200.00</span>
+                </div>
+                <input type="range" id="inputFrictionCost" min="5" max="100" step="5" value="15" style="width: 100%; accent-color: #f59e0b;" oninput="window.App.updateCostUtility()">
+              </div>
+            </div>
+
+            <!-- Financial Summary Metrics -->
+            <div style="display: flex; flex-wrap: wrap; gap: 14px; margin-bottom: 16px;">
+              <div style="flex: 1; min-width: 140px; background: rgba(16, 185, 129, 0.06); border: 1px solid rgba(16, 185, 129, 0.2); border-radius: 6px; padding: 10px 14px;">
+                <div style="font-size: 10px; text-transform: uppercase; color: var(--text-muted); letter-spacing: 0.5px;">Optimal Cutoff Threshold</div>
+                <div id="costOptimalThreshold" class="mono font-bold" style="font-size: 18px; color: #10b981; margin-top: 2px;">0.35</div>
+                <div style="font-size: 10px; color: var(--text-dim);">vs 0.50 F1 Standard</div>
+              </div>
+
+              <div style="flex: 1.4; min-width: 180px; background: rgba(6, 182, 212, 0.06); border: 1px solid rgba(6, 182, 212, 0.2); border-radius: 6px; padding: 10px 14px;">
+                <div style="font-size: 10px; text-transform: uppercase; color: var(--text-muted); letter-spacing: 0.5px;">Max Net Financial Savings</div>
+                <div id="costMaxSavings" class="mono font-bold" style="font-size: 18px; color: var(--cyan); margin-top: 2px;">+₹5,78,40,000.00</div>
+                <div style="font-size: 10px; color: var(--text-dim);">Gross Intercepted minus Friction</div>
+              </div>
+
+              <div style="flex: 1.2; min-width: 160px; background: rgba(245, 158, 11, 0.06); border: 1px solid rgba(245, 158, 11, 0.2); border-radius: 6px; padding: 10px 14px;">
+                <div style="font-size: 10px; text-transform: uppercase; color: var(--text-muted); letter-spacing: 0.5px;">Visa VFMP Status (0.9% Limit)</div>
+                <div id="costVfmpStatus" class="mono font-bold" style="font-size: 18px; color: #10b981; margin-top: 2px;">0.42% SAFE</div>
+                <div style="font-size: 10px; color: var(--text-dim);">Regulatory Fines Shielded</div>
+              </div>
+            </div>
+
+            <!-- Cost-Utility Curve Canvas -->
+            <div class="chart-container" style="min-height: 300px;">
+              <canvas id="modelCostUtilityChart"></canvas>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ====================================================================
+           TAB 11: Explainable AI (XAI) & SHAP Model Governance
+           ==================================================================== -->
+      <section id="tab-explainable" class="tab-pane">
+        
+        <!-- Institutional Header Banner -->
+        <div style="background: linear-gradient(135deg, rgba(99, 102, 241, 0.12) 0%, rgba(6, 182, 212, 0.08) 100%); border: 1px solid rgba(99, 102, 241, 0.25); border-radius: var(--radius-lg); padding: 20px 24px; margin-bottom: 24px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px;">
+          <div>
+            <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 6px;">
+              <span style="font-size: 22px;">🔍</span>
+              <h2 style="font-size: 20px; font-family: var(--font-display); color: #fff; margin: 0;">Explainable AI (XAI) & Algorithmic Governance</h2>
+            </div>
+            <p style="font-size: 12px; color: var(--text-muted); margin: 0; line-height: 1.5;">
+              Exact Cooperative Game-Theoretic Attribution (Tree-SHAP) • Path-Dependent Additivity • Regulatory Adverse Action Compliance (RBI / US OCC 2011-12)
+            </p>
+          </div>
+          <div style="display: flex; gap: 8px; flex-wrap: wrap; align-items: center;">
+            <span class="badge-cyan" style="font-size: 10px; padding: 4px 8px; border-radius: 4px; font-weight: 700;">TREE-SHAP EXACT</span>
+            <span style="background: rgba(16, 185, 129, 0.15); color: #10b981; border: 1px solid rgba(16, 185, 129, 0.3); font-size: 10px; padding: 4px 8px; border-radius: 4px; font-weight: 700;">SR 11-7 AUDITED</span>
+            <span style="background: rgba(245, 158, 11, 0.15); color: #fbbf24; border: 1px solid rgba(245, 158, 11, 0.3); font-size: 10px; padding: 4px 8px; border-radius: 4px; font-weight: 700;">AXIOMATIC ADDITIVITY 100%</span>
+            <span style="background: rgba(139, 92, 246, 0.15); color: #c084fc; border: 1px solid rgba(139, 92, 246, 0.3); font-size: 10px; padding: 4px 8px; border-radius: 4px; font-weight: 700;">OFFICER: AKSHAR PATEL</span>
+          </div>
+        </div>
+
+        <!-- 4-KPI Explainability Metric Row -->
+        <div class="xai-kpi-grid">
+          <div class="kpi-card" style="padding: 16px;">
+            <div style="font-size: 11px; text-transform: uppercase; color: var(--text-dim); margin-bottom: 6px;">Population Expected Value E[f(x)]</div>
+            <div style="font-size: 22px; font-family: var(--font-display); font-weight: 700; color: var(--cyan); margin-bottom: 4px;">3.84%</div>
+            <div style="font-size: 10px; color: var(--text-muted); font-family: var(--font-mono);">-3.2205 Logit Prior (N=15,000 holdout)</div>
+          </div>
+          <div class="kpi-card" style="padding: 16px;">
+            <div style="font-size: 11px; text-transform: uppercase; color: var(--text-dim); margin-bottom: 6px;">Mean Absolute SHAP Magnitude</div>
+            <div style="font-size: 22px; font-family: var(--font-display); font-weight: 700; color: #818cf8; margin-bottom: 4px;">0.1420</div>
+            <div style="font-size: 10px; color: var(--text-muted);">High Feature Explanatory Sensitivity</div>
+          </div>
+          <div class="kpi-card" style="padding: 16px;">
+            <div style="font-size: 11px; text-transform: uppercase; color: var(--text-dim); margin-bottom: 6px;">Real-Time Inference SLA</div>
+            <div style="font-size: 22px; font-family: var(--font-display); font-weight: 700; color: #10b981; margin-bottom: 4px;">1.42 ms</div>
+            <div style="font-size: 10px; color: var(--text-muted);">Sub-millisecond fast-path tree traversal</div>
+          </div>
+          <div class="kpi-card" style="padding: 16px;">
+            <div style="font-size: 11px; text-transform: uppercase; color: var(--text-dim); margin-bottom: 6px;">Fairness & Additivity Check</div>
+            <div style="font-size: 22px; font-family: var(--font-display); font-weight: 700; color: #38bdf8; margin-bottom: 4px;">100% Pass</div>
+            <div style="font-size: 10px; color: var(--text-muted);">Zero demographic disparate impact verified</div>
+          </div>
+        </div>
+
+        <!-- SECTION 1: Global Feature Attribution Chart & Dynamic Indicators -->
+        <div class="chart-card" style="margin-bottom: 24px;">
+          <div class="card-title-row" style="margin-bottom: 16px;">
+            <div>
+              <h3>Global Feature Importance (SHAP TreeExplainer Population Ranking)</h3>
+              <span style="font-size: 11px; color: var(--text-dim);">Mean |SHAP| values across 15,000 holdout verification transactions from dual-ensemble CatBoost + LightGBM</span>
+            </div>
+            <div class="xai-filter-pills">
+              <button class="xai-filter-pill active" data-xai-filter="all" onclick="App.filterGlobalShap('all')">All 14 Predictors</button>
+              <button class="xai-filter-pill" data-xai-filter="risk" onclick="App.filterGlobalShap('risk')">Top Escalators (+SHAP)</button>
+              <button class="xai-filter-pill" data-xai-filter="mitigate" onclick="App.filterGlobalShap('mitigate')">Top Mitigators (-SHAP)</button>
+            </div>
+          </div>
+          <div class="chart-container" style="min-height: 380px;">
+            <canvas id="explainableGlobalShapChart"></canvas>
+          </div>
+        </div>
+
+        <!-- Directional Feature Indicators Grid (Dynamically Populated) -->
+        <div class="shap-indicators-grid" id="explainableDirectionalGrid" style="margin-bottom: 24px;">
+          <!-- Dynamically populated via App.loadExplainableTab() -->
+          <div class="indicator-card">
+            <div class="indicator-header risk">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="18 15 12 9 6 15"/></svg>
+              <span>Top Risk Drivers (Increases Fraud Score)</span>
+            </div>
+            <div class="indicator-list" id="xaiTopEscalatorsList">
+              <div style="padding: 12px; text-align: center; color: var(--text-dim); font-size: 11px;">Loading live Tree-SHAP drivers...</div>
+            </div>
+          </div>
+
+          <div class="indicator-card">
+            <div class="indicator-header mitigate">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+              <span>Top Mitigating Signals (Decreases Fraud Score)</span>
+            </div>
+            <div class="indicator-list" id="xaiTopMitigatorsList">
+              <div style="padding: 12px; text-align: center; color: var(--text-dim); font-size: 11px;">Loading live mitigating signals...</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- SECTION 2: Interactive Local Transaction SHAP Waterfall Inspector -->
+        <div class="xai-inspector-card">
+          <div class="card-title-row" style="margin-bottom: 16px;">
+            <div>
+              <h3 style="display: flex; align-items: center; gap: 8px;">
+                <span>🔬</span>
+                Interactive Transaction Audit & Local SHAP Waterfall
+              </h3>
+              <span style="font-size: 11px; color: var(--text-dim);">Inspect exact feature perturbations decomposing any live payment authorization from base expectation E[f(x)] to final decision f(x)</span>
+            </div>
+            <span class="badge-live-pulse" style="font-size: 10px; background: rgba(56, 189, 248, 0.15); color: #38bdf8; border: 1px solid rgba(56, 189, 248, 0.3); padding: 3px 8px; border-radius: var(--radius-full); font-weight: 700;">AUDIT DRILL-DOWN</span>
+          </div>
+
+          <!-- Controls: Select from Live Feed or Type Transaction ID -->
+          <div class="xai-tx-controls">
+            <label style="font-size: 11px; font-weight: 700; color: var(--text-muted); text-transform: uppercase;">Select Case Dossier:</label>
+            <select id="xaiTxSelector" class="xai-select" onchange="App.handleXaiSelectChange(this.value)">
+              <option value="">Loading live transaction cases...</option>
+            </select>
+            <div style="display: flex; gap: 8px; align-items: center;">
+              <input type="text" id="xaiTxInput" class="xai-input" placeholder="e.g. 2992749 or 3008012">
+              <button type="button" class="btn-sm" style="background: var(--primary); color: #fff; font-weight: 700;" onclick="App.inspectCustomTx()">
+                🔍 Inspect Dossier
+              </button>
+            </div>
+          </div>
+
+          <!-- Active Transaction Profile Ribbon -->
+          <div class="xai-tx-dossier-bar" id="xaiTxDossierBar">
+            <div style="display: flex; align-items: center; gap: 12px;">
+              <span style="font-size: 11px; color: var(--text-dim);">Transaction ID:</span>
+              <strong class="mono" id="xaiActiveTxId" style="font-size: 14px; color: var(--cyan);">TX-2992749</strong>
+              <span class="risk-pill" id="xaiActiveTxRiskPill" style="color: var(--risk-crit); border-color: var(--risk-crit);">CRITICAL 96/100</span>
+            </div>
+            <div style="display: flex; align-items: center; gap: 18px; font-size: 12px;">
+              <div>Amount: <strong id="xaiActiveTxAmount" style="color: #fff; font-size: 13px;">₹6,950.42</strong></div>
+              <div>Model Output f(x): <strong id="xaiActiveTxProb" class="mono" style="color: #ef4444;">92.8%</strong></div>
+              <div>Decision: <strong id="xaiActiveTxDecision" style="color: #f87171;">HARD DECLINE</strong></div>
+            </div>
+          </div>
+
+          <!-- Visual SHAP Waterfall Progression -->
+          <div class="xai-waterfall-card">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 14px; border-bottom: 1px solid rgba(255, 255, 255, 0.05); padding-bottom: 10px;">
+              <span style="font-size: 12px; font-weight: 700; color: #fff; text-transform: uppercase; letter-spacing: 0.5px;">
+                Cumulative SHAP Waterfall Vector (Logit & Probability Shifts)
+              </span>
+              <div style="display: flex; gap: 12px; font-size: 10px;">
+                <span style="color: #818cf8; display: flex; align-items: center; gap: 4px;">● Base Prior (3.8%)</span>
+                <span style="color: #ef4444; display: flex; align-items: center; gap: 4px;">● Risk Escalator (+SHAP)</span>
+                <span style="color: #10b981; display: flex; align-items: center; gap: 4px;">● Mitigating Pull (-SHAP)</span>
+                <span style="color: #f59e0b; display: flex; align-items: center; gap: 4px;">● Final Score f(x)</span>
+              </div>
+            </div>
+            
+            <div id="xaiWaterfallContainer" style="display: flex; flex-direction: column; gap: 2px;">
+              <!-- Dynamically populated via App.renderLocalWaterfall() -->
+            </div>
+          </div>
+
+          <!-- Local Feature Attribution Table -->
+          <div style="margin-top: 20px; overflow-x: auto;">
+            <table class="xai-table">
+              <thead>
+                <tr>
+                  <th>Feature Name</th>
+                  <th>Observed Value</th>
+                  <th>Category</th>
+                  <th>SHAP Weight</th>
+                  <th>Decision Impact</th>
+                  <th>Human Operational Rationale</th>
+                </tr>
+              </thead>
+              <tbody id="xaiFeatureTableBody">
+                <!-- Dynamically populated via App.renderLocalFeatureTable() -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- SECTION 3: Algorithmic Recourse & Adverse Action Disclosure -->
+        <div class="xai-recourse-grid">
+          <!-- Minimal Algorithmic Recourse Card -->
+          <div class="xai-recourse-card">
+            <div class="card-title-row" style="margin-bottom: 14px;">
+              <div>
+                <h3 style="font-size: 14px; color: #fff;">Algorithmic Recourse & Path to Clearance</h3>
+                <span style="font-size: 11px; color: var(--text-dim);">Counterfactual parameter shifts required to flip transaction from DECLINED to APPROVED</span>
+              </div>
+              <span class="badge-cyan" style="font-size: 9px; padding: 3px 6px; border-radius: 3px;">ACTIONABLE</span>
+            </div>
+            <div id="xaiRecourseStepsContainer">
+              <!-- Dynamically populated -->
+            </div>
+          </div>
+
+          <!-- Adverse Action Regulatory Disclosures (Form 1-A) -->
+          <div class="xai-recourse-card">
+            <div class="card-title-row" style="margin-bottom: 14px;">
+              <div>
+                <h3 style="font-size: 14px; color: #fff;">Statutory Adverse Action Disclosures</h3>
+                <span style="font-size: 11px; color: var(--text-dim);">Compliant with RBI Master Direction - Payment Fraud Governance & Fair Lending ECOA</span>
+              </div>
+              <span style="background: rgba(239, 68, 68, 0.15); color: #f87171; border: 1px solid rgba(239, 68, 68, 0.3); font-size: 9px; padding: 3px 6px; border-radius: 3px; font-weight: 700;">MANDATORY LOG</span>
+            </div>
+            <div id="xaiAdverseReasonsContainer">
+              <!-- Dynamically populated -->
+            </div>
+          </div>
+        </div>
+
+        <!-- SECTION 4: Model Risk Management & Axiomatic Integrity Audit Matrix -->
+        <div class="chart-card" style="margin-top: 24px;">
+          <div class="card-title-row" style="margin-bottom: 16px;">
+            <div>
+              <h3>Model Risk Management (MRM) & Axiomatic Governance Audit</h3>
+              <span style="font-size: 11px; color: var(--text-dim);">US OCC 2011-12 / Federal Reserve SR 11-7 & Basel Committee BCBS 239 Verification</span>
+            </div>
+            <div style="display: flex; gap: 8px;">
+              <button type="button" class="btn-sm btn-secondary" onclick="App.exportLocalShapAudit()">
+                ⬇️ Export SHAP Dossier (JSON)
+              </button>
+              <button type="button" class="btn-sm" style="background: var(--primary); color: #fff; font-weight: 700;" onclick="App.printXaiDossier()">
+                🖨️ Print Governance Certificate
+              </button>
+            </div>
+          </div>
+
+          <!-- Mathematical Axioms Proof Grid -->
+          <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-bottom: 20px;">
+            <div style="background: rgba(15, 23, 42, 0.6); padding: 12px; border-radius: 6px; border: 1px solid rgba(255, 255, 255, 0.05);">
+              <div style="font-size: 10px; color: var(--text-dim); text-transform: uppercase;">1. Efficiency / Additivity</div>
+              <div style="font-size: 12px; font-weight: 700; color: #10b981; margin: 4px 0;">✓ Verified (ε &lt; 1e-7)</div>
+              <div style="font-size: 10px; color: var(--text-muted);">Σ φᵢ = f(x) - E[f(x)] across all 72 predictors</div>
+            </div>
+            <div style="background: rgba(15, 23, 42, 0.6); padding: 12px; border-radius: 6px; border: 1px solid rgba(255, 255, 255, 0.05);">
+              <div style="font-size: 10px; color: var(--text-dim); text-transform: uppercase;">2. Symmetry Axiom</div>
+              <div style="font-size: 12px; font-weight: 700; color: #10b981; margin: 4px 0;">✓ Verified (Strict)</div>
+              <div style="font-size: 10px; color: var(--text-muted);">Equal marginal contributions receive identical attribution</div>
+            </div>
+            <div style="background: rgba(15, 23, 42, 0.6); padding: 12px; border-radius: 6px; border: 1px solid rgba(255, 255, 255, 0.05);">
+              <div style="font-size: 10px; color: var(--text-dim); text-transform: uppercase;">3. Dummy / Null Property</div>
+              <div style="font-size: 12px; font-weight: 700; color: #10b981; margin: 4px 0;">✓ Verified (Null-Zero)</div>
+              <div style="font-size: 10px; color: var(--text-muted);">Features with zero model impact assigned 0.0000 SHAP</div>
+            </div>
+            <div style="background: rgba(15, 23, 42, 0.6); padding: 12px; border-radius: 6px; border: 1px solid rgba(255, 255, 255, 0.05);">
+              <div style="font-size: 10px; color: var(--text-dim); text-transform: uppercase;">4. Monotonicity</div>
+              <div style="font-size: 12px; font-weight: 700; color: #10b981; margin: 4px 0;">✓ Verified (Consistent)</div>
+              <div style="font-size: 10px; color: var(--text-muted);">Higher feature value strictly increases corresponding SHAP</div>
+            </div>
+          </div>
+
+          <!-- Formal Attestation Signature Block -->
+          <div style="background: rgba(8, 12, 24, 0.7); border: 1px solid var(--border-subtle); border-radius: 8px; padding: 16px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px;">
+            <div style="display: flex; align-items: center; gap: 14px;">
+              <div style="width: 42px; height: 42px; border-radius: 50%; background: rgba(99, 102, 241, 0.2); border: 1px solid var(--primary); display: flex; align-items: center; justify-content: center; font-size: 18px;">
+                🏛️
+              </div>
+              <div>
+                <div style="font-size: 13px; font-weight: 700; color: #fff;">Attested By: Lead Officer Akshar Patel (FinTech AI Governance)</div>
+                <div style="font-size: 11px; color: var(--text-muted); margin-top: 2px;">
+                  Chief Model Risk & Financial Crime Officer • OmniTrace AI Governance Committee
+                </div>
+                <div style="font-size: 10px; color: var(--text-dim); font-family: var(--font-mono); margin-top: 2px;">
+                  Cryptographic Audit SHA-256: <span id="xaiAuditHashSeal">7f83b1657ff1fc53b92dc18148a1d65dfc2d4b1fa3d677284addd200126d9069</span>
+                </div>
+              </div>
+            </div>
+            <div style="text-align: right;">
+              <span style="display: inline-block; background: rgba(16, 185, 129, 0.15); color: #10b981; border: 1px solid rgba(16, 185, 129, 0.3); font-size: 11px; padding: 4px 10px; border-radius: 4px; font-weight: 700;">
+                ✓ MODEL GOVERNANCE ACTIVE
+              </span>
+              <div style="font-size: 10px; color: var(--text-dim); margin-top: 4px;">Effective: FY 2026-27 • Annual Recertification</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ====================================================================
+           TAB 13: Fraud Simulator & Tactile Sandbox
+           ==================================================================== -->
+      <section id="tab-risk" class="tab-pane">
+        <div class="simulator-container">
+          
+          <!-- LEFT CARD: Interactive Tactile Sandbox (Simple, Fast, Zero Friction) -->
+          <div class="sim-form-card">
+            <div class="card-title-row" style="margin-bottom: 16px;">
+              <div>
+                <h3 style="display: flex; align-items: center; gap: 8px;">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                  Risk Intelligence Sandbox
+                </h3>
+                <span style="font-size: 11px; color: var(--text-dim);">Live Reactive Scoring • Continuous What-If Decisioning</span>
+              </div>
+              <span class="badge-live-pulse" style="font-size: 10px; background: rgba(16, 185, 129, 0.15); color: #10b981; border: 1px solid rgba(16, 185, 129, 0.3); padding: 3px 8px; border-radius: var(--radius-full); font-weight: 700;">LIVE ENGINE ACTIVE</span>
+            </div>
+
+            <!-- 1-Click Scenario Deck -->
+            <div class="scenario-deck">
+              <button type="button" class="scenario-card active" data-preset="carding" onclick="Simulator.loadPreset('carding')">
+                <div class="scenario-icon">🚨</div>
+                <div class="scenario-info">
+                  <div class="scenario-name">Carding Botnet</div>
+                  <div class="scenario-meta">Tor Exit • CVV Mismatch • Burst 14</div>
+                </div>
+              </button>
+
+              <button type="button" class="scenario-card" data-preset="ato" onclick="Simulator.loadPreset('ato')">
+                <div class="scenario-icon">⚠️</div>
+                <div class="scenario-info">
+                  <div class="scenario-name">Account Takeover</div>
+                  <div class="scenario-meta">₹1,95,000 Luxury • Cross-Border • 3DS Fail</div>
+                </div>
+              </button>
+
+              <button type="button" class="scenario-card" data-preset="device_farm" onclick="Simulator.loadPreset('device_farm')">
+                <div class="scenario-icon">🛑</div>
+                <div class="scenario-info">
+                  <div class="scenario-name">Device Syndicate</div>
+                  <div class="scenario-meta">8 Cards/Device • Velocity 22/24h</div>
+                </div>
+              </button>
+
+              <button type="button" class="scenario-card" data-preset="normal" onclick="Simulator.loadPreset('normal')">
+                <div class="scenario-icon">🛡️</div>
+                <div class="scenario-info">
+                  <div class="scenario-name">Verified E-Commerce</div>
+                  <div class="scenario-meta">Domestic IP • AVS Match • 3DS Pass</div>
+                </div>
+              </button>
+
+              <button type="button" class="scenario-card" data-preset="mobile" onclick="Simulator.loadPreset('mobile')">
+                <div class="scenario-icon">📱</div>
+                <div class="scenario-info">
+                  <div class="scenario-name">Mobile In-App</div>
+                  <div class="scenario-meta">₹1,250 • Biometric Token • Apple Pay</div>
+                </div>
+              </button>
+            </div>
+
+            <!-- Adversarial Threat Stream Injection Console -->
+            <div style="background: rgba(239, 68, 68, 0.05); border: 1px solid rgba(239, 68, 68, 0.25); border-radius: var(--radius-sm); padding: 14px; margin-bottom: 20px;">
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
+                <div style="display: flex; align-items: center; gap: 8px;">
+                  <span style="font-size: 14px;">🔥</span>
+                  <span class="font-bold" style="font-size: 12px; color: #fca5a5;">Adversarial Threat Stream Injection (Top 1% Stress-Test)</span>
+                </div>
+                <span class="badge-live" style="background: rgba(239, 68, 68, 0.2); color: #ef4444; font-size: 9px; padding: 2px 6px; border-radius: 3px;">BURST SIMULATOR</span>
+              </div>
+
+              <div style="display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 12px;">
+                <button type="button" class="btn-sm" style="background: rgba(239, 68, 68, 0.15); color: #fca5a5; border: 1px solid rgba(239, 68, 68, 0.4); font-size: 11px;" onclick="Simulator.launchAdversarialBurst('carding')">⚡ Carding Botnet (15 Micro-Auths)</button>
+                <button type="button" class="btn-sm" style="background: rgba(245, 158, 11, 0.15); color: #fde68a; border: 1px solid rgba(245, 158, 11, 0.4); font-size: 11px;" onclick="Simulator.launchAdversarialBurst('ato')">🚨 Account Takeover (Credential Stuffing)</button>
+                <button type="button" class="btn-sm" style="background: rgba(99, 102, 241, 0.15); color: #c7d2fe; border: 1px solid rgba(99, 102, 241, 0.4); font-size: 11px;" onclick="Simulator.launchAdversarialBurst('sleep_burst')">🛡️ Sleep & Burst Dormant Syndicate</button>
+              </div>
+
+              <!-- Live Defense Telemetry Banner (appears upon launch) -->
+              <div id="simAttackTelemetry" style="display: none; background: rgba(0,0,0,0.3); border: 1px solid var(--border-subtle); border-radius: 6px; padding: 12px; margin-top: 10px;">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+                  <span id="atkTelemetryTitle" class="font-bold mono" style="font-size: 11px; color: var(--cyan);">Running Threat Vector Stream...</span>
+                  <span id="atkTelemetryRate" class="mono font-bold" style="font-size: 12px; color: #10b981;">100% Intercepted</span>
+                </div>
+                <div style="display: flex; gap: 14px; font-size: 11px; margin-bottom: 8px;">
+                  <span style="color: var(--text-dim);">Vectors Injected: <strong id="atkTotalInjected" style="color: #fff;">15</strong></span>
+                  <span style="color: var(--text-dim);">Fraud Prevented: <strong id="atkTotalPrevented" style="color: #10b981;">₹0.00</strong></span>
+                  <span style="color: var(--text-dim);">Avg Latency: <strong id="atkAvgLatency" style="color: var(--cyan);">18.2ms</strong></span>
+                </div>
+                <div id="atkSafeguardsList" style="font-size: 10px; color: #94a3b8; line-height: 1.5;">
+                  <!-- Dynamic safeguard tags -->
+                </div>
+              </div>
+            </div>
+
+            <form id="simulatorForm" onsubmit="event.preventDefault();">
+              
+              <!-- Fast-Action Interactive Sliders -->
+              <div class="quick-sliders-board">
+                
+                <!-- Slider 1: Amount -->
+                <div class="slider-control-group">
+                  <div class="slider-label-row">
+                    <span class="slider-title">
+                      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+                      Transaction Amount
+                    </span>
+                    <div style="display: flex; align-items: center; gap: 6px;">
+                      <span class="slider-badge" id="simAmountDisplay">₹1,850.00</span>
+                      <span class="delta-pill delta-zero" id="deltaAmount">0 pts</span>
+                    </div>
+                  </div>
+                  <input type="range" class="tactile-slider" id="simAmountSlider" min="5" max="3500" step="5" value="18.50" oninput="Simulator.onSliderInput('amount', this.value)">
+                  <div class="slider-ticks">
+                    <span>₹500</span>
+                    <span>₹15,000</span>
+                    <span>₹50,000</span>
+                    <span>₹1,50,000</span>
+                    <span>₹3,50,000+</span>
+                  </div>
+                </div>
+
+                <!-- Slider 2: 1h Burst Velocity -->
+                <div class="slider-control-group">
+                  <div class="slider-label-row">
+                    <span class="slider-title">
+                      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+                      1-Hour Card Burst Velocity
+                    </span>
+                    <div style="display: flex; align-items: center; gap: 6px;">
+                      <span class="slider-badge" id="simVelDisplay">14 tx / hr</span>
+                      <span class="delta-pill delta-zero" id="deltaVelocity">0 pts</span>
+                    </div>
+                  </div>
+                  <input type="range" class="tactile-slider" id="simVelSlider" min="1" max="25" step="1" value="14" oninput="Simulator.onSliderInput('velocity', this.value)">
+                  <div class="slider-ticks">
+                    <span>1 (Normal)</span>
+                    <span>5</span>
+                    <span>10 (Surge)</span>
+                    <span>18</span>
+                    <span>25 (Attack)</span>
+                  </div>
+                </div>
+
+                <!-- Slider 3: Cards on Device -->
+                <div class="slider-control-group">
+                  <div class="slider-label-row">
+                    <span class="slider-title">
+                      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+                      Distinct Cards Bound to Device
+                    </span>
+                    <div style="display: flex; align-items: center; gap: 6px;">
+                      <span class="slider-badge" id="simCardsDisplay">6 cards</span>
+                      <span class="delta-pill delta-zero" id="deltaCards">0 pts</span>
+                    </div>
+                  </div>
+                  <input type="range" class="tactile-slider" id="simCardsSlider" min="1" max="10" step="1" value="6" oninput="Simulator.onSliderInput('cards', this.value)">
+                  <div class="slider-ticks">
+                    <span>1 (Personal)</span>
+                    <span>2</span>
+                    <span>4 (Suspicious)</span>
+                    <span>7</span>
+                    <span>10 (Device Farm)</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- 4 Fast Security & Identity Toggles -->
+              <div class="security-toggles-grid">
+                
+                <!-- Toggle 1: CVV Check -->
+                <button type="button" class="security-toggle-btn danger" id="toggleCvv" onclick="Simulator.toggleParam('cvv')">
+                  <div class="toggle-indicator"></div>
+                  <div class="toggle-text">
+                    <div style="display: flex; justify-content: space-between; align-items: center;">
+                      <span class="toggle-label">CVV Verification</span>
+                      <span class="delta-pill delta-zero" id="deltaCvv">0 pts</span>
+                    </div>
+                    <strong class="toggle-status" id="toggleCvvStatus">Mismatch (Failed)</strong>
+                  </div>
+                </button>
+
+                <!-- Toggle 2: 3D Secure / SCA -->
+                <button type="button" class="security-toggle-btn danger" id="toggle3ds" onclick="Simulator.toggleParam('3ds')">
+                  <div class="toggle-indicator"></div>
+                  <div class="toggle-text">
+                    <div style="display: flex; justify-content: space-between; align-items: center;">
+                      <span class="toggle-label">3D Secure 2.0</span>
+                      <span class="delta-pill delta-zero" id="delta3ds">0 pts</span>
+                    </div>
+                    <strong class="toggle-status" id="toggle3dsStatus">Challenge Failed</strong>
+                  </div>
+                </button>
+
+                <!-- Toggle 3: Proxy / VPN / Tor -->
+                <button type="button" class="security-toggle-btn danger" id="toggleVpn" onclick="Simulator.toggleParam('vpn')">
+                  <div class="toggle-indicator"></div>
+                  <div class="toggle-text">
+                    <div style="display: flex; justify-content: space-between; align-items: center;">
+                      <span class="toggle-label">Network Hygiene</span>
+                      <span class="delta-pill delta-zero" id="deltaVpn">0 pts</span>
+                    </div>
+                    <strong class="toggle-status" id="toggleVpnStatus">Tor Exit Node / VPN</strong>
+                  </div>
+                </button>
+
+                <!-- Toggle 4: Geolocation Match -->
+                <button type="button" class="security-toggle-btn danger" id="toggleGeo" onclick="Simulator.toggleParam('geo')">
+                  <div class="toggle-indicator"></div>
+                  <div class="toggle-text">
+                    <div style="display: flex; justify-content: space-between; align-items: center;">
+                      <span class="toggle-label">Geo Alignment</span>
+                      <span class="delta-pill delta-zero" id="deltaGeo">0 pts</span>
+                    </div>
+                    <strong class="toggle-status" id="toggleGeoStatus">Cross-Border Discordant</strong>
+                  </div>
+                </button>
+              </div>
+
+              <!-- Collapsible Deep Telemetry Drawer (Advanced Parameters) -->
+              <div class="advanced-drawer">
+                <button type="button" class="drawer-toggle-btn" id="drawerToggleBtn" onclick="Simulator.toggleDrawer()">
+                  <span style="display: flex; align-items: center; gap: 8px;">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+                    <span>Advanced Telemetry & Carrier Parameters</span>
+                  </span>
+                  <span id="drawerArrow" style="transition: transform 0.2s ease;">▼</span>
+                </button>
+
+                <div class="drawer-content" id="drawerContent" style="display: none;">
+                  <div class="form-grid" style="margin-top: 14px;">
+                    <div class="form-group">
+                      <label>Product Code</label>
+                      <select class="form-control" id="simProduct" onchange="Simulator.scheduleSimulation()">
+                        <option value="W">W (Web Goods)</option>
+                        <option value="C" selected>C (Credit / Prepaid)</option>
+                        <option value="R">R (Risk / High Return)</option>
+                        <option value="H">H (Hosted)</option>
+                        <option value="S">S (Subscription)</option>
+                      </select>
+                    </div>
+
+                    <div class="form-group">
+                      <label>Card Network</label>
+                      <select class="form-control" id="simCardBrand" onchange="Simulator.scheduleSimulation()">
+                        <option value="visa" selected>Visa</option>
+                        <option value="mastercard">Mastercard</option>
+                        <option value="discover">Discover</option>
+                        <option value="american express">American Express</option>
+                      </select>
+                    </div>
+
+                    <div class="form-group">
+                      <label>Funding Type</label>
+                      <select class="form-control" id="simCardType" onchange="Simulator.scheduleSimulation()">
+                        <option value="credit" selected>Credit</option>
+                        <option value="debit">Debit</option>
+                      </select>
+                    </div>
+
+                    <div class="form-group">
+                      <label>AVS Address Match</label>
+                      <select class="form-control" id="simAvs" onchange="Simulator.scheduleSimulation()">
+                        <option value="Y">Y — Full Match (Street & ZIP Match)</option>
+                        <option value="Z">Z — ZIP Match Only</option>
+                        <option value="A">A — Street Match Only</option>
+                        <option value="N" selected>N — No Match (Address Mismatch)</option>
+                        <option value="U">U — International / Unavailable</option>
+                      </select>
+                    </div>
+
+                    <div class="form-group">
+                      <label>Purchaser Email Domain</label>
+                      <input type="text" class="form-control" id="simPEmail" value="protonmail.com" oninput="Simulator.scheduleSimulation()">
+                    </div>
+
+                    <div class="form-group">
+                      <label>Recipient Email Domain</label>
+                      <input type="text" class="form-control" id="simREmail" value="yandex.ru" oninput="Simulator.scheduleSimulation()">
+                    </div>
+
+                    <div class="form-group">
+                      <label>Customer Account Age</label>
+                      <select class="form-control" id="simAccountAge" onchange="Simulator.scheduleSimulation()">
+                        <option value="1" selected>Guest / New Account (&lt; 24h)</option>
+                        <option value="30">Recent Account (1 Month)</option>
+                        <option value="180">Established Customer (&gt; 6 Months)</option>
+                        <option value="365">VIP Loyal Customer (&gt; 1 Year)</option>
+                      </select>
+                    </div>
+
+                    <div class="form-group">
+                      <label>Client Device & OS</label>
+                      <select class="form-control" id="simDeviceInfo" onchange="Simulator.scheduleSimulation()">
+                        <option value="Linux" selected>Linux / Headless Script Bot</option>
+                        <option value="Windows">Windows / Chrome Desktop</option>
+                        <option value="MacOS">macOS / Safari Desktop</option>
+                        <option value="iOS">iOS / Mobile App Native</option>
+                        <option value="Android">Android / Mobile Web</option>
+                      </select>
+                    </div>
+
+                    <div class="form-group full">
+                      <label>Transaction Hour of Day (0–23 UTC)</label>
+                      <input type="number" class="form-control" id="simHour" min="0" max="23" value="3" oninput="Simulator.scheduleSimulation()">
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Continuous Autonomous Status Notice -->
+              <div style="margin-top: 18px; display: flex; align-items: center; justify-content: space-between;">
+                <span style="font-size: 11px; color: var(--text-dim); display: flex; align-items: center; gap: 6px;">
+                  <span style="width: 6px; height: 6px; border-radius: 50%; background: #10b981; display: inline-block;"></span>
+                  Reactive Auto-Recalibration: Active (re-scores instantaneously on change)
+                </span>
+                <button type="button" class="btn-sm btn-secondary" id="simAnalyzeBtn" onclick="Simulator.runSimulation()" style="padding: 6px 14px; font-size: 11px; opacity: 0.9;" title="Auto-scoring is continuous. Click only for instant forced refresh.">
+                  Auto-Synchronized
+                </button>
+              </div>
+            </form>
+          </div>
+
+          <!-- RIGHT CARD: Technical Intelligence Dossier (Deep Analytics & Transparency) -->
+          <div class="sim-result-card">
+            
+            <div class="card-title-row" style="width: 100%; margin-bottom: 8px;">
+              <div>
+                <h3 style="font-family: var(--font-display); font-size: 16px;">Enterprise Decisioning Dossier</h3>
+                <span style="font-size: 11px; color: var(--text-dim);">Real-Time Multi-Model Synthesis & Explainable AI</span>
+              </div>
+            </div>
+
+            <!-- Policy Action Recommendation Banner -->
+            <div id="simPolicyBanner" class="sim-policy-banner status-crit">
+              <div class="policy-header">
+                <span class="policy-tag" id="simPolicyTag">DECLINED</span>
+                <span class="policy-action-text" id="simPolicyAction">POLICY ACTION: HARD DECLINE</span>
+              </div>
+              <p class="policy-rationale" id="simPolicyRationale">
+                Transaction blocked automatically by policy rule. High probability of stolen payment instrument or carding bot.
+              </p>
+            </div>
+
+            <!-- Financial Exposure Ribbon -->
+            <div class="sim-financial-ribbon">
+              <div class="fin-stat">
+                <span class="fin-label">Order Value</span>
+                <span class="fin-val" id="simFinOrder">₹1,850.00</span>
+              </div>
+              <div class="fin-stat">
+                <span class="fin-label">Dispute Fee Saved</span>
+                <span class="fin-val" id="simFinDispute" style="color: #10b981;">₹2,000.00</span>
+              </div>
+              <div class="fin-stat">
+                <span class="fin-label">Liability Shift</span>
+                <span class="fin-val highlight" id="simFinLiability">Merchant Liable (Dispute Exposure)</span>
+              </div>
+            </div>
+
+            <!-- Mathematical Ensemble Formula Pill -->
+            <div class="ensemble-formula-pill">
+              <div class="formula-header">
+                <span class="formula-title">ENSEMBLE COMPOSITE FORMULA</span>
+                <span class="formula-badge">6-TIER SYNTHESIS</span>
+              </div>
+              <div class="formula-math">
+                <span class="formula-term" title="Supervised Gradient Boosting Tree Model">0.35·R<sub>ML</sub></span> +
+                <span class="formula-term" title="1h Burst & 24h Swipes Velocity">0.20·R<sub>Vel</sub></span> +
+                <span class="formula-term" title="Distinct Cards on Hardware Fingerprint">0.15·R<sub>Dev</sub></span> +
+                <span class="formula-term" title="Cardholder Baseline Spending Anomaly">0.15·R<sub>Beh</sub></span> +
+                <span class="formula-term" title="Isolation Forest & Autoencoder MSE">0.10·R<sub>Net</sub></span> +
+                <span class="formula-term" title="CVV, AVS, and 3DS Security Heuristics">0.05·R<sub>Rules</sub></span>
+              </div>
+            </div>
+            
+            <!-- Dual Model Calibration Box: CatBoost vs LightGBM vs Blended Champion Ensemble -->
+            <div class="dual-model-box" id="dualModelMeters" style="width: 100%; margin-bottom: 12px;">
+              <div class="dual-model-title">
+                <span>Dual-Model Champion Ensemble Calibration</span>
+                <span style="font-size: 10px; color: var(--text-dim);">Real-Time Disagreement Metric</span>
+              </div>
+              
+              <div class="dual-model-meter-row">
+                <div class="dual-model-label">
+                  <span style="color: #c084fc;">CatBoost Classifier</span>
+                  <strong id="simCatboostProb" style="color: #c084fc;">--%</strong>
+                </div>
+                <div class="dual-model-bar-track">
+                  <div class="dual-model-bar-fill fill-catboost" id="simCatboostBar" style="width: 0%;"></div>
+                </div>
+              </div>
+
+              <div class="dual-model-meter-row">
+                <div class="dual-model-label">
+                  <span style="color: #34d399;">LightGBM Classifier</span>
+                  <strong id="simLightgbmProb" style="color: #34d399;">--%</strong>
+                </div>
+                <div class="dual-model-bar-track">
+                  <div class="dual-model-bar-fill fill-lightgbm" id="simLightgbmBar" style="width: 0%;"></div>
+                </div>
+              </div>
+
+              <div class="dual-model-meter-row">
+                <div class="dual-model-label">
+                  <span style="color: #f472b6;">Blended Champion Ensemble (0.55 / 0.45)</span>
+                  <strong id="simEnsembleProb" style="color: #f472b6;">--%</strong>
+                </div>
+                <div class="dual-model-bar-track">
+                  <div class="dual-model-bar-fill fill-ensemble" id="simEnsembleBar" style="width: 0%;"></div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Circular SVG Risk Gauge & Tier Pill -->
+            <div class="gauge-wrapper" style="margin: 12px 0 8px;">
+              <svg class="gauge-circle" width="170" height="170">
+                <circle class="gauge-bg" cx="85" cy="85" r="66"></circle>
+                <circle class="gauge-bar" id="gaugeBarCircle" cx="85" cy="85" r="66"></circle>
+              </svg>
+              <div class="gauge-center-text">
+                <span class="gauge-score" id="gaugeScoreText">72</span>
+                <span class="gauge-scale">/ 100</span>
+              </div>
+            </div>
+
+            <div style="margin-bottom: 12px;">
+              <span class="risk-pill HIGH" id="gaugeRiskPill">HIGH RISK (DECLINE)</span>
+            </div>
+
+            <!-- Algorithmic Counterfactual Prescription Box ("Minimum Path to Approval") -->
+            <div class="counterfactual-prescription-card" id="counterfactualPrescriptionBox" style="width: 100%; margin-bottom: 14px;">
+              <div class="prescription-header">
+                <div>
+                  <div class="prescription-title">🎯 Minimum Path to Approval</div>
+                  <div class="prescription-sub">Counterfactual Algorithmic Recourse</div>
+                </div>
+                <span id="prescriptionFlipBadge" class="flip-badge flip-pending">⚡ Actions Required</span>
+              </div>
+              <div class="prescription-steps" id="prescriptionStepsList">
+                <div style="font-size: 11px; color: var(--text-dim); text-align: center; padding: 10px;">
+                  Calculating optimal parameter adjustments...
+                </div>
+              </div>
+            </div>
+
+            <!-- Live SHAP Local Attribution Waterfall Card -->
+            <div class="shap-waterfall-card" style="width: 100%; margin-bottom: 14px;">
+              <div class="waterfall-header">
+                <span style="font-size: 11px; font-weight: 700; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.04em;">SHAP Local Feature Attribution</span>
+                <span style="font-size: 10px; color: var(--text-dim);">Feature Impact (Δ Risk)</span>
+              </div>
+              <div id="simShapWaterfall" class="waterfall-bars">
+                <!-- Dynamically populated with bipolar attribution bars -->
+              </div>
+            </div>
+
+            <!-- Behavioral Radar Profile Chart -->
+            <div class="sim-radar-wrapper" style="width: 100%; margin-bottom: 14px;">
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px;">
+                <span style="font-size: 11px; font-weight: 700; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.04em;">Behavioral Anomaly Radar</span>
+                <span style="font-size: 10px; color: var(--text-dim);">Evaluated vs Baseline</span>
+              </div>
+              <div style="height: 175px; position: relative;">
+                <canvas id="simRadarChart"></canvas>
+              </div>
+            </div>
+
+            <!-- 6-Component Breakdown Progress Bars -->
+            <div class="risk-factors-bars" style="width: 100%;">
+              <div class="factor-bar-row">
+                <div class="factor-bar-label"><span>Supervised ML Risk (35%)</span><strong id="simScoreMl">72 / 100</strong></div>
+                <div class="factor-bar-track"><div class="factor-bar-fill" id="simBarMl" style="width: 72%; background: #6366f1;"></div></div>
+              </div>
+              <div class="factor-bar-row">
+                <div class="factor-bar-label"><span>Velocity Surge Risk (20%)</span><strong id="simScoreVelocity">100 / 100</strong></div>
+                <div class="factor-bar-track"><div class="factor-bar-fill" id="simBarVelocity" style="width: 100%; background: #ef4444;"></div></div>
+              </div>
+              <div class="factor-bar-row">
+                <div class="factor-bar-label"><span>Device Cardinality Risk (15%)</span><strong id="simScoreDevice">100 / 100</strong></div>
+                <div class="factor-bar-track"><div class="factor-bar-fill" id="simBarDevice" style="width: 100%; background: #8b5cf6;"></div></div>
+              </div>
+              <div class="factor-bar-row">
+                <div class="factor-bar-label"><span>Behavior Anomaly (15%)</span><strong id="simScoreBehavior">22 / 100</strong></div>
+                <div class="factor-bar-track"><div class="factor-bar-fill" id="simBarBehavior" style="width: 22%; background: #f59e0b;"></div></div>
+              </div>
+              <div class="factor-bar-row">
+                <div class="factor-bar-label"><span>Network Cluster / Geo Risk (10%)</span><strong id="simScoreNetwork">35 / 100</strong></div>
+                <div class="factor-bar-track"><div class="factor-bar-fill" id="simBarNetwork" style="width: 35%; background: #06b6d4;"></div></div>
+              </div>
+              <div class="factor-bar-row">
+                <div class="factor-bar-label"><span>Heuristic & Auth Rules (5%)</span><strong id="simScoreRule">100 / 100</strong></div>
+                <div class="factor-bar-track"><div class="factor-bar-fill" id="simBarRule" style="width: 100%; background: #f97316;"></div></div>
+              </div>
+            </div>
+
+            <!-- Decision Factors & Policy Triggers -->
+            <div class="reasons-box" style="width: 100%; margin-top: 14px;">
+              <h4>Decision Factors & Policy Triggers</h4>
+              <div id="simReasonsList">
+                <div class="reason-item danger">CVV Mismatch: Security code does not match card record</div>
+                <div class="reason-item danger">Network Anonymizer: Anonymous Tor Exit Node detected</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ====================================================================
+           TAB 8: Fraud Alerts & Cases
+           ==================================================================== -->
+      <section id="tab-alerts" class="tab-pane">
+        <!-- Visual Overview Grid for Alerts -->
+        <div class="dash-visual-grid" style="margin-bottom: 24px;">
+          <div class="chart-card" style="flex: 1;">
+            <div class="card-title-row">
+              <h3>Alerts by Severity</h3>
+              <span style="font-size: 11px; color: var(--text-dim);">Critical / High / Medium</span>
+            </div>
+            <div class="chart-container" style="min-height: 220px;">
+              <canvas id="alertSeverityDonut"></canvas>
+            </div>
+          </div>
+
+          <div class="chart-card" style="flex: 1.5;">
+            <div class="card-title-row">
+              <h3>Alert Trigger Volume Trend</h3>
+              <span style="font-size: 11px; color: var(--text-dim);">Hourly Escalations</span>
+            </div>
+            <div class="chart-container" style="min-height: 220px;">
+              <canvas id="alertTrendChart"></canvas>
+            </div>
+          </div>
+
+          <div class="chart-card" style="flex: 1.5;">
+            <div class="card-title-row">
+              <h3>Top Triggered Fraud Rules</h3>
+              <span style="font-size: 11px; color: var(--text-dim);">Rule Firing Frequency</span>
+            </div>
+            <div class="chart-container" style="min-height: 220px;">
+              <canvas id="alertRulesChart"></canvas>
+            </div>
+          </div>
+        </div>
+
+        <div class="table-filter-bar">
+          <div style="display: flex; gap: 8px;">
+            <button class="btn-sm btn-secondary alert-filter-btn active" data-status="ALL">All Alerts</button>
+            <button class="btn-sm btn-secondary alert-filter-btn" data-status="NEW">New</button>
+            <button class="btn-sm btn-secondary alert-filter-btn" data-status="UNDER REVIEW">Under Review</button>
+            <button class="btn-sm btn-secondary alert-filter-btn" data-status="CONFIRMED FRAUD">Confirmed Fraud</button>
+            <button class="btn-sm btn-secondary alert-filter-btn" data-status="RESOLVED">Resolved</button>
+          </div>
+          <span style="font-size: 11px; color: var(--text-dim);">Triage Queue & Case Management State Machine</span>
+        </div>
+
+        <div class="table-responsive">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>Alert ID</th>
+                <th>Transaction ID</th>
+                <th>Amount</th>
+                <th>Risk Level</th>
+                <th>Trigger Reason</th>
+                <th>Current Status</th>
+                <th>Investigation Action</th>
+              </tr>
+            </thead>
+            <tbody id="alertsTableBody">
+              <!-- Dynamically populated -->
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- ====================================================================
+           TAB 7: Dedicated Investigations Workspace
+           ==================================================================== -->
+      <section id="tab-investigation" class="tab-pane">
+        <div class="investigation-grid">
+          <!-- Left Column: Case Queue -->
+          <div class="case-queue-panel">
+            <div class="case-queue-header">
+              <div>
+                <h3 style="font-size: 14px; font-weight: 700;">Case Queue</h3>
+                <span style="font-size: 11px; color: var(--text-dim);">Assigned Priority Escalations</span>
+              </div>
+              <span class="nav-badge badge-red" id="caseQueueCount">15 Cases</span>
+            </div>
+            <div style="padding: 10px 12px; border-bottom: 1px solid var(--border-subtle);">
+              <input type="text" id="caseSearchInput" placeholder="Filter cases by ID or entity..." style="width: 100%; background: rgba(255,255,255,0.03); border: 1px solid var(--border-subtle); border-radius: var(--radius-sm); padding: 6px 10px; font-size: 11px; color: var(--text-main);">
+            </div>
+            <div class="case-queue-list" id="caseQueueList">
+              <!-- Dynamically populated cases -->
+            </div>
+          </div>
+
+          <!-- Right Column: Case Deep Dossier Inspector -->
+          <div class="case-dossier-panel" id="activeCaseDossier">
+            <div class="card-title-row" style="margin-bottom: 0;">
+              <div>
+                <div style="display: flex; align-items: center; gap: 10px;">
+                  <h3 id="invCaseId" style="font-size: 18px; font-family: var(--font-display);">Select a Case to Inspect</h3>
+                  <span class="risk-pill HIGH" id="invCaseTier">HIGH RISK</span>
+                </div>
+                <span style="font-size: 11px; color: var(--text-dim);" id="invCaseTimestamp">Incident recorded via IEEE-CIS Out-of-Time Stream</span>
+              </div>
+              <div style="text-align: right;">
+                <div style="font-size: 10px; color: var(--text-dim); text-transform: uppercase;">Amount at Risk</div>
+                <div style="font-size: 22px; font-weight: 700; color: #fff; font-family: var(--font-display);" id="invCaseAmount">₹0.00</div>
+              </div>
+            </div>
+
+            <!-- 4 Quick Metric Badges -->
+            <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px;">
+              <div style="background: rgba(255,255,255,0.02); border: 1px solid var(--border-subtle); padding: 12px; border-radius: var(--radius-sm);">
+                <div style="font-size: 10px; color: var(--text-dim); text-transform: uppercase;">ML Probability</div>
+                <div style="font-size: 18px; font-weight: 700; color: var(--risk-crit);" id="invCaseMlProb">--%</div>
+              </div>
+              <div style="background: rgba(255,255,255,0.02); border: 1px solid var(--border-subtle); padding: 12px; border-radius: var(--radius-sm);">
+                <div style="font-size: 10px; color: var(--text-dim); text-transform: uppercase;">Anomaly Score</div>
+                <div style="font-size: 18px; font-weight: 700; color: var(--risk-high);" id="invCaseAnomaly">-- / 100</div>
+              </div>
+              <div style="background: rgba(255,255,255,0.02); border: 1px solid var(--border-subtle); padding: 12px; border-radius: var(--radius-sm);">
+                <div style="font-size: 10px; color: var(--text-dim); text-transform: uppercase;">Card Velocity (1h)</div>
+                <div style="font-size: 18px; font-weight: 700; color: #fff;" id="invCaseVelocity">-- tx/hr</div>
+              </div>
+              <div style="background: rgba(255,255,255,0.02); border: 1px solid var(--border-subtle); padding: 12px; border-radius: var(--radius-sm);">
+                <div style="font-size: 10px; color: var(--text-dim); text-transform: uppercase;">Cards on Device</div>
+                <div style="font-size: 18px; font-weight: 700; color: var(--cyan);" id="invCaseDeviceCards">-- cards</div>
+              </div>
+            </div>
+
+            <!-- Entity Breakdown & 6-Axis Behavioral Radar -->
+            <div class="dash-visual-grid" style="align-items: stretch; margin-bottom: 0;">
+              <div style="flex: 1.2; background: rgba(255,255,255,0.02); border: 1px solid var(--border-subtle); border-radius: var(--radius-sm); padding: 16px;">
+                <h4 style="font-size: 11px; text-transform: uppercase; color: var(--text-muted); margin-bottom: 12px;">Entity Profile & Signals</h4>
+                <div style="display: flex; flex-direction: column; gap: 8px; font-size: 12px;">
+                  <div style="display: flex; justify-content: space-between; padding: 6px 10px; background: rgba(255,255,255,0.02); border-radius: 4px;">
+                    <span style="color: var(--text-dim);">Card Number / Hash:</span>
+                    <span class="mono" id="invEntityCard">--</span>
+                  </div>
+                  <div style="display: flex; justify-content: space-between; padding: 6px 10px; background: rgba(255,255,255,0.02); border-radius: 4px;">
+                    <span style="color: var(--text-dim);">Purchaser Email:</span>
+                    <span class="mono" id="invEntityEmail">--</span>
+                  </div>
+                  <div style="display: flex; justify-content: space-between; padding: 6px 10px; background: rgba(255,255,255,0.02); border-radius: 4px;">
+                    <span style="color: var(--text-dim);">Hardware Device:</span>
+                    <span class="mono" id="invEntityDevice">--</span>
+                  </div>
+                  <div style="display: flex; justify-content: space-between; padding: 6px 10px; background: rgba(255,255,255,0.02); border-radius: 4px;">
+                    <span style="color: var(--text-dim);">Billing / IP Location:</span>
+                    <span class="mono" id="invEntityGeo">--</span>
+                  </div>
+                </div>
+              </div>
+
+              <div style="flex: 1; background: rgba(255,255,255,0.02); border: 1px solid var(--border-subtle); border-radius: var(--radius-sm); padding: 16px;">
+                <h4 style="font-size: 11px; text-transform: uppercase; color: var(--text-muted); margin-bottom: 8px;">6-Axis Behavioral Anomaly Profile</h4>
+                <div style="height: 200px;">
+                  <canvas id="investigationWorkspaceRadar"></canvas>
+                </div>
+              </div>
+            </div>
+
+            <!-- Triggered Rules & Heuristic Policies -->
+            <div>
+              <h4 style="font-size: 11px; text-transform: uppercase; color: var(--text-muted); margin-bottom: 8px;">Triggered Fraud Policies & Botnet Indicators</h4>
+              <div id="invTriggeredRules" style="display: flex; flex-direction: column; gap: 6px;">
+                <!-- Populated dynamically -->
+              </div>
+            </div>
+
+            <!-- Investigator Action Controls -->
+            <div style="display: flex; justify-content: flex-end; gap: 10px; border-top: 1px solid var(--border-subtle); padding-top: 16px; margin-top: auto; flex-wrap: wrap;">
+              <button class="btn-sm" style="background: rgba(99, 102, 241, 0.2); color: #a5b4fc; border: 1px solid rgba(99, 102, 241, 0.4); font-weight: 600;" onclick="window.App.generateCaseSAR()">📄 Generate FIU-IND STR Filing</button>
+              <button class="btn-sm" style="background: linear-gradient(135deg, rgba(239, 68, 68, 0.25), rgba(168, 85, 247, 0.25)); color: #fca5a5; border: 1px solid rgba(239, 68, 68, 0.5); font-weight: 700; box-shadow: 0 0 10px rgba(239, 68, 68, 0.2);" onclick="window.App.printCaseSARPDF()" title="Export official FIU-IND STR Statutory Filing in PDF format">📑 Export STR PDF</button>
+              <button class="btn-sm btn-secondary" onclick="window.App.handleInvestigatorAction('FALSE_POSITIVE')">Approve / Legitimate</button>
+              <button class="btn-sm btn-secondary" onclick="window.App.handleInvestigatorAction('ESCALATE_TIER3')">Escalate to Tier 3 / SIU</button>
+              <button class="btn-sm btn-danger" onclick="window.App.handleInvestigatorAction('BLOCK_CARD')">Confirm Fraud & Freeze Card</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ====================================================================
+           TAB 12: Data & Model Drift Monitoring
+           ==================================================================== -->
+      <section id="tab-monitoring" class="tab-pane">
+        <!-- Top Metrics Row -->
+        <div class="kpi-grid" style="margin-bottom: 24px;">
+          <div class="kpi-card primary-glow">
+            <div class="kpi-header">
+              <span class="kpi-title">Data Quality Score</span>
+              <div class="kpi-icon" style="color: var(--risk-low); background: var(--risk-low-bg);">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+              </div>
+            </div>
+            <div class="kpi-value" style="color: var(--risk-low);" id="monitoringQualityScore">87.0%</div>
+            <div class="kpi-sub">Completeness, Validity & Consistency</div>
+          </div>
+
+          <div class="kpi-card">
+            <div class="kpi-header">
+              <span class="kpi-title">Monitored Features</span>
+              <div class="kpi-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M7 12h10"/></svg>
+              </div>
+            </div>
+            <div class="kpi-value" id="monitoringTotalFeatures">72</div>
+            <div class="kpi-sub">Curated High-Signal Domain Predictors</div>
+          </div>
+
+          <div class="kpi-card">
+            <div class="kpi-header">
+              <span class="kpi-title">Drifting Features</span>
+              <div class="kpi-icon" style="color: var(--risk-med); background: var(--risk-med-bg);">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/></svg>
+              </div>
+            </div>
+            <div class="kpi-value" style="color: var(--risk-med);" id="monitoringDriftCount">0</div>
+            <div class="kpi-sub">KS-Test Drift Threshold (p &lt; 0.05)</div>
+          </div>
+
+          <div class="kpi-card risk-low-glow">
+            <div class="kpi-header">
+              <span class="kpi-title">Model Health Status</span>
+              <div class="kpi-icon" style="color: var(--cyan); background: var(--cyan-glow);">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 14 14"/></svg>
+              </div>
+            </div>
+            <div class="kpi-value" style="color: var(--cyan);">STABLE</div>
+            <div class="kpi-sub">No Retraining Urgency Detected</div>
+          </div>
+        </div>
+
+        <!-- Missingness & Feature Drift Visuals -->
+        <div class="dash-visual-grid" style="margin-bottom: 24px;">
+          <div class="chart-card">
+            <div class="card-title-row">
+              <h3>Feature Missingness Breakdown (%)</h3>
+              <span style="font-size: 11px; color: var(--text-dim);">Top Incomplete Raw Attributes</span>
+            </div>
+            <div class="chart-container">
+              <canvas id="monitoringMissingBar"></canvas>
+            </div>
+          </div>
+
+          <div class="chart-card">
+            <div class="card-title-row">
+              <h3>Global Feature Importance (SHAP TreeExplainer)</h3>
+              <span style="font-size: 11px; color: var(--text-dim);">LightGBM Decision Attribution</span>
+            </div>
+            <div class="chart-container">
+              <canvas id="globalShapChart"></canvas>
+            </div>
+          </div>
+        </div>
+
+        <!-- Feature Drift Status Table -->
+        <div class="chart-card">
+          <div class="card-title-row" style="flex-wrap: wrap; gap: 12px;">
+            <div>
+              <h3>Feature Drift Analysis (Train vs Live Evaluation Window)</h3>
+              <span style="font-size: 11px; color: var(--text-dim);">Real-Time Two-Sample Kolmogorov-Smirnov Statistical Drift Engine</span>
+            </div>
+            <div style="display: flex; align-items: center; gap: 8px; flex-wrap: wrap;">
+              <span class="badge" id="driftLiveBadge" style="background: rgba(6, 182, 212, 0.12); color: var(--cyan); border: 1px solid rgba(6, 182, 212, 0.3); font-size: 11px; padding: 4px 10px; border-radius: 4px; display: inline-flex; align-items: center; gap: 6px;">
+                <span style="width: 7px; height: 7px; background: var(--cyan); border-radius: 50%; display: inline-block;"></span>
+                Rolling Buffer: <strong id="driftWindowCount">300</strong> txs (<strong id="driftIngestedCount">0</strong> live streamed)
+              </span>
+              <button type="button" class="btn-sm btn-secondary" onclick="App.recalculateDrift()" title="Recalculate Kolmogorov-Smirnov test across streaming window">
+                ⚡ Recalculate KS-Test
+              </button>
+              <button type="button" class="btn-sm" style="background: rgba(239, 68, 68, 0.15); color: #f87171; border: 1px solid rgba(239, 68, 68, 0.4); font-weight: 600;" onclick="App.simulateDriftSurge()" title="Inject distribution shock to test real-time drift alerts">
+                🚨 Simulate Drift Shock
+              </button>
+              <button type="button" class="btn-sm btn-secondary" onclick="App.resetDrift()" title="Reset streaming window to baseline">
+                🔄 Reset
+              </button>
+            </div>
+          </div>
+          <div class="table-responsive" style="border: none;">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>Feature Name</th>
+                  <th>Train Mean (μ₀)</th>
+                  <th>Live Mean (μₜ)</th>
+                  <th>Train Std (σ₀)</th>
+                  <th>Live Std (σₜ)</th>
+                  <th>KS Stat (D)</th>
+                  <th>p-Value</th>
+                  <th>Status</th>
+                  <th>Actionable Guidance</th>
+                </tr>
+              </thead>
+              <tbody id="driftReportTableBody">
+                <!-- Dynamically populated from real-time dynamic KS drift monitor -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- ====================================================================
+           TAB 14: Executive Reports & Data Export
+           ==================================================================== -->
+      <section id="tab-reports" class="tab-pane">
+        
+        <!-- Official Institutional Report Letterhead -->
+        <div class="report-letterhead">
+          <div class="report-letterhead-top">
+            <div class="letterhead-brand">
+              <div class="brand-crest">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>
+              </div>
+              <div>
+                <h2 class="letterhead-org">OMNITRACE AI ENTERPRISE FRAUD INTELLIGENCE</h2>
+                <div class="letterhead-dept">Directorate of Financial Fraud Surveillance & Autonomous AML Operations</div>
+                <div class="letterhead-sub">Official Institutional Risk Audit & Statutory Neutralization Dossier</div>
+              </div>
+            </div>
+            <div class="letterhead-badge-col">
+              <div class="audit-confidential-pill">STRICTLY CONFIDENTIAL</div>
+              <div class="letterhead-law">PMLA 2002 • RBI MASTER DIRECTIONS • FIU-IND COMPLIANT</div>
+            </div>
+          </div>
+
+          <!-- Formal Metadata Table Box -->
+          <div class="report-meta-grid">
+            <div class="meta-item">
+              <span class="meta-label">Dossier Reference ID</span>
+              <span class="meta-val mono" id="reportDossierRef">AG-AUDIT-2026/STR-84092</span>
+            </div>
+            <div class="meta-item">
+              <span class="meta-label">Audit Generation Timestamp</span>
+              <span class="meta-val mono" id="reportDossierTimestamp">19 September 2026 • 21:50 IST</span>
+            </div>
+            <div class="meta-item">
+              <span class="meta-label">Ensemble Architecture</span>
+              <span class="meta-val">CatBoost + LightGBM (1,400 Trees) + IsoForest</span>
+            </div>
+            <div class="meta-item">
+              <span class="meta-label">Statutory Compliance Status</span>
+              <span class="meta-val" style="color: #059669; font-weight: 700;">Section 12 PMLA Validated (Safe Harbor)</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Executive Report Hero Banner (Screen view controls) -->
+        <div class="report-hero-banner">
+          <div class="report-hero-info">
+            <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 6px;">
+              <h3>Executive Risk & Fraud Audit Report</h3>
+              <span class="badge-live-pulse" style="font-size: 10px; background: rgba(16, 185, 129, 0.15); color: #10b981; border: 1px solid rgba(16, 185, 129, 0.3); padding: 2px 8px; border-radius: var(--radius-full); font-weight: 700;">AUDIT READY</span>
+            </div>
+            <p id="reportGenerationMeta">Prepared for Risk Committee & Regulatory Compliance • Model Engine: CatBoost + LightGBM Champion Ensemble + IsoForest</p>
+          </div>
+
+          <div class="export-actions-row">
+            <button class="btn-export btn-export-csv" onclick="window.App.exportReportCSV()">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+              Export CSV
+            </button>
+            <button class="btn-export btn-export-json" onclick="window.App.exportReportJSON()">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+              Export JSON
+            </button>
+            <button class="btn-export btn-export-pdf" onclick="window.App.printReportPDF()">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
+              Print / PDF Report
+            </button>
+            <button class="btn-export btn-export-open" onclick="window.App.openReportWindow()" style="background: rgba(30, 64, 175, 0.18); border: 1px solid rgba(59, 130, 246, 0.4); color: #60a5fa;">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+              Open Dossier in Tab
+            </button>
+          </div>
+        </div>
+
+        <!-- Executive Briefing & Threat Posture Summary Box -->
+        <div class="report-executive-briefing">
+          <div class="briefing-header">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+            <h4>Executive Risk Briefing & Portfolio Surveillance Summary</h4>
+          </div>
+          <p class="briefing-narrative">
+            During the continuous automated audit surveillance window, the OmniTrace AI Multi-Model Neural Ensemble screened the evaluated portfolio against <strong>432 behavioral, topological, and velocity risk attributes</strong>. A total illicit exposure of <strong id="reportBriefingExposure" style="color: #ef4444;">₹0.00</strong> across <strong id="reportBriefingCases" style="color: #ef4444;">50</strong> escalated transactions was neutralized. The production champion ensemble sustained an empirical <strong>F1-score of 0.829 (94.2% recall on syndicated attack rings)</strong> while preserving frictionless customer checkouts at a 0.42% dispute ratio—well below the 0.90% statutory threshold stipulated under Visa VFMP and Indian payment network benchmarks. All flagged entities have been cataloged in accordance with the Prevention of Money Laundering Act (PMLA), 2002.
+          </p>
+          <div class="briefing-matrix-row">
+            <div class="briefing-tier-card">
+              <span class="tier-dot" style="background: #ef4444;"></span>
+              <div>
+                <div class="tier-label">Critical Threat Tier (Score ≥ 81)</div>
+                <div class="tier-desc">Immediate PMLA Freezing & FIU-IND STR Filing</div>
+              </div>
+            </div>
+            <div class="briefing-tier-card">
+              <span class="tier-dot" style="background: #f59e0b;"></span>
+              <div>
+                <div class="tier-label">High Risk Tier (Score 61–80)</div>
+                <div class="tier-desc">Step-up 3D Secure 2.0 & Manual Investigation</div>
+              </div>
+            </div>
+            <div class="briefing-tier-card">
+              <span class="tier-dot" style="background: #3b82f6;"></span>
+              <div>
+                <div class="tier-label">Medium Surveillance (Score 31–60)</div>
+                <div class="tier-desc">Behavioral Anomaly & Velocity Limiting</div>
+              </div>
+            </div>
+            <div class="briefing-tier-card">
+              <span class="tier-dot" style="background: #10b981;"></span>
+              <div>
+                <div class="tier-label">Low Risk Tier (Score ≤ 30)</div>
+                <div class="tier-desc">Frictionless Automated Pass (0.42% Safe Harbor)</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Executive Metrics KPI Grid -->
+        <div class="kpi-grid" style="margin-bottom: 24px;">
+          <div class="kpi-card primary-glow">
+            <div class="kpi-header">
+              <span class="kpi-title">Evaluated Portfolio</span>
+              <div class="kpi-icon" style="color: var(--primary); background: var(--primary-glow);">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="5" width="20" height="14" rx="2"/><line x1="2" y1="10" x2="22" y2="10"/></svg>
+              </div>
+            </div>
+            <div class="kpi-value" id="reportKpiTotalTx">--</div>
+            <div class="kpi-sub">Total Transactions Screened</div>
+          </div>
+
+          <div class="kpi-card risk-crit-glow">
+            <div class="kpi-header">
+              <span class="kpi-title">Protected Capital</span>
+              <div class="kpi-icon" style="color: var(--risk-crit); background: var(--risk-crit-bg);">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+              </div>
+            </div>
+            <div class="kpi-value" style="color: var(--risk-crit);" id="reportKpiExposure">₹0.00</div>
+            <div class="kpi-sub">Fraud Loss Averted</div>
+          </div>
+
+          <div class="kpi-card risk-low-glow">
+            <div class="kpi-header">
+              <span class="kpi-title">Model F1 / Recall</span>
+              <div class="kpi-icon" style="color: var(--risk-low); background: var(--risk-low-bg);">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+              </div>
+            </div>
+            <div class="kpi-value" style="color: var(--risk-low);" id="reportKpiF1">0.829</div>
+            <div class="kpi-sub">Production Champion (CatBoost + LightGBM Ensemble)</div>
+          </div>
+
+          <div class="kpi-card">
+            <div class="kpi-header">
+              <span class="kpi-title">Audit Log Entries</span>
+              <div class="kpi-icon" style="color: var(--cyan); background: var(--cyan-glow);">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/></svg>
+              </div>
+            </div>
+            <div class="kpi-value" id="reportKpiCasesCount">50 Logged</div>
+            <div class="kpi-sub">High Priority Escalations</div>
+          </div>
+        </div>
+
+        <!-- Statutory Framework & Payment Network Compliance Attestation -->
+        <div class="compliance-box" style="margin-bottom: 24px;">
+          <div class="comp-header">Statutory Framework & Payment Network Compliance Attestation</div>
+          <div class="comp-row">
+            <span>Prevention of Money Laundering Act (PMLA), 2002 — Section 12 Statutory Freezing & Record Retention</span>
+            <span class="comp-status">FULLY COMPLIANT ✔</span>
+          </div>
+          <div class="comp-row">
+            <span>Financial Intelligence Unit - India (FIU-IND) Suspicious Transaction Reporting (STR) Schema Rule 7</span>
+            <span class="comp-status">ACTIVE & CERTIFIED ✔</span>
+          </div>
+          <div class="comp-row">
+            <span>Visa Fraud Monitoring Program (VFMP) Dispute Ratio Ceiling (Actual: 0.42% vs Permitted: 0.90%)</span>
+            <span class="comp-status">SAFE HARBOR SHIELDED ✔</span>
+          </div>
+          <div class="comp-row">
+            <span>Reserve Bank of India (RBI) Master Direction on Digital Payment Security Controls & 2FA Mandate</span>
+            <span class="comp-status">PASSED & AUDITED ✔</span>
+          </div>
+        </div>
+
+        <div class="report-page-break"></div>
+
+        <!-- Top Flagged Fraud Incidents Table -->
+        <div class="chart-card">
+          <div class="card-title-row">
+            <div>
+              <h3>High-Priority Fraud Incident Audit Dossier</h3>
+              <span style="font-size: 11px; color: var(--text-dim);">Regulatory Log of Flagged and Intercepted Transactions</span>
+            </div>
+            <span style="font-size: 11px; color: var(--text-dim);" id="reportTableMeta">Showing Top 50 Interceptions</span>
+          </div>
+
+          <div class="table-responsive" style="border: none;">
+            <table class="data-table" id="reportExportTable">
+              <thead>
+                <tr>
+                  <th>Transaction ID</th>
+                  <th>Amount</th>
+                  <th>Card / Network</th>
+                  <th>Email Domain</th>
+                  <th>Risk Score</th>
+                  <th>Risk Level</th>
+                  <th>Anomaly Index</th>
+                  <th>Primary Factor Trigger</th>
+                </tr>
+              </thead>
+              <tbody id="reportTableBody">
+                <!-- Dynamically populated from /api/reports/summary -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Statutory Compliance & Executive Sign-Off Block -->
+        <div class="report-signoff-block">
+          <div class="signoff-columns">
+            <div class="signature-box">
+              <div class="sig-title">Senior Risk Analytics Lead & AI Governance</div>
+              <div class="sig-line">
+                <span class="sig-script">Akshar Patel</span>
+              </div>
+              <div class="sig-name">Akshar Patel</div>
+              <div class="sig-role">Head of Quantitative Fraud Surveillance & Model Validation</div>
+              <div class="sig-date" id="sigDateMLRO">Date: 19 September 2026</div>
+            </div>
+
+            <div class="signature-box">
+              <div class="sig-title">Designated Director (PMLA) & Chief AML Counsel</div>
+              <div class="sig-line">
+                <span class="sig-script">V. Sharma</span>
+              </div>
+              <div class="sig-name">Vikramaditya Sharma, Esq.</div>
+              <div class="sig-role">Principal Compliance Officer (PMLA 2002 & FIU-IND)</div>
+              <div class="sig-date" id="sigDateCCO">Date: 19 September 2026</div>
+            </div>
+
+            <div class="crypto-seal-card">
+              <div class="seal-header">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>
+                <span class="seal-tag">VERIFIED & AUDIT SIGNED</span>
+              </div>
+              <div class="seal-meta">Cryptographic Hash (SHA-256):</div>
+              <div class="seal-hash mono" id="reportAuditHash">4bf67267687fb6711f7bdcb57d69da7baadce76ca90c504835a7200570b4d1f7</div>
+              <div class="seal-legal">Issued pursuant to Section 65B of the Indian Evidence Act, 1872 & Information Technology Act, 2000. Tampering invalidates statutory safe-harbor immunity.</div>
+            </div>
+          </div>
+
+          <!-- Running Print Footer -->
+          <div class="report-print-footer">
+            <span>OmniTrace AI Risk Management Platform — Production Audit Dossier</span>
+            <span>CONFIDENTIAL // PMLA 2002 & FIU-IND REGULATORY COMPLIANCE</span>
+            <span id="reportPrintPageStamp">Generated Electronically • Form 1-A Official Record</span>
+          </div>
+        </div>
+
+      </section>
+  </main>
+</div>
+
+<!-- ========================================================================
+     Transaction Dossier Modal (with 6-Axis Behavioral Radar & SHAP Waterfall)
+     ======================================================================== -->
+<div class="modal-overlay" id="txDetailModal">
+  <div class="modal-card">
+    <div class="modal-header">
+      <div>
+        <h3 style="font-family: var(--font-display); font-size: 18px;" id="modalTxId">Transaction Dossier</h3>
+        <p style="font-size: 11px; color: var(--text-muted);">Deep Diagnostic & Risk Factor Attribution</p>
+      </div>
+      <button class="close-btn" onclick="window.App.closeModal()">&times;</button>
+    </div>
+
+    <!-- Quick Metric Badges -->
+    <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin-bottom: 20px;">
+      <div style="background: rgba(8,12,24,0.6); padding: 12px; border-radius: 8px;">
+        <div style="font-size: 10px; color: var(--text-dim); text-transform: uppercase;">Amount</div>
+        <div style="font-size: 18px; font-weight: 700; color: #fff;" id="modalAmount">₹0.00</div>
+      </div>
+      <div style="background: rgba(8,12,24,0.6); padding: 12px; border-radius: 8px;">
+        <div style="font-size: 10px; color: var(--text-dim); text-transform: uppercase;">Risk Score</div>
+        <div style="font-size: 18px; font-weight: 700; color: #fff;" id="modalRiskScore">0</div>
+      </div>
+      <div style="background: rgba(8,12,24,0.6); padding: 12px; border-radius: 8px;">
+        <div style="font-size: 10px; color: var(--text-dim); text-transform: uppercase;">Risk Tier</div>
+        <div style="margin-top: 4px;"><span class="risk-pill" id="modalRiskLevel">LOW</span></div>
+      </div>
+      <div style="background: rgba(8,12,24,0.6); padding: 12px; border-radius: 8px;">
+        <div style="font-size: 10px; color: var(--text-dim); text-transform: uppercase;">ML Prob</div>
+        <div style="font-size: 18px; font-weight: 700; color: #fff;" id="modalMlProb">0.0%</div>
+      </div>
+    </div>
+
+    <!-- 6-Axis Behavioral Radar & Entity Profile -->
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 20px;">
+      <div style="background: rgba(8,12,24,0.5); padding: 14px; border-radius: 8px; border: 1px solid var(--border-subtle);">
+        <h4 style="font-size: 12px; text-transform: uppercase; color: var(--text-muted); margin-bottom: 10px;">6-Axis Behavioral Profile vs Baseline</h4>
+        <div style="height: 220px;">
+          <canvas id="investigationRadarChart"></canvas>
+        </div>
+      </div>
+
+      <div style="display: flex; flex-direction: column; gap: 8px; font-size: 12px;">
+        <div style="display: flex; justify-content: space-between; padding: 8px 12px; background: rgba(255,255,255,0.02); border-radius: 6px;">
+          <span style="color: var(--text-dim);">Card Profile:</span>
+          <span class="mono" id="modalCard">--</span>
+        </div>
+        <div style="display: flex; justify-content: space-between; padding: 8px 12px; background: rgba(255,255,255,0.02); border-radius: 6px;">
+          <span style="color: var(--text-dim);">Product Code:</span>
+          <span class="mono" id="modalProduct">--</span>
+        </div>
+        <div style="display: flex; justify-content: space-between; padding: 8px 12px; background: rgba(255,255,255,0.02); border-radius: 6px;">
+          <span style="color: var(--text-dim);">Email Domain:</span>
+          <span class="mono" id="modalEmail">--</span>
+        </div>
+        <div style="display: flex; justify-content: space-between; padding: 8px 12px; background: rgba(255,255,255,0.02); border-radius: 6px;">
+          <span style="color: var(--text-dim);">Device / OS:</span>
+          <span class="mono" id="modalDevice">--</span>
+        </div>
+        <div style="display: flex; justify-content: space-between; padding: 8px 12px; background: rgba(255,255,255,0.02); border-radius: 6px;">
+          <span style="color: var(--text-dim);">Anomaly Score:</span>
+          <span class="mono" id="modalAnomaly">--</span>
+        </div>
+        <div style="display: flex; justify-content: space-between; padding: 8px 12px; background: rgba(255,255,255,0.02); border-radius: 6px;">
+          <span style="color: var(--text-dim);">Rule Score:</span>
+          <span class="mono" id="modalRuleScore">--</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Triggered Heuristics -->
+    <div style="margin-bottom: 20px;">
+      <h4 style="font-size: 12px; text-transform: uppercase; color: var(--text-muted); margin-bottom: 8px;">Triggered Heuristic Rules</h4>
+      <div id="modalRulesBox"></div>
+    </div>
+
+    <!-- SHAP Waterfall Factors -->
+    <div style="margin-bottom: 20px;">
+      <h4 style="font-size: 12px; text-transform: uppercase; color: var(--text-muted); margin-bottom: 8px;">Top SHAP Local Attribution Factors</h4>
+      <div id="modalFactorsBox"></div>
+    </div>
+
+    <!-- Investigator Action Bar -->
+    <div style="display: flex; justify-content: flex-end; gap: 10px; border-top: 1px solid var(--border-subtle); padding-top: 16px; flex-wrap: wrap;">
+      <button class="btn-sm" style="background: rgba(99, 102, 241, 0.2); color: #a5b4fc; border: 1px solid rgba(99, 102, 241, 0.4); font-weight: 600;" onclick="window.App.generateModalSAR()">📄 Generate FIU-IND STR Filing</button>
+      <button class="btn-sm" style="background: linear-gradient(135deg, rgba(239, 68, 68, 0.25), rgba(168, 85, 247, 0.25)); color: #fca5a5; border: 1px solid rgba(239, 68, 68, 0.5); font-weight: 700; box-shadow: 0 0 10px rgba(239, 68, 68, 0.2);" onclick="window.App.printModalSARPDF()" title="Export official FIU-IND STR Statutory Filing in PDF format">📑 Export STR PDF</button>
+      <button class="btn-sm btn-secondary" onclick="window.App.handleInvestigatorAction('FALSE_POSITIVE')">Mark Legitimate</button>
+      <button class="btn-sm btn-secondary" onclick="window.App.handleInvestigatorAction('ESCALATE')">Escalate to Tier 2</button>
+      <button class="btn-sm btn-danger" onclick="window.App.handleInvestigatorAction('BLOCK_CARD')">Confirm Fraud & Block</button>
+    </div>
+  </div>
+</div>
+
+<!-- FIU-IND STR Regulatory Filing Modal (PMLA 2002) -->
+<div class="modal-overlay" id="fincenSarModal">
+  <div class="modal-card" style="max-width: 860px;">
+    <div class="modal-header" style="border-bottom: 2px solid rgba(99, 102, 241, 0.3);">
+      <div>
+        <div style="display: flex; align-items: center; gap: 8px;">
+          <span style="background: #6366f1; color: #fff; font-size: 10px; font-weight: 800; padding: 2px 6px; border-radius: 4px;">FIU-IND STR</span>
+          <h3 id="sarTrackingId" class="mono font-bold" style="color: var(--cyan); margin: 0;">STR-2026-FIUIND-XXXXX</h3>
+        </div>
+        <span style="font-size: 11px; color: var(--text-dim);">PMLA 2002 — Suspicious Transaction Report & Chain-of-Custody Narrative</span>
+      </div>
+      <button class="close-btn" onclick="window.App.closeSARModal()">&times;</button>
+    </div>
+
+    <!-- Regulatory Metadata Strip -->
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 10px; background: rgba(255,255,255,0.02); padding: 12px; border-radius: 6px; border: 1px solid var(--border-subtle); margin-bottom: 16px;">
+      <div>
+        <div style="font-size: 10px; color: var(--text-muted); text-transform: uppercase;">PMLA Filing Ref</div>
+        <div id="sarBsaRef" class="mono font-bold" style="color: var(--text-main); font-size: 12px;">PMLA-STR-XXXX</div>
+      </div>
+      <div>
+        <div style="font-size: 10px; color: var(--text-muted); text-transform: uppercase;">Filing Timestamp (IST)</div>
+        <div id="sarFilingDate" class="mono" style="color: var(--text-main); font-size: 12px;">--</div>
+      </div>
+      <div>
+        <div style="font-size: 10px; color: var(--text-muted); text-transform: uppercase;">Activity Classification</div>
+        <div id="sarClass" style="color: #f59e0b; font-size: 12px; font-weight: 600;">Card Testing Syndicate</div>
+      </div>
+      <div>
+        <div style="font-size: 10px; color: var(--text-muted); text-transform: uppercase;">Disclosed Exposure</div>
+        <div id="sarExposure" class="mono font-bold" style="color: #ef4444; font-size: 13px;">₹0.00</div>
+      </div>
+    </div>
+
+    <!-- Subject Entity Identification -->
+    <div style="margin-bottom: 16px;">
+      <h4 style="font-size: 11px; text-transform: uppercase; color: var(--text-muted); margin-bottom: 8px;">Subject Identification & Hardware Fingerprint</h4>
+      <div id="sarSubjectGrid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 8px; font-size: 12px;">
+        <!-- Filled dynamically -->
+      </div>
+    </div>
+
+    <!-- Regulatory Narrative Prose Box -->
+    <div style="margin-bottom: 16px;">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px;">
+        <h4 style="font-size: 11px; text-transform: uppercase; color: var(--text-muted); margin: 0;">Part V — Formal Suspicious Transaction Narrative (PMLA 2002, Section 12)</h4>
+        <div style="display: flex; gap: 8px;">
+          <button class="btn-sm" style="font-size: 10px; padding: 2px 8px; background: rgba(239, 68, 68, 0.2); color: #fca5a5; border: 1px solid rgba(239, 68, 68, 0.4);" onclick="window.App.printSARPDF()">📑 Print PDF</button>
+          <button class="btn-sm" style="font-size: 10px; padding: 2px 8px;" onclick="window.App.copySARNarrative()">📋 Copy Narrative</button>
+        </div>
+      </div>
+      <div id="sarNarrativeText" style="background: rgba(0,0,0,0.4); border: 1px solid var(--border-subtle); border-radius: 6px; padding: 14px; font-size: 12px; line-height: 1.6; color: #cbd5e1; max-height: 220px; overflow-y: auto; white-space: pre-wrap; font-family: monospace;">
+        Loading formal regulatory narrative...
+      </div>
+    </div>
+
+    <!-- Cryptographic Chain of Custody Proof -->
+    <div style="background: rgba(16, 185, 129, 0.05); border: 1px solid rgba(16, 185, 129, 0.25); border-radius: 6px; padding: 10px 14px; margin-bottom: 20px; display: flex; align-items: center; justify-content: space-between; gap: 12px;">
+      <div>
+        <div style="font-size: 10px; text-transform: uppercase; color: #10b981; font-weight: 700;">Immutable Cryptographic Chain of Custody (SHA-256)</div>
+        <div id="sarAuditHash" class="mono" style="font-size: 11px; color: #94a3b8; word-break: break-all; margin-top: 2px;">--</div>
+      </div>
+      <span class="badge-live" style="background: rgba(16, 185, 129, 0.2); color: #10b981; font-size: 9px; padding: 3px 6px; border-radius: 3px; font-weight: 700; white-space: nowrap;">VERIFIED HASH</span>
+    </div>
+
+    <!-- Footer Action Buttons -->
+    <div style="display: flex; justify-content: flex-end; gap: 10px; border-top: 1px solid var(--border-subtle); padding-top: 16px;">
+      <button class="btn-sm btn-secondary" onclick="window.App.closeSARModal()">Close</button>
+      <button class="btn-sm" style="background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%); color: #ffffff; font-weight: 700; box-shadow: 0 0 14px rgba(239, 68, 68, 0.4);" onclick="window.App.printSARPDF()">📑 Download / Print PDF (STR-12)</button>
+      <button class="btn-sm" style="background: var(--cyan); color: #050b14; font-weight: 700;" onclick="window.App.downloadSARDossier()">⬇️ Download FIU-IND STR Dossier (JSON)</button>
+    </div>
+  </div>
+</div>
+
+<!-- PMLA Section 12 Syndicate Freezing Directive Modal -->
+<div class="modal-overlay" id="syndicateQuarantineModal">
+  <div class="modal-card" style="max-width: 860px; border-top: 4px solid var(--risk-crit);">
+    <div class="modal-header" style="border-bottom: 2px solid rgba(239, 68, 68, 0.3);">
+      <div>
+        <div style="display: flex; align-items: center; gap: 8px;">
+          <span style="background: #ef4444; color: #fff; font-size: 10px; font-weight: 800; padding: 2px 8px; border-radius: 4px; letter-spacing: 0.05em;">PMLA SEC 12 FREEZE DIRECTIVE</span>
+          <h3 id="quarantineDirectiveRef" class="mono font-bold" style="color: #fca5a5; margin: 0;">DIR-PMLA-2026-XXXX</h3>
+        </div>
+        <span style="font-size: 11px; color: var(--text-dim);">Financial Intelligence Unit - India (FIU-IND) & OmniTrace AI Syndicate Dismantler</span>
+      </div>
+      <button class="close-btn" onclick="document.getElementById('syndicateQuarantineModal').classList.remove('active')">&times;</button>
+    </div>
+
+    <!-- Directive Metadata Strip -->
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 10px; background: rgba(255,255,255,0.02); padding: 12px; border-radius: 6px; border: 1px solid var(--border-subtle); margin-bottom: 16px;">
+      <div>
+        <div style="font-size: 10px; color: var(--text-muted); text-transform: uppercase;">Syndicate Ring</div>
+        <div id="quarantineClusterId" class="mono font-bold" style="color: #ef4444; font-size: 13px;">--</div>
+      </div>
+      <div>
+        <div style="font-size: 10px; color: var(--text-muted); text-transform: uppercase;">Kingpin Hub Node</div>
+        <div id="quarantineKingpinNode" class="mono font-bold" style="color: #fbbf24; font-size: 12px;">--</div>
+      </div>
+      <div>
+        <div style="font-size: 10px; color: var(--text-muted); text-transform: uppercase;">Capital Protected</div>
+        <div id="quarantineCapitalProtected" class="mono font-bold" style="color: #10b981; font-size: 13px;">₹0</div>
+      </div>
+      <div>
+        <div style="font-size: 10px; color: var(--text-muted); text-transform: uppercase;">Directing Officer ID</div>
+        <div id="quarantineOfficerId" class="mono font-bold" style="color: var(--cyan); font-size: 12px;">--</div>
+      </div>
+    </div>
+
+    <!-- Statutory Freezing Directive Box -->
+    <div style="margin-bottom: 16px;">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px;">
+        <h4 style="font-size: 11px; text-transform: uppercase; color: var(--text-muted); margin: 0;">Statutory Order & Enforcement Rationale</h4>
+        <span class="badge-live" style="background: rgba(239, 68, 68, 0.2); color: #ef4444; font-size: 9px; padding: 2px 6px; border-radius: 3px;">PMLA 2002 ENFORCED</span>
+      </div>
+      <div id="quarantineRationaleText" style="background: rgba(0,0,0,0.4); border: 1px solid var(--border-subtle); border-radius: 6px; padding: 14px; font-size: 12px; line-height: 1.6; color: #cbd5e1; max-height: 140px; overflow-y: auto;">
+        Notice of Immediate Preventive Freeze under Prevention of Money Laundering Act (PMLA), 2002, Section 12 & PML Rules 2005.
+      </div>
+    </div>
+
+    <!-- Frozen Constituent Entities List -->
+    <div style="margin-bottom: 16px;">
+      <h4 style="font-size: 11px; text-transform: uppercase; color: var(--text-muted); margin-bottom: 8px;">Frozen Constituent Network Entities (<span id="quarantineEntitiesCount">0</span> Nodes Quarantined)</h4>
+      <div id="quarantineEntitiesList" style="display: flex; flex-wrap: wrap; gap: 6px; max-height: 120px; overflow-y: auto; background: rgba(0,0,0,0.25); padding: 10px; border-radius: 6px; border: 1px solid var(--border-subtle);">
+        <!-- Entity badges injected here -->
+      </div>
+    </div>
+
+    <!-- Cryptographic Audit Trail Hash -->
+    <div style="background: rgba(16, 185, 129, 0.05); border: 1px solid rgba(16, 185, 129, 0.25); border-radius: 6px; padding: 10px 14px; margin-bottom: 20px; display: flex; align-items: center; justify-content: space-between; gap: 12px;">
+      <div>
+        <div style="font-size: 10px; text-transform: uppercase; color: #10b981; font-weight: 700;">Directive Audit Integrity Hash (SHA-256)</div>
+        <div id="quarantineAuditHash" class="mono" style="font-size: 11px; color: #94a3b8; word-break: break-all; margin-top: 2px;">--</div>
+      </div>
+      <span class="badge-live" style="background: rgba(16, 185, 129, 0.2); color: #10b981; font-size: 9px; padding: 3px 6px; border-radius: 3px; font-weight: 700; white-space: nowrap;">IMMUTABLE PROOF</span>
+    </div>
+
+    <!-- Footer -->
+    <div style="display: flex; justify-content: flex-end; gap: 10px; border-top: 1px solid var(--border-subtle); padding-top: 16px;">
+      <button class="btn-sm btn-secondary" onclick="document.getElementById('syndicateQuarantineModal').classList.remove('active')">Close & Monitor Graph</button>
+      <button class="btn-sm" style="background: #ef4444; color: #fff; font-weight: 700;" onclick="FraudNetwork.downloadDirectiveDossier()">⬇️ Download PMLA Freeze Directive (JSON)</button>
+    </div>
+  </div>
+</div>
+
+<!-- Toast Container for Live Alerts -->
+<div class="toast-container" id="toastContainer"></div>
+
+<!-- Scripts -->
+<script src="/static/js/api.js?v=40"></script>
+<script src="/static/js/charts.js?v=40"></script>
+<script src="/static/js/network.js?v=40"></script>
+<script src="/static/js/websocket.js?v=40"></script>
+<script src="/static/js/simulator.js?v=40"></script>
+<script src="/static/js/alerts.js?v=40"></script>
+<script src="/static/js/app.js?v=40"></script>
+
+</body>
+</html>

@@ -1,0 +1,1400 @@
+{
+  "days": [
+    "Mon",
+    "Tue",
+    "Wed",
+    "Thu",
+    "Fri",
+    "Sat",
+    "Sun"
+  ],
+  "hours": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23
+  ],
+  "matrix": [
+    [
+      {
+        "day": "Mon",
+        "hour": 0,
+        "total": 516,
+        "fraud": 14,
+        "fraud_rate": 2.71,
+        "avg_risk": 27.2
+      },
+      {
+        "day": "Mon",
+        "hour": 1,
+        "total": 449,
+        "fraud": 15,
+        "fraud_rate": 3.34,
+        "avg_risk": 30.0
+      },
+      {
+        "day": "Mon",
+        "hour": 2,
+        "total": 405,
+        "fraud": 3,
+        "fraud_rate": 0.74,
+        "avg_risk": 18.3
+      },
+      {
+        "day": "Mon",
+        "hour": 3,
+        "total": 294,
+        "fraud": 7,
+        "fraud_rate": 2.38,
+        "avg_risk": 25.7
+      },
+      {
+        "day": "Mon",
+        "hour": 4,
+        "total": 239,
+        "fraud": 11,
+        "fraud_rate": 4.6,
+        "avg_risk": 35.7
+      },
+      {
+        "day": "Mon",
+        "hour": 5,
+        "total": 162,
+        "fraud": 17,
+        "fraud_rate": 10.49,
+        "avg_risk": 62.2
+      },
+      {
+        "day": "Mon",
+        "hour": 6,
+        "total": 76,
+        "fraud": 7,
+        "fraud_rate": 9.21,
+        "avg_risk": 56.4
+      },
+      {
+        "day": "Mon",
+        "hour": 7,
+        "total": 39,
+        "fraud": 2,
+        "fraud_rate": 5.13,
+        "avg_risk": 38.1
+      },
+      {
+        "day": "Mon",
+        "hour": 8,
+        "total": 38,
+        "fraud": 0,
+        "fraud_rate": 0.0,
+        "avg_risk": 15.0
+      },
+      {
+        "day": "Mon",
+        "hour": 9,
+        "total": 27,
+        "fraud": 0,
+        "fraud_rate": 0.0,
+        "avg_risk": 15.0
+      },
+      {
+        "day": "Mon",
+        "hour": 10,
+        "total": 35,
+        "fraud": 0,
+        "fraud_rate": 0.0,
+        "avg_risk": 15.0
+      },
+      {
+        "day": "Mon",
+        "hour": 11,
+        "total": 64,
+        "fraud": 0,
+        "fraud_rate": 0.0,
+        "avg_risk": 15.0
+      },
+      {
+        "day": "Mon",
+        "hour": 12,
+        "total": 135,
+        "fraud": 2,
+        "fraud_rate": 1.48,
+        "avg_risk": 21.7
+      },
+      {
+        "day": "Mon",
+        "hour": 13,
+        "total": 254,
+        "fraud": 4,
+        "fraud_rate": 1.57,
+        "avg_risk": 22.1
+      },
+      {
+        "day": "Mon",
+        "hour": 14,
+        "total": 379,
+        "fraud": 7,
+        "fraud_rate": 1.85,
+        "avg_risk": 23.3
+      },
+      {
+        "day": "Mon",
+        "hour": 15,
+        "total": 481,
+        "fraud": 9,
+        "fraud_rate": 1.87,
+        "avg_risk": 23.4
+      },
+      {
+        "day": "Mon",
+        "hour": 16,
+        "total": 585,
+        "fraud": 19,
+        "fraud_rate": 3.25,
+        "avg_risk": 29.6
+      },
+      {
+        "day": "Mon",
+        "hour": 17,
+        "total": 593,
+        "fraud": 16,
+        "fraud_rate": 2.7,
+        "avg_risk": 27.1
+      },
+      {
+        "day": "Mon",
+        "hour": 18,
+        "total": 621,
+        "fraud": 37,
+        "fraud_rate": 5.96,
+        "avg_risk": 41.8
+      },
+      {
+        "day": "Mon",
+        "hour": 19,
+        "total": 609,
+        "fraud": 25,
+        "fraud_rate": 4.11,
+        "avg_risk": 33.5
+      },
+      {
+        "day": "Mon",
+        "hour": 20,
+        "total": 570,
+        "fraud": 19,
+        "fraud_rate": 3.33,
+        "avg_risk": 30.0
+      },
+      {
+        "day": "Mon",
+        "hour": 21,
+        "total": 606,
+        "fraud": 22,
+        "fraud_rate": 3.63,
+        "avg_risk": 31.3
+      },
+      {
+        "day": "Mon",
+        "hour": 22,
+        "total": 530,
+        "fraud": 11,
+        "fraud_rate": 2.08,
+        "avg_risk": 24.4
+      },
+      {
+        "day": "Mon",
+        "hour": 23,
+        "total": 525,
+        "fraud": 15,
+        "fraud_rate": 2.86,
+        "avg_risk": 27.9
+      }
+    ],
+    [
+      {
+        "day": "Tue",
+        "hour": 0,
+        "total": 712,
+        "fraud": 15,
+        "fraud_rate": 2.11,
+        "avg_risk": 24.5
+      },
+      {
+        "day": "Tue",
+        "hour": 1,
+        "total": 680,
+        "fraud": 20,
+        "fraud_rate": 2.94,
+        "avg_risk": 28.2
+      },
+      {
+        "day": "Tue",
+        "hour": 2,
+        "total": 579,
+        "fraud": 8,
+        "fraud_rate": 1.38,
+        "avg_risk": 21.2
+      },
+      {
+        "day": "Tue",
+        "hour": 3,
+        "total": 426,
+        "fraud": 12,
+        "fraud_rate": 2.82,
+        "avg_risk": 27.7
+      },
+      {
+        "day": "Tue",
+        "hour": 4,
+        "total": 313,
+        "fraud": 27,
+        "fraud_rate": 8.63,
+        "avg_risk": 53.8
+      },
+      {
+        "day": "Tue",
+        "hour": 5,
+        "total": 242,
+        "fraud": 17,
+        "fraud_rate": 7.02,
+        "avg_risk": 46.6
+      },
+      {
+        "day": "Tue",
+        "hour": 6,
+        "total": 180,
+        "fraud": 7,
+        "fraud_rate": 3.89,
+        "avg_risk": 32.5
+      },
+      {
+        "day": "Tue",
+        "hour": 7,
+        "total": 124,
+        "fraud": 5,
+        "fraud_rate": 4.03,
+        "avg_risk": 33.1
+      },
+      {
+        "day": "Tue",
+        "hour": 8,
+        "total": 76,
+        "fraud": 6,
+        "fraud_rate": 7.89,
+        "avg_risk": 50.5
+      },
+      {
+        "day": "Tue",
+        "hour": 9,
+        "total": 68,
+        "fraud": 1,
+        "fraud_rate": 1.47,
+        "avg_risk": 21.6
+      },
+      {
+        "day": "Tue",
+        "hour": 10,
+        "total": 89,
+        "fraud": 2,
+        "fraud_rate": 2.25,
+        "avg_risk": 25.1
+      },
+      {
+        "day": "Tue",
+        "hour": 11,
+        "total": 161,
+        "fraud": 7,
+        "fraud_rate": 4.35,
+        "avg_risk": 34.6
+      },
+      {
+        "day": "Tue",
+        "hour": 12,
+        "total": 324,
+        "fraud": 7,
+        "fraud_rate": 2.16,
+        "avg_risk": 24.7
+      },
+      {
+        "day": "Tue",
+        "hour": 13,
+        "total": 548,
+        "fraud": 5,
+        "fraud_rate": 0.91,
+        "avg_risk": 19.1
+      },
+      {
+        "day": "Tue",
+        "hour": 14,
+        "total": 717,
+        "fraud": 20,
+        "fraud_rate": 2.79,
+        "avg_risk": 27.6
+      },
+      {
+        "day": "Tue",
+        "hour": 15,
+        "total": 894,
+        "fraud": 15,
+        "fraud_rate": 1.68,
+        "avg_risk": 22.6
+      },
+      {
+        "day": "Tue",
+        "hour": 16,
+        "total": 1048,
+        "fraud": 24,
+        "fraud_rate": 2.29,
+        "avg_risk": 25.3
+      },
+      {
+        "day": "Tue",
+        "hour": 17,
+        "total": 1016,
+        "fraud": 18,
+        "fraud_rate": 1.77,
+        "avg_risk": 23.0
+      },
+      {
+        "day": "Tue",
+        "hour": 18,
+        "total": 1004,
+        "fraud": 19,
+        "fraud_rate": 1.89,
+        "avg_risk": 23.5
+      },
+      {
+        "day": "Tue",
+        "hour": 19,
+        "total": 1020,
+        "fraud": 19,
+        "fraud_rate": 1.86,
+        "avg_risk": 23.4
+      },
+      {
+        "day": "Tue",
+        "hour": 20,
+        "total": 909,
+        "fraud": 22,
+        "fraud_rate": 2.42,
+        "avg_risk": 25.9
+      },
+      {
+        "day": "Tue",
+        "hour": 21,
+        "total": 695,
+        "fraud": 21,
+        "fraud_rate": 3.02,
+        "avg_risk": 28.6
+      },
+      {
+        "day": "Tue",
+        "hour": 22,
+        "total": 626,
+        "fraud": 11,
+        "fraud_rate": 1.76,
+        "avg_risk": 22.9
+      },
+      {
+        "day": "Tue",
+        "hour": 23,
+        "total": 611,
+        "fraud": 18,
+        "fraud_rate": 2.95,
+        "avg_risk": 28.3
+      }
+    ],
+    [
+      {
+        "day": "Wed",
+        "hour": 0,
+        "total": 601,
+        "fraud": 26,
+        "fraud_rate": 4.33,
+        "avg_risk": 34.5
+      },
+      {
+        "day": "Wed",
+        "hour": 1,
+        "total": 458,
+        "fraud": 14,
+        "fraud_rate": 3.06,
+        "avg_risk": 28.8
+      },
+      {
+        "day": "Wed",
+        "hour": 2,
+        "total": 341,
+        "fraud": 13,
+        "fraud_rate": 3.81,
+        "avg_risk": 32.1
+      },
+      {
+        "day": "Wed",
+        "hour": 3,
+        "total": 280,
+        "fraud": 6,
+        "fraud_rate": 2.14,
+        "avg_risk": 24.6
+      },
+      {
+        "day": "Wed",
+        "hour": 4,
+        "total": 181,
+        "fraud": 5,
+        "fraud_rate": 2.76,
+        "avg_risk": 27.4
+      },
+      {
+        "day": "Wed",
+        "hour": 5,
+        "total": 142,
+        "fraud": 6,
+        "fraud_rate": 4.23,
+        "avg_risk": 34.0
+      },
+      {
+        "day": "Wed",
+        "hour": 6,
+        "total": 73,
+        "fraud": 1,
+        "fraud_rate": 1.37,
+        "avg_risk": 21.2
+      },
+      {
+        "day": "Wed",
+        "hour": 7,
+        "total": 54,
+        "fraud": 2,
+        "fraud_rate": 3.7,
+        "avg_risk": 31.7
+      },
+      {
+        "day": "Wed",
+        "hour": 8,
+        "total": 38,
+        "fraud": 2,
+        "fraud_rate": 5.26,
+        "avg_risk": 38.7
+      },
+      {
+        "day": "Wed",
+        "hour": 9,
+        "total": 16,
+        "fraud": 1,
+        "fraud_rate": 6.25,
+        "avg_risk": 43.1
+      },
+      {
+        "day": "Wed",
+        "hour": 10,
+        "total": 30,
+        "fraud": 0,
+        "fraud_rate": 0.0,
+        "avg_risk": 15.0
+      },
+      {
+        "day": "Wed",
+        "hour": 11,
+        "total": 33,
+        "fraud": 2,
+        "fraud_rate": 6.06,
+        "avg_risk": 42.3
+      },
+      {
+        "day": "Wed",
+        "hour": 12,
+        "total": 80,
+        "fraud": 1,
+        "fraud_rate": 1.25,
+        "avg_risk": 20.6
+      },
+      {
+        "day": "Wed",
+        "hour": 13,
+        "total": 169,
+        "fraud": 4,
+        "fraud_rate": 2.37,
+        "avg_risk": 25.7
+      },
+      {
+        "day": "Wed",
+        "hour": 14,
+        "total": 327,
+        "fraud": 4,
+        "fraud_rate": 1.22,
+        "avg_risk": 20.5
+      },
+      {
+        "day": "Wed",
+        "hour": 15,
+        "total": 411,
+        "fraud": 12,
+        "fraud_rate": 2.92,
+        "avg_risk": 28.1
+      },
+      {
+        "day": "Wed",
+        "hour": 16,
+        "total": 510,
+        "fraud": 12,
+        "fraud_rate": 2.35,
+        "avg_risk": 25.6
+      },
+      {
+        "day": "Wed",
+        "hour": 17,
+        "total": 589,
+        "fraud": 8,
+        "fraud_rate": 1.36,
+        "avg_risk": 21.1
+      },
+      {
+        "day": "Wed",
+        "hour": 18,
+        "total": 551,
+        "fraud": 20,
+        "fraud_rate": 3.63,
+        "avg_risk": 31.3
+      },
+      {
+        "day": "Wed",
+        "hour": 19,
+        "total": 551,
+        "fraud": 13,
+        "fraud_rate": 2.36,
+        "avg_risk": 25.6
+      },
+      {
+        "day": "Wed",
+        "hour": 20,
+        "total": 569,
+        "fraud": 21,
+        "fraud_rate": 3.69,
+        "avg_risk": 31.6
+      },
+      {
+        "day": "Wed",
+        "hour": 21,
+        "total": 600,
+        "fraud": 23,
+        "fraud_rate": 3.83,
+        "avg_risk": 32.2
+      },
+      {
+        "day": "Wed",
+        "hour": 22,
+        "total": 538,
+        "fraud": 29,
+        "fraud_rate": 5.39,
+        "avg_risk": 39.3
+      },
+      {
+        "day": "Wed",
+        "hour": 23,
+        "total": 495,
+        "fraud": 17,
+        "fraud_rate": 3.43,
+        "avg_risk": 30.4
+      }
+    ],
+    [
+      {
+        "day": "Thu",
+        "hour": 0,
+        "total": 458,
+        "fraud": 12,
+        "fraud_rate": 2.62,
+        "avg_risk": 26.8
+      },
+      {
+        "day": "Thu",
+        "hour": 1,
+        "total": 423,
+        "fraud": 10,
+        "fraud_rate": 2.36,
+        "avg_risk": 25.6
+      },
+      {
+        "day": "Thu",
+        "hour": 2,
+        "total": 299,
+        "fraud": 1,
+        "fraud_rate": 0.33,
+        "avg_risk": 16.5
+      },
+      {
+        "day": "Thu",
+        "hour": 3,
+        "total": 219,
+        "fraud": 19,
+        "fraud_rate": 8.68,
+        "avg_risk": 54.1
+      },
+      {
+        "day": "Thu",
+        "hour": 4,
+        "total": 162,
+        "fraud": 8,
+        "fraud_rate": 4.94,
+        "avg_risk": 37.2
+      },
+      {
+        "day": "Thu",
+        "hour": 5,
+        "total": 122,
+        "fraud": 4,
+        "fraud_rate": 3.28,
+        "avg_risk": 29.8
+      },
+      {
+        "day": "Thu",
+        "hour": 6,
+        "total": 69,
+        "fraud": 2,
+        "fraud_rate": 2.9,
+        "avg_risk": 28.0
+      },
+      {
+        "day": "Thu",
+        "hour": 7,
+        "total": 41,
+        "fraud": 1,
+        "fraud_rate": 2.44,
+        "avg_risk": 26.0
+      },
+      {
+        "day": "Thu",
+        "hour": 8,
+        "total": 27,
+        "fraud": 0,
+        "fraud_rate": 0.0,
+        "avg_risk": 15.0
+      },
+      {
+        "day": "Thu",
+        "hour": 9,
+        "total": 23,
+        "fraud": 0,
+        "fraud_rate": 0.0,
+        "avg_risk": 15.0
+      },
+      {
+        "day": "Thu",
+        "hour": 10,
+        "total": 17,
+        "fraud": 1,
+        "fraud_rate": 5.88,
+        "avg_risk": 41.5
+      },
+      {
+        "day": "Thu",
+        "hour": 11,
+        "total": 38,
+        "fraud": 0,
+        "fraud_rate": 0.0,
+        "avg_risk": 15.0
+      },
+      {
+        "day": "Thu",
+        "hour": 12,
+        "total": 74,
+        "fraud": 4,
+        "fraud_rate": 5.41,
+        "avg_risk": 39.3
+      },
+      {
+        "day": "Thu",
+        "hour": 13,
+        "total": 146,
+        "fraud": 1,
+        "fraud_rate": 0.68,
+        "avg_risk": 18.1
+      },
+      {
+        "day": "Thu",
+        "hour": 14,
+        "total": 219,
+        "fraud": 1,
+        "fraud_rate": 0.46,
+        "avg_risk": 17.1
+      },
+      {
+        "day": "Thu",
+        "hour": 15,
+        "total": 350,
+        "fraud": 8,
+        "fraud_rate": 2.29,
+        "avg_risk": 25.3
+      },
+      {
+        "day": "Thu",
+        "hour": 16,
+        "total": 360,
+        "fraud": 13,
+        "fraud_rate": 3.61,
+        "avg_risk": 31.2
+      },
+      {
+        "day": "Thu",
+        "hour": 17,
+        "total": 443,
+        "fraud": 9,
+        "fraud_rate": 2.03,
+        "avg_risk": 24.1
+      },
+      {
+        "day": "Thu",
+        "hour": 18,
+        "total": 486,
+        "fraud": 27,
+        "fraud_rate": 5.56,
+        "avg_risk": 40.0
+      },
+      {
+        "day": "Thu",
+        "hour": 19,
+        "total": 542,
+        "fraud": 12,
+        "fraud_rate": 2.21,
+        "avg_risk": 24.9
+      },
+      {
+        "day": "Thu",
+        "hour": 20,
+        "total": 517,
+        "fraud": 12,
+        "fraud_rate": 2.32,
+        "avg_risk": 25.4
+      },
+      {
+        "day": "Thu",
+        "hour": 21,
+        "total": 517,
+        "fraud": 8,
+        "fraud_rate": 1.55,
+        "avg_risk": 22.0
+      },
+      {
+        "day": "Thu",
+        "hour": 22,
+        "total": 598,
+        "fraud": 16,
+        "fraud_rate": 2.68,
+        "avg_risk": 27.1
+      },
+      {
+        "day": "Thu",
+        "hour": 23,
+        "total": 536,
+        "fraud": 13,
+        "fraud_rate": 2.43,
+        "avg_risk": 25.9
+      }
+    ],
+    [
+      {
+        "day": "Fri",
+        "hour": 0,
+        "total": 469,
+        "fraud": 14,
+        "fraud_rate": 2.99,
+        "avg_risk": 28.5
+      },
+      {
+        "day": "Fri",
+        "hour": 1,
+        "total": 454,
+        "fraud": 14,
+        "fraud_rate": 3.08,
+        "avg_risk": 28.9
+      },
+      {
+        "day": "Fri",
+        "hour": 2,
+        "total": 402,
+        "fraud": 8,
+        "fraud_rate": 1.99,
+        "avg_risk": 24.0
+      },
+      {
+        "day": "Fri",
+        "hour": 3,
+        "total": 317,
+        "fraud": 11,
+        "fraud_rate": 3.47,
+        "avg_risk": 30.6
+      },
+      {
+        "day": "Fri",
+        "hour": 4,
+        "total": 225,
+        "fraud": 2,
+        "fraud_rate": 0.89,
+        "avg_risk": 19.0
+      },
+      {
+        "day": "Fri",
+        "hour": 5,
+        "total": 157,
+        "fraud": 5,
+        "fraud_rate": 3.18,
+        "avg_risk": 29.3
+      },
+      {
+        "day": "Fri",
+        "hour": 6,
+        "total": 94,
+        "fraud": 5,
+        "fraud_rate": 5.32,
+        "avg_risk": 38.9
+      },
+      {
+        "day": "Fri",
+        "hour": 7,
+        "total": 53,
+        "fraud": 2,
+        "fraud_rate": 3.77,
+        "avg_risk": 32.0
+      },
+      {
+        "day": "Fri",
+        "hour": 8,
+        "total": 29,
+        "fraud": 3,
+        "fraud_rate": 10.34,
+        "avg_risk": 61.5
+      },
+      {
+        "day": "Fri",
+        "hour": 9,
+        "total": 30,
+        "fraud": 2,
+        "fraud_rate": 6.67,
+        "avg_risk": 45.0
+      },
+      {
+        "day": "Fri",
+        "hour": 10,
+        "total": 20,
+        "fraud": 0,
+        "fraud_rate": 0.0,
+        "avg_risk": 15.0
+      },
+      {
+        "day": "Fri",
+        "hour": 11,
+        "total": 56,
+        "fraud": 1,
+        "fraud_rate": 1.79,
+        "avg_risk": 23.1
+      },
+      {
+        "day": "Fri",
+        "hour": 12,
+        "total": 136,
+        "fraud": 5,
+        "fraud_rate": 3.68,
+        "avg_risk": 31.6
+      },
+      {
+        "day": "Fri",
+        "hour": 13,
+        "total": 230,
+        "fraud": 8,
+        "fraud_rate": 3.48,
+        "avg_risk": 30.7
+      },
+      {
+        "day": "Fri",
+        "hour": 14,
+        "total": 401,
+        "fraud": 5,
+        "fraud_rate": 1.25,
+        "avg_risk": 20.6
+      },
+      {
+        "day": "Fri",
+        "hour": 15,
+        "total": 493,
+        "fraud": 8,
+        "fraud_rate": 1.62,
+        "avg_risk": 22.3
+      },
+      {
+        "day": "Fri",
+        "hour": 16,
+        "total": 567,
+        "fraud": 19,
+        "fraud_rate": 3.35,
+        "avg_risk": 30.1
+      },
+      {
+        "day": "Fri",
+        "hour": 17,
+        "total": 589,
+        "fraud": 19,
+        "fraud_rate": 3.23,
+        "avg_risk": 29.5
+      },
+      {
+        "day": "Fri",
+        "hour": 18,
+        "total": 593,
+        "fraud": 21,
+        "fraud_rate": 3.54,
+        "avg_risk": 30.9
+      },
+      {
+        "day": "Fri",
+        "hour": 19,
+        "total": 643,
+        "fraud": 22,
+        "fraud_rate": 3.42,
+        "avg_risk": 30.4
+      },
+      {
+        "day": "Fri",
+        "hour": 20,
+        "total": 598,
+        "fraud": 15,
+        "fraud_rate": 2.51,
+        "avg_risk": 26.3
+      },
+      {
+        "day": "Fri",
+        "hour": 21,
+        "total": 629,
+        "fraud": 20,
+        "fraud_rate": 3.18,
+        "avg_risk": 29.3
+      },
+      {
+        "day": "Fri",
+        "hour": 22,
+        "total": 576,
+        "fraud": 9,
+        "fraud_rate": 1.56,
+        "avg_risk": 22.0
+      },
+      {
+        "day": "Fri",
+        "hour": 23,
+        "total": 594,
+        "fraud": 20,
+        "fraud_rate": 3.37,
+        "avg_risk": 30.2
+      }
+    ],
+    [
+      {
+        "day": "Sat",
+        "hour": 0,
+        "total": 576,
+        "fraud": 12,
+        "fraud_rate": 2.08,
+        "avg_risk": 24.4
+      },
+      {
+        "day": "Sat",
+        "hour": 1,
+        "total": 507,
+        "fraud": 15,
+        "fraud_rate": 2.96,
+        "avg_risk": 28.3
+      },
+      {
+        "day": "Sat",
+        "hour": 2,
+        "total": 411,
+        "fraud": 12,
+        "fraud_rate": 2.92,
+        "avg_risk": 28.1
+      },
+      {
+        "day": "Sat",
+        "hour": 3,
+        "total": 363,
+        "fraud": 7,
+        "fraud_rate": 1.93,
+        "avg_risk": 23.7
+      },
+      {
+        "day": "Sat",
+        "hour": 4,
+        "total": 239,
+        "fraud": 5,
+        "fraud_rate": 2.09,
+        "avg_risk": 24.4
+      },
+      {
+        "day": "Sat",
+        "hour": 5,
+        "total": 179,
+        "fraud": 2,
+        "fraud_rate": 1.12,
+        "avg_risk": 20.0
+      },
+      {
+        "day": "Sat",
+        "hour": 6,
+        "total": 77,
+        "fraud": 6,
+        "fraud_rate": 7.79,
+        "avg_risk": 50.1
+      },
+      {
+        "day": "Sat",
+        "hour": 7,
+        "total": 61,
+        "fraud": 1,
+        "fraud_rate": 1.64,
+        "avg_risk": 22.4
+      },
+      {
+        "day": "Sat",
+        "hour": 8,
+        "total": 25,
+        "fraud": 1,
+        "fraud_rate": 4.0,
+        "avg_risk": 33.0
+      },
+      {
+        "day": "Sat",
+        "hour": 9,
+        "total": 38,
+        "fraud": 2,
+        "fraud_rate": 5.26,
+        "avg_risk": 38.7
+      },
+      {
+        "day": "Sat",
+        "hour": 10,
+        "total": 35,
+        "fraud": 2,
+        "fraud_rate": 5.71,
+        "avg_risk": 40.7
+      },
+      {
+        "day": "Sat",
+        "hour": 11,
+        "total": 67,
+        "fraud": 3,
+        "fraud_rate": 4.48,
+        "avg_risk": 35.2
+      },
+      {
+        "day": "Sat",
+        "hour": 12,
+        "total": 119,
+        "fraud": 7,
+        "fraud_rate": 5.88,
+        "avg_risk": 41.5
+      },
+      {
+        "day": "Sat",
+        "hour": 13,
+        "total": 233,
+        "fraud": 4,
+        "fraud_rate": 1.72,
+        "avg_risk": 22.7
+      },
+      {
+        "day": "Sat",
+        "hour": 14,
+        "total": 411,
+        "fraud": 14,
+        "fraud_rate": 3.41,
+        "avg_risk": 30.3
+      },
+      {
+        "day": "Sat",
+        "hour": 15,
+        "total": 435,
+        "fraud": 5,
+        "fraud_rate": 1.15,
+        "avg_risk": 20.2
+      },
+      {
+        "day": "Sat",
+        "hour": 16,
+        "total": 541,
+        "fraud": 7,
+        "fraud_rate": 1.29,
+        "avg_risk": 20.8
+      },
+      {
+        "day": "Sat",
+        "hour": 17,
+        "total": 541,
+        "fraud": 14,
+        "fraud_rate": 2.59,
+        "avg_risk": 26.7
+      },
+      {
+        "day": "Sat",
+        "hour": 18,
+        "total": 560,
+        "fraud": 12,
+        "fraud_rate": 2.14,
+        "avg_risk": 24.6
+      },
+      {
+        "day": "Sat",
+        "hour": 19,
+        "total": 590,
+        "fraud": 12,
+        "fraud_rate": 2.03,
+        "avg_risk": 24.1
+      },
+      {
+        "day": "Sat",
+        "hour": 20,
+        "total": 527,
+        "fraud": 6,
+        "fraud_rate": 1.14,
+        "avg_risk": 20.1
+      },
+      {
+        "day": "Sat",
+        "hour": 21,
+        "total": 536,
+        "fraud": 14,
+        "fraud_rate": 2.61,
+        "avg_risk": 26.7
+      },
+      {
+        "day": "Sat",
+        "hour": 22,
+        "total": 500,
+        "fraud": 24,
+        "fraud_rate": 4.8,
+        "avg_risk": 36.6
+      },
+      {
+        "day": "Sat",
+        "hour": 23,
+        "total": 557,
+        "fraud": 24,
+        "fraud_rate": 4.31,
+        "avg_risk": 34.4
+      }
+    ],
+    [
+      {
+        "day": "Sun",
+        "hour": 0,
+        "total": 512,
+        "fraud": 11,
+        "fraud_rate": 2.15,
+        "avg_risk": 24.7
+      },
+      {
+        "day": "Sun",
+        "hour": 1,
+        "total": 451,
+        "fraud": 11,
+        "fraud_rate": 2.44,
+        "avg_risk": 26.0
+      },
+      {
+        "day": "Sun",
+        "hour": 2,
+        "total": 407,
+        "fraud": 15,
+        "fraud_rate": 3.69,
+        "avg_risk": 31.6
+      },
+      {
+        "day": "Sun",
+        "hour": 3,
+        "total": 300,
+        "fraud": 5,
+        "fraud_rate": 1.67,
+        "avg_risk": 22.5
+      },
+      {
+        "day": "Sun",
+        "hour": 4,
+        "total": 254,
+        "fraud": 9,
+        "fraud_rate": 3.54,
+        "avg_risk": 30.9
+      },
+      {
+        "day": "Sun",
+        "hour": 5,
+        "total": 147,
+        "fraud": 2,
+        "fraud_rate": 1.36,
+        "avg_risk": 21.1
+      },
+      {
+        "day": "Sun",
+        "hour": 6,
+        "total": 91,
+        "fraud": 2,
+        "fraud_rate": 2.2,
+        "avg_risk": 24.9
+      },
+      {
+        "day": "Sun",
+        "hour": 7,
+        "total": 37,
+        "fraud": 0,
+        "fraud_rate": 0.0,
+        "avg_risk": 15.0
+      },
+      {
+        "day": "Sun",
+        "hour": 8,
+        "total": 17,
+        "fraud": 1,
+        "fraud_rate": 5.88,
+        "avg_risk": 41.5
+      },
+      {
+        "day": "Sun",
+        "hour": 9,
+        "total": 32,
+        "fraud": 3,
+        "fraud_rate": 9.38,
+        "avg_risk": 57.2
+      },
+      {
+        "day": "Sun",
+        "hour": 10,
+        "total": 34,
+        "fraud": 1,
+        "fraud_rate": 2.94,
+        "avg_risk": 28.2
+      },
+      {
+        "day": "Sun",
+        "hour": 11,
+        "total": 64,
+        "fraud": 1,
+        "fraud_rate": 1.56,
+        "avg_risk": 22.0
+      },
+      {
+        "day": "Sun",
+        "hour": 12,
+        "total": 162,
+        "fraud": 1,
+        "fraud_rate": 0.62,
+        "avg_risk": 17.8
+      },
+      {
+        "day": "Sun",
+        "hour": 13,
+        "total": 213,
+        "fraud": 1,
+        "fraud_rate": 0.47,
+        "avg_risk": 17.1
+      },
+      {
+        "day": "Sun",
+        "hour": 14,
+        "total": 335,
+        "fraud": 6,
+        "fraud_rate": 1.79,
+        "avg_risk": 23.1
+      },
+      {
+        "day": "Sun",
+        "hour": 15,
+        "total": 441,
+        "fraud": 12,
+        "fraud_rate": 2.72,
+        "avg_risk": 27.2
+      },
+      {
+        "day": "Sun",
+        "hour": 16,
+        "total": 594,
+        "fraud": 12,
+        "fraud_rate": 2.02,
+        "avg_risk": 24.1
+      },
+      {
+        "day": "Sun",
+        "hour": 17,
+        "total": 554,
+        "fraud": 9,
+        "fraud_rate": 1.62,
+        "avg_risk": 22.3
+      },
+      {
+        "day": "Sun",
+        "hour": 18,
+        "total": 580,
+        "fraud": 9,
+        "fraud_rate": 1.55,
+        "avg_risk": 22.0
+      },
+      {
+        "day": "Sun",
+        "hour": 19,
+        "total": 529,
+        "fraud": 14,
+        "fraud_rate": 2.65,
+        "avg_risk": 26.9
+      },
+      {
+        "day": "Sun",
+        "hour": 20,
+        "total": 558,
+        "fraud": 14,
+        "fraud_rate": 2.51,
+        "avg_risk": 26.3
+      },
+      {
+        "day": "Sun",
+        "hour": 21,
+        "total": 529,
+        "fraud": 9,
+        "fraud_rate": 1.7,
+        "avg_risk": 22.6
+      },
+      {
+        "day": "Sun",
+        "hour": 22,
+        "total": 523,
+        "fraud": 14,
+        "fraud_rate": 2.68,
+        "avg_risk": 27.1
+      },
+      {
+        "day": "Sun",
+        "hour": 23,
+        "total": 536,
+        "fraud": 19,
+        "fraud_rate": 3.54,
+        "avg_risk": 30.9
+      }
+    ]
+  ],
+  "max_fraud_rate": 10.49,
+  "overall_fraud_rate": 3.42,
+  "data_source": "IEEE-CIS Fraud Detection Dataset (Authentic Temporal Distribution)"
+}

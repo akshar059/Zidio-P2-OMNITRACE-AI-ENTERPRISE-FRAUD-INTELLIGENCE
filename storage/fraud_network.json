@@ -1,0 +1,1801 @@
+{
+  "elements": [
+    {
+      "data": {
+        "id": "DFP-WIN11-CANVAS-88A1",
+        "label": "WIN11-CANVAS-88A1",
+        "type": "device",
+        "risk_score": 98,
+        "is_fraud": 1,
+        "metadata": {
+          "os": "Windows 11",
+          "browser": "Chromium Headless",
+          "canvas_hash": "a8f94e"
+        },
+        "degree": 14,
+        "is_quarantined": true,
+        "is_kingpin": true,
+        "cluster_id": "RING-01"
+      }
+    },
+    {
+      "data": {
+        "id": "CARD-MC-5424-2749",
+        "label": "MC-5424\u2022\u2022\u20222749",
+        "type": "card",
+        "risk_score": 92,
+        "is_fraud": 1,
+        "metadata": {
+          "brand": "mastercard",
+          "type": "credit"
+        },
+        "degree": 3,
+        "is_quarantined": true,
+        "is_kingpin": false,
+        "cluster_id": "RING-01"
+      }
+    },
+    {
+      "data": {
+        "id": "CARD-VISA-4821-5395",
+        "label": "VISA-4821\u2022\u2022\u20225395",
+        "type": "card",
+        "risk_score": 89,
+        "is_fraud": 1,
+        "metadata": {
+          "brand": "visa",
+          "type": "debit"
+        },
+        "degree": 3,
+        "is_quarantined": true,
+        "is_kingpin": false,
+        "cluster_id": "RING-01"
+      }
+    },
+    {
+      "data": {
+        "id": "CARD-MC-5105-5499",
+        "label": "MC-5105\u2022\u2022\u20225499",
+        "type": "card",
+        "risk_score": 91,
+        "is_fraud": 1,
+        "metadata": {
+          "brand": "mastercard",
+          "type": "credit"
+        },
+        "degree": 3,
+        "is_quarantined": true,
+        "is_kingpin": false,
+        "cluster_id": "RING-01"
+      }
+    },
+    {
+      "data": {
+        "id": "CARD-VISA-4532-5387",
+        "label": "VISA-4532\u2022\u2022\u20225387",
+        "type": "card",
+        "risk_score": 87,
+        "is_fraud": 1,
+        "metadata": {
+          "brand": "visa",
+          "type": "credit"
+        },
+        "degree": 2,
+        "is_quarantined": true,
+        "is_kingpin": false,
+        "cluster_id": "RING-01"
+      }
+    },
+    {
+      "data": {
+        "id": "CARD-MC-5289-8348",
+        "label": "MC-5289\u2022\u2022\u20228348",
+        "type": "card",
+        "risk_score": 88,
+        "is_fraud": 1,
+        "metadata": {
+          "brand": "mastercard",
+          "type": "debit"
+        },
+        "degree": 2,
+        "is_quarantined": true,
+        "is_kingpin": false,
+        "cluster_id": "RING-01"
+      }
+    },
+    {
+      "data": {
+        "id": "CARD-MC-5511-0858",
+        "label": "MC-5511\u2022\u2022\u20220858",
+        "type": "card",
+        "risk_score": 90,
+        "is_fraud": 1,
+        "metadata": {
+          "brand": "mastercard",
+          "type": "credit"
+        },
+        "degree": 2,
+        "is_quarantined": true,
+        "is_kingpin": false,
+        "cluster_id": "RING-01"
+      }
+    },
+    {
+      "data": {
+        "id": "EML-botnet-relay@tempmail.org",
+        "label": "relay@tempmail.org",
+        "type": "email",
+        "risk_score": 95,
+        "is_fraud": 1,
+        "metadata": {
+          "domain": "tempmail.org"
+        },
+        "degree": 6,
+        "is_quarantined": true,
+        "is_kingpin": false,
+        "cluster_id": "RING-01"
+      }
+    },
+    {
+      "data": {
+        "id": "TX-2992749",
+        "label": "TX 2992749\n\u20b96,950",
+        "type": "transaction",
+        "risk_score": 94,
+        "is_fraud": 1,
+        "metadata": {
+          "amount": 6950.0,
+          "level": "CRITICAL"
+        },
+        "degree": 3,
+        "is_quarantined": true,
+        "is_kingpin": false,
+        "cluster_id": "RING-01"
+      }
+    },
+    {
+      "data": {
+        "id": "TX-2995499",
+        "label": "TX 2995499\n\u20b912,400",
+        "type": "transaction",
+        "risk_score": 92,
+        "is_fraud": 1,
+        "metadata": {
+          "amount": 12400.0,
+          "level": "CRITICAL"
+        },
+        "degree": 3,
+        "is_quarantined": true,
+        "is_kingpin": false,
+        "cluster_id": "RING-01"
+      }
+    },
+    {
+      "data": {
+        "id": "TX-2995395",
+        "label": "TX 2995395\n\u20b918,500",
+        "type": "transaction",
+        "risk_score": 95,
+        "is_fraud": 1,
+        "metadata": {
+          "amount": 18500.0,
+          "level": "CRITICAL"
+        },
+        "degree": 3,
+        "is_quarantined": true,
+        "is_kingpin": false,
+        "cluster_id": "RING-01"
+      }
+    },
+    {
+      "data": {
+        "id": "TX-2995387",
+        "label": "TX 2995387\n\u20b914,200",
+        "type": "transaction",
+        "risk_score": 89,
+        "is_fraud": 1,
+        "metadata": {
+          "amount": 14200.0,
+          "level": "CRITICAL"
+        },
+        "degree": 3,
+        "is_quarantined": true,
+        "is_kingpin": false,
+        "cluster_id": "RING-01"
+      }
+    },
+    {
+      "data": {
+        "id": "TX-2988348",
+        "label": "TX 2988348\n\u20b99,800",
+        "type": "transaction",
+        "risk_score": 91,
+        "is_fraud": 1,
+        "metadata": {
+          "amount": 9800.0,
+          "level": "CRITICAL"
+        },
+        "degree": 3,
+        "is_quarantined": true,
+        "is_kingpin": false,
+        "cluster_id": "RING-01"
+      }
+    },
+    {
+      "data": {
+        "id": "TX-2990858",
+        "label": "TX 2990858\n\u20b916,750",
+        "type": "transaction",
+        "risk_score": 93,
+        "is_fraud": 1,
+        "metadata": {
+          "amount": 16750.0,
+          "level": "CRITICAL"
+        },
+        "degree": 3,
+        "is_quarantined": true,
+        "is_kingpin": false,
+        "cluster_id": "RING-01"
+      }
+    },
+    {
+      "data": {
+        "id": "TX-3008012",
+        "label": "TX 3008012\n\u20b922,087",
+        "type": "transaction",
+        "risk_score": 96,
+        "is_fraud": 1,
+        "metadata": {
+          "amount": 22087.0,
+          "level": "CRITICAL"
+        },
+        "degree": 3,
+        "is_quarantined": true,
+        "is_kingpin": false,
+        "cluster_id": "RING-01"
+      }
+    },
+    {
+      "data": {
+        "id": "TX-3008014",
+        "label": "TX 3008014\n\u20b915,360",
+        "type": "transaction",
+        "risk_score": 88,
+        "is_fraud": 1,
+        "metadata": {
+          "amount": 15360.0,
+          "level": "HIGH"
+        },
+        "degree": 3,
+        "is_quarantined": true,
+        "is_kingpin": false,
+        "cluster_id": "RING-01"
+      }
+    },
+    {
+      "data": {
+        "id": "TX-3008019",
+        "label": "TX 3008019\n\u20b98,450",
+        "type": "transaction",
+        "risk_score": 87,
+        "is_fraud": 1,
+        "metadata": {
+          "amount": 8450.0,
+          "level": "HIGH"
+        },
+        "degree": 2,
+        "is_quarantined": true,
+        "is_kingpin": false,
+        "cluster_id": "RING-01"
+      }
+    },
+    {
+      "data": {
+        "id": "TX-3008025",
+        "label": "TX 3008025\n\u20b97,120",
+        "type": "transaction",
+        "risk_score": 86,
+        "is_fraud": 1,
+        "metadata": {
+          "amount": 7120.0,
+          "level": "HIGH"
+        },
+        "degree": 2,
+        "is_quarantined": true,
+        "is_kingpin": false,
+        "cluster_id": "RING-01"
+      }
+    },
+    {
+      "data": {
+        "id": "TX-3008031",
+        "label": "TX 3008031\n\u20b95,400",
+        "type": "transaction",
+        "risk_score": 85,
+        "is_fraud": 1,
+        "metadata": {
+          "amount": 5400.0,
+          "level": "HIGH"
+        },
+        "degree": 2,
+        "is_quarantined": true,
+        "is_kingpin": false,
+        "cluster_id": "RING-01"
+      }
+    },
+    {
+      "data": {
+        "id": "TX-3008038",
+        "label": "TX 3008038\n\u20b93,900",
+        "type": "transaction",
+        "risk_score": 84,
+        "is_fraud": 1,
+        "metadata": {
+          "amount": 3900.0,
+          "level": "HIGH"
+        },
+        "degree": 2,
+        "is_quarantined": true,
+        "is_kingpin": false,
+        "cluster_id": "RING-01"
+      }
+    },
+    {
+      "data": {
+        "id": "TX-3008044",
+        "label": "TX 3008044\n\u20b94,200",
+        "type": "transaction",
+        "risk_score": 83,
+        "is_fraud": 1,
+        "metadata": {
+          "amount": 4200.0,
+          "level": "HIGH"
+        },
+        "degree": 2,
+        "is_quarantined": true,
+        "is_kingpin": false,
+        "cluster_id": "RING-01"
+      }
+    },
+    {
+      "data": {
+        "id": "TX-3008051",
+        "label": "TX 3008051\n\u20b93,403",
+        "type": "transaction",
+        "risk_score": 82,
+        "is_fraud": 1,
+        "metadata": {
+          "amount": 3403.0,
+          "level": "HIGH"
+        },
+        "degree": 2,
+        "is_quarantined": true,
+        "is_kingpin": false,
+        "cluster_id": "RING-01"
+      }
+    },
+    {
+      "data": {
+        "id": "e_dev_TX-2992749",
+        "source": "TX-2992749",
+        "target": "DFP-WIN11-CANVAS-88A1",
+        "relationship": "OPERATED_ON",
+        "cluster_id": "RING-01"
+      }
+    },
+    {
+      "data": {
+        "id": "e_card_TX-2992749",
+        "source": "TX-2992749",
+        "target": "CARD-MC-5424-2749",
+        "relationship": "PAID_WITH",
+        "cluster_id": "RING-01"
+      }
+    },
+    {
+      "data": {
+        "id": "e_eml_TX-2992749",
+        "source": "TX-2992749",
+        "target": "EML-botnet-relay@tempmail.org",
+        "relationship": "REGISTERED_WITH",
+        "cluster_id": "RING-01"
+      }
+    },
+    {
+      "data": {
+        "id": "e_dev_TX-2995499",
+        "source": "TX-2995499",
+        "target": "DFP-WIN11-CANVAS-88A1",
+        "relationship": "OPERATED_ON",
+        "cluster_id": "RING-01"
+      }
+    },
+    {
+      "data": {
+        "id": "e_card_TX-2995499",
+        "source": "TX-2995499",
+        "target": "CARD-VISA-4821-5395",
+        "relationship": "PAID_WITH",
+        "cluster_id": "RING-01"
+      }
+    },
+    {
+      "data": {
+        "id": "e_eml_TX-2995499",
+        "source": "TX-2995499",
+        "target": "EML-botnet-relay@tempmail.org",
+        "relationship": "REGISTERED_WITH",
+        "cluster_id": "RING-01"
+      }
+    },
+    {
+      "data": {
+        "id": "e_dev_TX-2995395",
+        "source": "TX-2995395",
+        "target": "DFP-WIN11-CANVAS-88A1",
+        "relationship": "OPERATED_ON",
+        "cluster_id": "RING-01"
+      }
+    },
+    {
+      "data": {
+        "id": "e_card_TX-2995395",
+        "source": "TX-2995395",
+        "target": "CARD-MC-5105-5499",
+        "relationship": "PAID_WITH",
+        "cluster_id": "RING-01"
+      }
+    },
+    {
+      "data": {
+        "id": "e_eml_TX-2995395",
+        "source": "TX-2995395",
+        "target": "EML-botnet-relay@tempmail.org",
+        "relationship": "REGISTERED_WITH",
+        "cluster_id": "RING-01"
+      }
+    },
+    {
+      "data": {
+        "id": "e_dev_TX-2995387",
+        "source": "TX-2995387",
+        "target": "DFP-WIN11-CANVAS-88A1",
+        "relationship": "OPERATED_ON",
+        "cluster_id": "RING-01"
+      }
+    },
+    {
+      "data": {
+        "id": "e_card_TX-2995387",
+        "source": "TX-2995387",
+        "target": "CARD-VISA-4532-5387",
+        "relationship": "PAID_WITH",
+        "cluster_id": "RING-01"
+      }
+    },
+    {
+      "data": {
+        "id": "e_eml_TX-2995387",
+        "source": "TX-2995387",
+        "target": "EML-botnet-relay@tempmail.org",
+        "relationship": "REGISTERED_WITH",
+        "cluster_id": "RING-01"
+      }
+    },
+    {
+      "data": {
+        "id": "e_dev_TX-2988348",
+        "source": "TX-2988348",
+        "target": "DFP-WIN11-CANVAS-88A1",
+        "relationship": "OPERATED_ON",
+        "cluster_id": "RING-01"
+      }
+    },
+    {
+      "data": {
+        "id": "e_card_TX-2988348",
+        "source": "TX-2988348",
+        "target": "CARD-MC-5289-8348",
+        "relationship": "PAID_WITH",
+        "cluster_id": "RING-01"
+      }
+    },
+    {
+      "data": {
+        "id": "e_eml_TX-2988348",
+        "source": "TX-2988348",
+        "target": "EML-botnet-relay@tempmail.org",
+        "relationship": "REGISTERED_WITH",
+        "cluster_id": "RING-01"
+      }
+    },
+    {
+      "data": {
+        "id": "e_dev_TX-2990858",
+        "source": "TX-2990858",
+        "target": "DFP-WIN11-CANVAS-88A1",
+        "relationship": "OPERATED_ON",
+        "cluster_id": "RING-01"
+      }
+    },
+    {
+      "data": {
+        "id": "e_card_TX-2990858",
+        "source": "TX-2990858",
+        "target": "CARD-MC-5511-0858",
+        "relationship": "PAID_WITH",
+        "cluster_id": "RING-01"
+      }
+    },
+    {
+      "data": {
+        "id": "e_eml_TX-2990858",
+        "source": "TX-2990858",
+        "target": "EML-botnet-relay@tempmail.org",
+        "relationship": "REGISTERED_WITH",
+        "cluster_id": "RING-01"
+      }
+    },
+    {
+      "data": {
+        "id": "e_dev_TX-3008012",
+        "source": "TX-3008012",
+        "target": "DFP-WIN11-CANVAS-88A1",
+        "relationship": "OPERATED_ON",
+        "cluster_id": "RING-01"
+      }
+    },
+    {
+      "data": {
+        "id": "e_card_TX-3008012",
+        "source": "TX-3008012",
+        "target": "CARD-MC-5424-2749",
+        "relationship": "PAID_WITH",
+        "cluster_id": "RING-01"
+      }
+    },
+    {
+      "data": {
+        "id": "e_dev_TX-3008014",
+        "source": "TX-3008014",
+        "target": "DFP-WIN11-CANVAS-88A1",
+        "relationship": "OPERATED_ON",
+        "cluster_id": "RING-01"
+      }
+    },
+    {
+      "data": {
+        "id": "e_card_TX-3008014",
+        "source": "TX-3008014",
+        "target": "CARD-VISA-4821-5395",
+        "relationship": "PAID_WITH",
+        "cluster_id": "RING-01"
+      }
+    },
+    {
+      "data": {
+        "id": "e_dev_TX-3008019",
+        "source": "TX-3008019",
+        "target": "DFP-WIN11-CANVAS-88A1",
+        "relationship": "OPERATED_ON",
+        "cluster_id": "RING-01"
+      }
+    },
+    {
+      "data": {
+        "id": "e_card_TX-3008019",
+        "source": "TX-3008019",
+        "target": "CARD-MC-5105-5499",
+        "relationship": "PAID_WITH",
+        "cluster_id": "RING-01"
+      }
+    },
+    {
+      "data": {
+        "id": "e_dev_TX-3008025",
+        "source": "TX-3008025",
+        "target": "DFP-WIN11-CANVAS-88A1",
+        "relationship": "OPERATED_ON",
+        "cluster_id": "RING-01"
+      }
+    },
+    {
+      "data": {
+        "id": "e_card_TX-3008025",
+        "source": "TX-3008025",
+        "target": "CARD-VISA-4532-5387",
+        "relationship": "PAID_WITH",
+        "cluster_id": "RING-01"
+      }
+    },
+    {
+      "data": {
+        "id": "e_dev_TX-3008031",
+        "source": "TX-3008031",
+        "target": "DFP-WIN11-CANVAS-88A1",
+        "relationship": "OPERATED_ON",
+        "cluster_id": "RING-01"
+      }
+    },
+    {
+      "data": {
+        "id": "e_card_TX-3008031",
+        "source": "TX-3008031",
+        "target": "CARD-MC-5289-8348",
+        "relationship": "PAID_WITH",
+        "cluster_id": "RING-01"
+      }
+    },
+    {
+      "data": {
+        "id": "e_dev_TX-3008038",
+        "source": "TX-3008038",
+        "target": "DFP-WIN11-CANVAS-88A1",
+        "relationship": "OPERATED_ON",
+        "cluster_id": "RING-01"
+      }
+    },
+    {
+      "data": {
+        "id": "e_card_TX-3008038",
+        "source": "TX-3008038",
+        "target": "CARD-MC-5511-0858",
+        "relationship": "PAID_WITH",
+        "cluster_id": "RING-01"
+      }
+    },
+    {
+      "data": {
+        "id": "e_dev_TX-3008044",
+        "source": "TX-3008044",
+        "target": "DFP-WIN11-CANVAS-88A1",
+        "relationship": "OPERATED_ON",
+        "cluster_id": "RING-01"
+      }
+    },
+    {
+      "data": {
+        "id": "e_card_TX-3008044",
+        "source": "TX-3008044",
+        "target": "CARD-MC-5424-2749",
+        "relationship": "PAID_WITH",
+        "cluster_id": "RING-01"
+      }
+    },
+    {
+      "data": {
+        "id": "e_dev_TX-3008051",
+        "source": "TX-3008051",
+        "target": "DFP-WIN11-CANVAS-88A1",
+        "relationship": "OPERATED_ON",
+        "cluster_id": "RING-01"
+      }
+    },
+    {
+      "data": {
+        "id": "e_card_TX-3008051",
+        "source": "TX-3008051",
+        "target": "CARD-VISA-4821-5395",
+        "relationship": "PAID_WITH",
+        "cluster_id": "RING-01"
+      }
+    },
+    {
+      "data": {
+        "id": "GW-TOR-EXIT-94.130.82",
+        "label": "TOR-EXIT-94.130.82",
+        "type": "device",
+        "risk_score": 95,
+        "is_fraud": 1,
+        "metadata": {
+          "asn": "AS24940 Hetzner",
+          "country": "DE"
+        },
+        "degree": 11,
+        "is_quarantined": true,
+        "is_kingpin": true,
+        "cluster_id": "RING-02"
+      }
+    },
+    {
+      "data": {
+        "id": "DFP-MAC-SONOMA-4F2A",
+        "label": "MAC-SONOMA-4F2A",
+        "type": "device",
+        "risk_score": 86,
+        "is_fraud": 1,
+        "metadata": {
+          "os": "macOS Sonoma"
+        },
+        "degree": 3,
+        "is_quarantined": true,
+        "is_kingpin": false,
+        "cluster_id": "RING-02"
+      }
+    },
+    {
+      "data": {
+        "id": "DFP-ANDR-CHROME-9B10",
+        "label": "ANDR-CHROME-9B10",
+        "type": "device",
+        "risk_score": 88,
+        "is_fraud": 1,
+        "metadata": {
+          "os": "Android 14"
+        },
+        "degree": 3,
+        "is_quarantined": true,
+        "is_kingpin": false,
+        "cluster_id": "RING-02"
+      }
+    },
+    {
+      "data": {
+        "id": "DFP-IOS-SAFARI-1E8D",
+        "label": "IOS-SAFARI-1E8D",
+        "type": "device",
+        "risk_score": 84,
+        "is_fraud": 1,
+        "metadata": {
+          "os": "iOS 17.4"
+        },
+        "degree": 3,
+        "is_quarantined": true,
+        "is_kingpin": false,
+        "cluster_id": "RING-02"
+      }
+    },
+    {
+      "data": {
+        "id": "CARD-VISA-4916-8745",
+        "label": "VISA-4916\u2022\u2022\u20228745",
+        "type": "card",
+        "risk_score": 93,
+        "is_fraud": 1,
+        "metadata": {
+          "brand": "visa",
+          "type": "credit"
+        },
+        "degree": 3,
+        "is_quarantined": true,
+        "is_kingpin": false,
+        "cluster_id": "RING-02"
+      }
+    },
+    {
+      "data": {
+        "id": "CARD-MC-5312-4121",
+        "label": "MC-5312\u2022\u2022\u20224121",
+        "type": "card",
+        "risk_score": 91,
+        "is_fraud": 1,
+        "metadata": {
+          "brand": "mastercard",
+          "type": "credit"
+        },
+        "degree": 2,
+        "is_quarantined": true,
+        "is_kingpin": false,
+        "cluster_id": "RING-02"
+      }
+    },
+    {
+      "data": {
+        "id": "CARD-VISA-4485-2903",
+        "label": "VISA-4485\u2022\u2022\u20222903",
+        "type": "card",
+        "risk_score": 90,
+        "is_fraud": 1,
+        "metadata": {
+          "brand": "visa",
+          "type": "credit"
+        },
+        "degree": 2,
+        "is_quarantined": true,
+        "is_kingpin": false,
+        "cluster_id": "RING-02"
+      }
+    },
+    {
+      "data": {
+        "id": "CARD-MC-5198-0338",
+        "label": "MC-5198\u2022\u2022\u20220338",
+        "type": "card",
+        "risk_score": 89,
+        "is_fraud": 1,
+        "metadata": {
+          "brand": "mastercard",
+          "type": "debit"
+        },
+        "degree": 2,
+        "is_quarantined": true,
+        "is_kingpin": false,
+        "cluster_id": "RING-02"
+      }
+    },
+    {
+      "data": {
+        "id": "EML-anon-drop@proton.me",
+        "label": "drop@proton.me",
+        "type": "email",
+        "risk_score": 92,
+        "is_fraud": 1,
+        "metadata": {
+          "domain": "proton.me"
+        },
+        "degree": 5,
+        "is_quarantined": true,
+        "is_kingpin": false,
+        "cluster_id": "RING-02"
+      }
+    },
+    {
+      "data": {
+        "id": "TX-2998745",
+        "label": "TX 2998745\n\u20b942,000",
+        "type": "transaction",
+        "risk_score": 94,
+        "is_fraud": 1,
+        "metadata": {
+          "amount": 42000.0,
+          "level": "CRITICAL"
+        },
+        "degree": 3,
+        "is_quarantined": true,
+        "is_kingpin": false,
+        "cluster_id": "RING-02"
+      }
+    },
+    {
+      "data": {
+        "id": "TX-2994121",
+        "label": "TX 2994121\n\u20b956,500",
+        "type": "transaction",
+        "risk_score": 96,
+        "is_fraud": 1,
+        "metadata": {
+          "amount": 56500.0,
+          "level": "CRITICAL"
+        },
+        "degree": 3,
+        "is_quarantined": true,
+        "is_kingpin": false,
+        "cluster_id": "RING-02"
+      }
+    },
+    {
+      "data": {
+        "id": "TX-3002903",
+        "label": "TX 3002903\n\u20b948,900",
+        "type": "transaction",
+        "risk_score": 91,
+        "is_fraud": 1,
+        "metadata": {
+          "amount": 48900.0,
+          "level": "CRITICAL"
+        },
+        "degree": 3,
+        "is_quarantined": true,
+        "is_kingpin": false,
+        "cluster_id": "RING-02"
+      }
+    },
+    {
+      "data": {
+        "id": "TX-3000338",
+        "label": "TX 3000338\n\u20b939,800",
+        "type": "transaction",
+        "risk_score": 89,
+        "is_fraud": 1,
+        "metadata": {
+          "amount": 39800.0,
+          "level": "HIGH"
+        },
+        "degree": 3,
+        "is_quarantined": true,
+        "is_kingpin": false,
+        "cluster_id": "RING-02"
+      }
+    },
+    {
+      "data": {
+        "id": "TX-3008060",
+        "label": "TX 3008060\n\u20b962,400",
+        "type": "transaction",
+        "risk_score": 97,
+        "is_fraud": 1,
+        "metadata": {
+          "amount": 62400.0,
+          "level": "CRITICAL"
+        },
+        "degree": 3,
+        "is_quarantined": true,
+        "is_kingpin": false,
+        "cluster_id": "RING-02"
+      }
+    },
+    {
+      "data": {
+        "id": "TX-3008065",
+        "label": "TX 3008065\n\u20b945,000",
+        "type": "transaction",
+        "risk_score": 92,
+        "is_fraud": 1,
+        "metadata": {
+          "amount": 45000.0,
+          "level": "CRITICAL"
+        },
+        "degree": 3,
+        "is_quarantined": true,
+        "is_kingpin": false,
+        "cluster_id": "RING-02"
+      }
+    },
+    {
+      "data": {
+        "id": "TX-3008071",
+        "label": "TX 3008071\n\u20b938,000",
+        "type": "transaction",
+        "risk_score": 88,
+        "is_fraud": 1,
+        "metadata": {
+          "amount": 38000.0,
+          "level": "HIGH"
+        },
+        "degree": 2,
+        "is_quarantined": true,
+        "is_kingpin": false,
+        "cluster_id": "RING-02"
+      }
+    },
+    {
+      "data": {
+        "id": "TX-3008078",
+        "label": "TX 3008078\n\u20b928,500",
+        "type": "transaction",
+        "risk_score": 87,
+        "is_fraud": 1,
+        "metadata": {
+          "amount": 28500.0,
+          "level": "HIGH"
+        },
+        "degree": 2,
+        "is_quarantined": true,
+        "is_kingpin": false,
+        "cluster_id": "RING-02"
+      }
+    },
+    {
+      "data": {
+        "id": "TX-3008085",
+        "label": "TX 3008085\n\u20b923,500",
+        "type": "transaction",
+        "risk_score": 85,
+        "is_fraud": 1,
+        "metadata": {
+          "amount": 23500.0,
+          "level": "HIGH"
+        },
+        "degree": 2,
+        "is_quarantined": true,
+        "is_kingpin": false,
+        "cluster_id": "RING-02"
+      }
+    },
+    {
+      "data": {
+        "id": "e_gw_TX-2998745",
+        "source": "TX-2998745",
+        "target": "GW-TOR-EXIT-94.130.82",
+        "relationship": "ROUTED_VIA",
+        "cluster_id": "RING-02"
+      }
+    },
+    {
+      "data": {
+        "id": "e_r2_card_TX-2998745",
+        "source": "TX-2998745",
+        "target": "CARD-VISA-4916-8745",
+        "relationship": "PAID_WITH",
+        "cluster_id": "RING-02"
+      }
+    },
+    {
+      "data": {
+        "id": "e_r2_dev_TX-2998745",
+        "source": "TX-2998745",
+        "target": "DFP-MAC-SONOMA-4F2A",
+        "relationship": "OPERATED_ON",
+        "cluster_id": "RING-02"
+      }
+    },
+    {
+      "data": {
+        "id": "e_r2_eml_TX-2998745",
+        "source": "TX-2998745",
+        "target": "EML-anon-drop@proton.me",
+        "relationship": "REGISTERED_WITH",
+        "cluster_id": "RING-02"
+      }
+    },
+    {
+      "data": {
+        "id": "e_gw_TX-2994121",
+        "source": "TX-2994121",
+        "target": "GW-TOR-EXIT-94.130.82",
+        "relationship": "ROUTED_VIA",
+        "cluster_id": "RING-02"
+      }
+    },
+    {
+      "data": {
+        "id": "e_r2_card_TX-2994121",
+        "source": "TX-2994121",
+        "target": "CARD-MC-5312-4121",
+        "relationship": "PAID_WITH",
+        "cluster_id": "RING-02"
+      }
+    },
+    {
+      "data": {
+        "id": "e_r2_dev_TX-2994121",
+        "source": "TX-2994121",
+        "target": "DFP-ANDR-CHROME-9B10",
+        "relationship": "OPERATED_ON",
+        "cluster_id": "RING-02"
+      }
+    },
+    {
+      "data": {
+        "id": "e_r2_eml_TX-2994121",
+        "source": "TX-2994121",
+        "target": "EML-anon-drop@proton.me",
+        "relationship": "REGISTERED_WITH",
+        "cluster_id": "RING-02"
+      }
+    },
+    {
+      "data": {
+        "id": "e_gw_TX-3002903",
+        "source": "TX-3002903",
+        "target": "GW-TOR-EXIT-94.130.82",
+        "relationship": "ROUTED_VIA",
+        "cluster_id": "RING-02"
+      }
+    },
+    {
+      "data": {
+        "id": "e_r2_card_TX-3002903",
+        "source": "TX-3002903",
+        "target": "CARD-VISA-4485-2903",
+        "relationship": "PAID_WITH",
+        "cluster_id": "RING-02"
+      }
+    },
+    {
+      "data": {
+        "id": "e_r2_dev_TX-3002903",
+        "source": "TX-3002903",
+        "target": "DFP-IOS-SAFARI-1E8D",
+        "relationship": "OPERATED_ON",
+        "cluster_id": "RING-02"
+      }
+    },
+    {
+      "data": {
+        "id": "e_r2_eml_TX-3002903",
+        "source": "TX-3002903",
+        "target": "EML-anon-drop@proton.me",
+        "relationship": "REGISTERED_WITH",
+        "cluster_id": "RING-02"
+      }
+    },
+    {
+      "data": {
+        "id": "e_gw_TX-3000338",
+        "source": "TX-3000338",
+        "target": "GW-TOR-EXIT-94.130.82",
+        "relationship": "ROUTED_VIA",
+        "cluster_id": "RING-02"
+      }
+    },
+    {
+      "data": {
+        "id": "e_r2_card_TX-3000338",
+        "source": "TX-3000338",
+        "target": "CARD-MC-5198-0338",
+        "relationship": "PAID_WITH",
+        "cluster_id": "RING-02"
+      }
+    },
+    {
+      "data": {
+        "id": "e_r2_dev_TX-3000338",
+        "source": "TX-3000338",
+        "target": "DFP-MAC-SONOMA-4F2A",
+        "relationship": "OPERATED_ON",
+        "cluster_id": "RING-02"
+      }
+    },
+    {
+      "data": {
+        "id": "e_r2_eml_TX-3000338",
+        "source": "TX-3000338",
+        "target": "EML-anon-drop@proton.me",
+        "relationship": "REGISTERED_WITH",
+        "cluster_id": "RING-02"
+      }
+    },
+    {
+      "data": {
+        "id": "e_gw_TX-3008060",
+        "source": "TX-3008060",
+        "target": "GW-TOR-EXIT-94.130.82",
+        "relationship": "ROUTED_VIA",
+        "cluster_id": "RING-02"
+      }
+    },
+    {
+      "data": {
+        "id": "e_r2_card_TX-3008060",
+        "source": "TX-3008060",
+        "target": "CARD-VISA-4916-8745",
+        "relationship": "PAID_WITH",
+        "cluster_id": "RING-02"
+      }
+    },
+    {
+      "data": {
+        "id": "e_r2_dev_TX-3008060",
+        "source": "TX-3008060",
+        "target": "DFP-ANDR-CHROME-9B10",
+        "relationship": "OPERATED_ON",
+        "cluster_id": "RING-02"
+      }
+    },
+    {
+      "data": {
+        "id": "e_r2_eml_TX-3008060",
+        "source": "TX-3008060",
+        "target": "EML-anon-drop@proton.me",
+        "relationship": "REGISTERED_WITH",
+        "cluster_id": "RING-02"
+      }
+    },
+    {
+      "data": {
+        "id": "e_gw_TX-3008065",
+        "source": "TX-3008065",
+        "target": "GW-TOR-EXIT-94.130.82",
+        "relationship": "ROUTED_VIA",
+        "cluster_id": "RING-02"
+      }
+    },
+    {
+      "data": {
+        "id": "e_r2_card_TX-3008065",
+        "source": "TX-3008065",
+        "target": "CARD-MC-5312-4121",
+        "relationship": "PAID_WITH",
+        "cluster_id": "RING-02"
+      }
+    },
+    {
+      "data": {
+        "id": "e_r2_dev_TX-3008065",
+        "source": "TX-3008065",
+        "target": "DFP-IOS-SAFARI-1E8D",
+        "relationship": "OPERATED_ON",
+        "cluster_id": "RING-02"
+      }
+    },
+    {
+      "data": {
+        "id": "e_gw_TX-3008071",
+        "source": "TX-3008071",
+        "target": "GW-TOR-EXIT-94.130.82",
+        "relationship": "ROUTED_VIA",
+        "cluster_id": "RING-02"
+      }
+    },
+    {
+      "data": {
+        "id": "e_r2_card_TX-3008071",
+        "source": "TX-3008071",
+        "target": "CARD-VISA-4485-2903",
+        "relationship": "PAID_WITH",
+        "cluster_id": "RING-02"
+      }
+    },
+    {
+      "data": {
+        "id": "e_r2_dev_TX-3008071",
+        "source": "TX-3008071",
+        "target": "DFP-MAC-SONOMA-4F2A",
+        "relationship": "OPERATED_ON",
+        "cluster_id": "RING-02"
+      }
+    },
+    {
+      "data": {
+        "id": "e_gw_TX-3008078",
+        "source": "TX-3008078",
+        "target": "GW-TOR-EXIT-94.130.82",
+        "relationship": "ROUTED_VIA",
+        "cluster_id": "RING-02"
+      }
+    },
+    {
+      "data": {
+        "id": "e_r2_card_TX-3008078",
+        "source": "TX-3008078",
+        "target": "CARD-MC-5198-0338",
+        "relationship": "PAID_WITH",
+        "cluster_id": "RING-02"
+      }
+    },
+    {
+      "data": {
+        "id": "e_r2_dev_TX-3008078",
+        "source": "TX-3008078",
+        "target": "DFP-ANDR-CHROME-9B10",
+        "relationship": "OPERATED_ON",
+        "cluster_id": "RING-02"
+      }
+    },
+    {
+      "data": {
+        "id": "e_gw_TX-3008085",
+        "source": "TX-3008085",
+        "target": "GW-TOR-EXIT-94.130.82",
+        "relationship": "ROUTED_VIA",
+        "cluster_id": "RING-02"
+      }
+    },
+    {
+      "data": {
+        "id": "e_r2_card_TX-3008085",
+        "source": "TX-3008085",
+        "target": "CARD-VISA-4916-8745",
+        "relationship": "PAID_WITH",
+        "cluster_id": "RING-02"
+      }
+    },
+    {
+      "data": {
+        "id": "e_r2_dev_TX-3008085",
+        "source": "TX-3008085",
+        "target": "DFP-IOS-SAFARI-1E8D",
+        "relationship": "OPERATED_ON",
+        "cluster_id": "RING-02"
+      }
+    },
+    {
+      "data": {
+        "id": "DFP-EMULATOR-ANDR-98A",
+        "label": "EMULATOR-ANDR-98A",
+        "type": "device",
+        "risk_score": 91,
+        "is_fraud": 1,
+        "metadata": {
+          "os": "Android x86 Virtualbox",
+          "device_model": "SM-G998B"
+        },
+        "degree": 8,
+        "is_quarantined": false,
+        "is_kingpin": true,
+        "cluster_id": "RING-03"
+      }
+    },
+    {
+      "data": {
+        "id": "DFP-LINUX-QEMU-77C2",
+        "label": "LINUX-QEMU-77C2",
+        "type": "device",
+        "risk_score": 83,
+        "is_fraud": 1,
+        "metadata": {
+          "os": "Debian QEMU"
+        },
+        "degree": 4,
+        "is_quarantined": false,
+        "is_kingpin": false,
+        "cluster_id": "RING-03"
+      }
+    },
+    {
+      "data": {
+        "id": "CARD-RUPAY-6072-9281",
+        "label": "RUPAY-6072\u2022\u2022\u20229281",
+        "type": "card",
+        "risk_score": 86,
+        "is_fraud": 1,
+        "metadata": {
+          "brand": "rupay",
+          "type": "debit"
+        },
+        "degree": 3,
+        "is_quarantined": false,
+        "is_kingpin": false,
+        "cluster_id": "RING-03"
+      }
+    },
+    {
+      "data": {
+        "id": "CARD-VISA-4716-7390",
+        "label": "VISA-4716\u2022\u2022\u20227390",
+        "type": "card",
+        "risk_score": 85,
+        "is_fraud": 1,
+        "metadata": {
+          "brand": "visa",
+          "type": "credit"
+        },
+        "degree": 2,
+        "is_quarantined": false,
+        "is_kingpin": false,
+        "cluster_id": "RING-03"
+      }
+    },
+    {
+      "data": {
+        "id": "CARD-MC-5241-6124",
+        "label": "MC-5241\u2022\u2022\u20226124",
+        "type": "card",
+        "risk_score": 84,
+        "is_fraud": 1,
+        "metadata": {
+          "brand": "mastercard",
+          "type": "credit"
+        },
+        "degree": 2,
+        "is_quarantined": false,
+        "is_kingpin": false,
+        "cluster_id": "RING-03"
+      }
+    },
+    {
+      "data": {
+        "id": "EML-sync-ops@icloud.com",
+        "label": "ops@icloud.com",
+        "type": "email",
+        "risk_score": 81,
+        "is_fraud": 1,
+        "metadata": {
+          "domain": "icloud.com"
+        },
+        "degree": 4,
+        "is_quarantined": false,
+        "is_kingpin": false,
+        "cluster_id": "RING-03"
+      }
+    },
+    {
+      "data": {
+        "id": "TX-2997390",
+        "label": "TX 2997390\n\u20b918,500",
+        "type": "transaction",
+        "risk_score": 86,
+        "is_fraud": 1,
+        "metadata": {
+          "amount": 18500.0,
+          "level": "HIGH"
+        },
+        "degree": 3,
+        "is_quarantined": false,
+        "is_kingpin": false,
+        "cluster_id": "RING-03"
+      }
+    },
+    {
+      "data": {
+        "id": "TX-2990704",
+        "label": "TX 2990704\n\u20b914,950",
+        "type": "transaction",
+        "risk_score": 84,
+        "is_fraud": 1,
+        "metadata": {
+          "amount": 14950.0,
+          "level": "HIGH"
+        },
+        "degree": 3,
+        "is_quarantined": false,
+        "is_kingpin": false,
+        "cluster_id": "RING-03"
+      }
+    },
+    {
+      "data": {
+        "id": "TX-3008092",
+        "label": "TX 3008092\n\u20b921,000",
+        "type": "transaction",
+        "risk_score": 88,
+        "is_fraud": 1,
+        "metadata": {
+          "amount": 21000.0,
+          "level": "HIGH"
+        },
+        "degree": 3,
+        "is_quarantined": false,
+        "is_kingpin": false,
+        "cluster_id": "RING-03"
+      }
+    },
+    {
+      "data": {
+        "id": "TX-3008099",
+        "label": "TX 3008099\n\u20b917,400",
+        "type": "transaction",
+        "risk_score": 85,
+        "is_fraud": 1,
+        "metadata": {
+          "amount": 17400.0,
+          "level": "HIGH"
+        },
+        "degree": 2,
+        "is_quarantined": false,
+        "is_kingpin": false,
+        "cluster_id": "RING-03"
+      }
+    },
+    {
+      "data": {
+        "id": "TX-3008105",
+        "label": "TX 3008105\n\u20b915,200",
+        "type": "transaction",
+        "risk_score": 83,
+        "is_fraud": 1,
+        "metadata": {
+          "amount": 15200.0,
+          "level": "HIGH"
+        },
+        "degree": 2,
+        "is_quarantined": false,
+        "is_kingpin": false,
+        "cluster_id": "RING-03"
+      }
+    },
+    {
+      "data": {
+        "id": "TX-3008112",
+        "label": "TX 3008112\n\u20b913,800",
+        "type": "transaction",
+        "risk_score": 82,
+        "is_fraud": 1,
+        "metadata": {
+          "amount": 13800.0,
+          "level": "HIGH"
+        },
+        "degree": 2,
+        "is_quarantined": false,
+        "is_kingpin": false,
+        "cluster_id": "RING-03"
+      }
+    },
+    {
+      "data": {
+        "id": "TX-3008118",
+        "label": "TX 3008118\n\u20b911,600",
+        "type": "transaction",
+        "risk_score": 81,
+        "is_fraud": 1,
+        "metadata": {
+          "amount": 11600.0,
+          "level": "HIGH"
+        },
+        "degree": 2,
+        "is_quarantined": false,
+        "is_kingpin": false,
+        "cluster_id": "RING-03"
+      }
+    },
+    {
+      "data": {
+        "id": "e_r3_emul_TX-2997390",
+        "source": "TX-2997390",
+        "target": "DFP-EMULATOR-ANDR-98A",
+        "relationship": "OPERATED_ON",
+        "cluster_id": "RING-03"
+      }
+    },
+    {
+      "data": {
+        "id": "e_r3_card_TX-2997390",
+        "source": "TX-2997390",
+        "target": "CARD-RUPAY-6072-9281",
+        "relationship": "PAID_WITH",
+        "cluster_id": "RING-03"
+      }
+    },
+    {
+      "data": {
+        "id": "e_r3_eml_TX-2997390",
+        "source": "TX-2997390",
+        "target": "EML-sync-ops@icloud.com",
+        "relationship": "REGISTERED_WITH",
+        "cluster_id": "RING-03"
+      }
+    },
+    {
+      "data": {
+        "id": "e_r3_emul_TX-2990704",
+        "source": "TX-2990704",
+        "target": "DFP-EMULATOR-ANDR-98A",
+        "relationship": "OPERATED_ON",
+        "cluster_id": "RING-03"
+      }
+    },
+    {
+      "data": {
+        "id": "e_r3_card_TX-2990704",
+        "source": "TX-2990704",
+        "target": "CARD-VISA-4716-7390",
+        "relationship": "PAID_WITH",
+        "cluster_id": "RING-03"
+      }
+    },
+    {
+      "data": {
+        "id": "e_r3_qemu_TX-2990704",
+        "source": "TX-2990704",
+        "target": "DFP-LINUX-QEMU-77C2",
+        "relationship": "OPERATED_ON",
+        "cluster_id": "RING-03"
+      }
+    },
+    {
+      "data": {
+        "id": "e_r3_eml_TX-2990704",
+        "source": "TX-2990704",
+        "target": "EML-sync-ops@icloud.com",
+        "relationship": "REGISTERED_WITH",
+        "cluster_id": "RING-03"
+      }
+    },
+    {
+      "data": {
+        "id": "e_r3_emul_TX-3008092",
+        "source": "TX-3008092",
+        "target": "DFP-EMULATOR-ANDR-98A",
+        "relationship": "OPERATED_ON",
+        "cluster_id": "RING-03"
+      }
+    },
+    {
+      "data": {
+        "id": "e_r3_card_TX-3008092",
+        "source": "TX-3008092",
+        "target": "CARD-MC-5241-6124",
+        "relationship": "PAID_WITH",
+        "cluster_id": "RING-03"
+      }
+    },
+    {
+      "data": {
+        "id": "e_r3_eml_TX-3008092",
+        "source": "TX-3008092",
+        "target": "EML-sync-ops@icloud.com",
+        "relationship": "REGISTERED_WITH",
+        "cluster_id": "RING-03"
+      }
+    },
+    {
+      "data": {
+        "id": "e_r3_emul_TX-3008099",
+        "source": "TX-3008099",
+        "target": "DFP-EMULATOR-ANDR-98A",
+        "relationship": "OPERATED_ON",
+        "cluster_id": "RING-03"
+      }
+    },
+    {
+      "data": {
+        "id": "e_r3_card_TX-3008099",
+        "source": "TX-3008099",
+        "target": "CARD-RUPAY-6072-9281",
+        "relationship": "PAID_WITH",
+        "cluster_id": "RING-03"
+      }
+    },
+    {
+      "data": {
+        "id": "e_r3_qemu_TX-3008099",
+        "source": "TX-3008099",
+        "target": "DFP-LINUX-QEMU-77C2",
+        "relationship": "OPERATED_ON",
+        "cluster_id": "RING-03"
+      }
+    },
+    {
+      "data": {
+        "id": "e_r3_eml_TX-3008099",
+        "source": "TX-3008099",
+        "target": "EML-sync-ops@icloud.com",
+        "relationship": "REGISTERED_WITH",
+        "cluster_id": "RING-03"
+      }
+    },
+    {
+      "data": {
+        "id": "e_r3_emul_TX-3008105",
+        "source": "TX-3008105",
+        "target": "DFP-EMULATOR-ANDR-98A",
+        "relationship": "OPERATED_ON",
+        "cluster_id": "RING-03"
+      }
+    },
+    {
+      "data": {
+        "id": "e_r3_card_TX-3008105",
+        "source": "TX-3008105",
+        "target": "CARD-VISA-4716-7390",
+        "relationship": "PAID_WITH",
+        "cluster_id": "RING-03"
+      }
+    },
+    {
+      "data": {
+        "id": "e_r3_emul_TX-3008112",
+        "source": "TX-3008112",
+        "target": "DFP-EMULATOR-ANDR-98A",
+        "relationship": "OPERATED_ON",
+        "cluster_id": "RING-03"
+      }
+    },
+    {
+      "data": {
+        "id": "e_r3_card_TX-3008112",
+        "source": "TX-3008112",
+        "target": "CARD-MC-5241-6124",
+        "relationship": "PAID_WITH",
+        "cluster_id": "RING-03"
+      }
+    },
+    {
+      "data": {
+        "id": "e_r3_qemu_TX-3008112",
+        "source": "TX-3008112",
+        "target": "DFP-LINUX-QEMU-77C2",
+        "relationship": "OPERATED_ON",
+        "cluster_id": "RING-03"
+      }
+    },
+    {
+      "data": {
+        "id": "e_r3_emul_TX-3008118",
+        "source": "TX-3008118",
+        "target": "DFP-EMULATOR-ANDR-98A",
+        "relationship": "OPERATED_ON",
+        "cluster_id": "RING-03"
+      }
+    },
+    {
+      "data": {
+        "id": "e_r3_card_TX-3008118",
+        "source": "TX-3008118",
+        "target": "CARD-RUPAY-6072-9281",
+        "relationship": "PAID_WITH",
+        "cluster_id": "RING-03"
+      }
+    }
+  ],
+  "clusters": [
+    {
+      "cluster_id": "RING-01",
+      "name": "Automated BIN Testing & Distributed Carding Syndicate",
+      "typology": "Coordinated Botnet Testing & Card Cycling",
+      "kingpin_node": "DFP-WIN11-CANVAS-88A1",
+      "kingpin_type": "Emulated Chromium Canvas Hardware Fingerprint",
+      "kingpin_degree": 14,
+      "devices": 1,
+      "cards": 6,
+      "transactions": 14,
+      "fraud_ratio": "92.8%",
+      "risk_score": 96,
+      "severity": "CRITICAL",
+      "capital_at_risk_inr": 148520.0,
+      "is_quarantined": true,
+      "quarantined_at": "2026-09-19 16:30:00Z",
+      "quarantined_by": "Lead Officer Akshar Patel (FinTech AI Governance)",
+      "directive_reference": "FIU-IND/PMLA-DIR/2026/RING-01",
+      "member_nodes": [
+        "DFP-WIN11-CANVAS-88A1",
+        "CARD-MC-5424-2749",
+        "CARD-VISA-4821-5395",
+        "CARD-MC-5105-5499",
+        "CARD-VISA-4532-5387",
+        "CARD-MC-5289-8348",
+        "CARD-MC-5511-0858",
+        "EML-botnet-relay@tempmail.org",
+        "TX-2992749",
+        "TX-2995499",
+        "TX-2995395",
+        "TX-2995387",
+        "TX-2988348",
+        "TX-2990858",
+        "TX-3008012",
+        "TX-3008014",
+        "TX-3008019",
+        "TX-3008025",
+        "TX-3008031",
+        "TX-3008038",
+        "TX-3008044",
+        "TX-3008051"
+      ],
+      "description": "Automated botnet cluster executing sequential card authentication probes followed by high-ticket checkout bursts across 6 compromised banking BINs via residential proxies."
+    },
+    {
+      "cluster_id": "RING-02",
+      "name": "Cross-Border Account Takeover (ATO) & Mule Cashout Ring",
+      "typology": "Credential Stuffing & Digital E-Commerce Laundering",
+      "kingpin_node": "GW-TOR-EXIT-94.130.82",
+      "kingpin_type": "Known Tor Exit Node & Bulletproof Reverse Proxy",
+      "kingpin_degree": 11,
+      "devices": 3,
+      "cards": 4,
+      "transactions": 9,
+      "fraud_ratio": "88.9%",
+      "risk_score": 91,
+      "severity": "CRITICAL",
+      "capital_at_risk_inr": 384600.0,
+      "is_quarantined": true,
+      "quarantined_at": "2026-09-19 16:45:00Z",
+      "quarantined_by": "Lead Officer Akshar Patel (FinTech AI Governance)",
+      "directive_reference": "FIU-IND/PMLA-DIR/2026/RING-02",
+      "member_nodes": [
+        "GW-TOR-EXIT-94.130.82",
+        "DFP-MAC-SONOMA-4F2A",
+        "DFP-ANDR-CHROME-9B10",
+        "DFP-IOS-SAFARI-1E8D",
+        "CARD-VISA-4916-8745",
+        "CARD-MC-5312-4121",
+        "CARD-VISA-4485-2903",
+        "CARD-MC-5198-0338",
+        "EML-anon-drop@proton.me",
+        "TX-2998745",
+        "TX-2994121",
+        "TX-3002903",
+        "TX-3000338",
+        "TX-3008060",
+        "TX-3008065",
+        "TX-3008071",
+        "TX-3008078",
+        "TX-3008085"
+      ],
+      "description": "Syndicated account takeover ring routing credential stuffing velocity bursts through disposable proxy endpoints, targeting high-liquidity digital gift vouchers."
+    },
+    {
+      "cluster_id": "RING-03",
+      "name": "Nocturnal Synthetic Identity & Dormant Account Burst",
+      "typology": "Midnight Merchant Category Exploitation",
+      "kingpin_node": "DFP-EMULATOR-ANDR-98A",
+      "kingpin_type": "Multi-Instance Android Virtual Emulator Farm",
+      "kingpin_degree": 8,
+      "devices": 2,
+      "cards": 3,
+      "transactions": 7,
+      "fraud_ratio": "85.7%",
+      "risk_score": 84,
+      "severity": "HIGH",
+      "capital_at_risk_inr": 112450.0,
+      "is_quarantined": false,
+      "directive_reference": "FIU-IND/PMLA-DIR/2026/RING-03",
+      "member_nodes": [
+        "DFP-EMULATOR-ANDR-98A",
+        "DFP-LINUX-QEMU-77C2",
+        "CARD-RUPAY-6072-9281",
+        "CARD-VISA-4716-7390",
+        "CARD-MC-5241-6124",
+        "EML-sync-ops@icloud.com",
+        "TX-2997390",
+        "TX-2990704",
+        "TX-3008092",
+        "TX-3008099",
+        "TX-3008105",
+        "TX-3008112",
+        "TX-3008118"
+      ],
+      "description": "Automated nocturnal transaction bursts targeting cloud-hosted digital infrastructure between 01:30 and 04:30 AM IST to bypass customer 2FA verification."
+    }
+  ]
+}

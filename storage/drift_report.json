@@ -1,0 +1,82 @@
+[
+  {
+    "feature": "TransactionAmt",
+    "train_mean": 141.56,
+    "test_mean": 150.95,
+    "shift_index": 0.044,
+    "status": "NORMAL",
+    "recommendation": "Stable"
+  },
+  {
+    "feature": "hour",
+    "train_mean": 13.46,
+    "test_mean": 13.57,
+    "shift_index": 0.014,
+    "status": "NORMAL",
+    "recommendation": "Stable"
+  },
+  {
+    "feature": "weekday",
+    "train_mean": 2.86,
+    "test_mean": 2.96,
+    "shift_index": 0.048,
+    "status": "NORMAL",
+    "recommendation": "Stable"
+  },
+  {
+    "feature": "card_velocity_24h",
+    "train_mean": 3.57,
+    "test_mean": 2.77,
+    "shift_index": 0.134,
+    "status": "MODERATE",
+    "recommendation": "Monitor Closely"
+  },
+  {
+    "feature": "device_unique_cards",
+    "train_mean": 1651.06,
+    "test_mean": 1728.65,
+    "shift_index": 0.081,
+    "status": "NORMAL",
+    "recommendation": "Stable"
+  },
+  {
+    "feature": "card1",
+    "train_mean": 9611.46,
+    "test_mean": 9777.53,
+    "shift_index": 0.034,
+    "status": "NORMAL",
+    "recommendation": "Stable"
+  },
+  {
+    "feature": "addr1",
+    "train_mean": 290.03,
+    "test_mean": 299.3,
+    "shift_index": 0.09,
+    "status": "NORMAL",
+    "recommendation": "Stable"
+  },
+  {
+    "feature": "C1",
+    "train_mean": 31.76,
+    "test_mean": 23.12,
+    "shift_index": 0.034,
+    "status": "NORMAL",
+    "recommendation": "Stable"
+  },
+  {
+    "feature": "D1",
+    "train_mean": 53.52,
+    "test_mean": 60.86,
+    "shift_index": 0.061,
+    "status": "NORMAL",
+    "recommendation": "Stable"
+  },
+  {
+    "feature": "V310",
+    "train_mean": 127.49,
+    "test_mean": 137.83,
+    "shift_index": 0.022,
+    "status": "NORMAL",
+    "recommendation": "Stable"
+  }
+]

@@ -1,0 +1,370 @@
+{
+  "data_quality_score": 87.0,
+  "total_records": 30000,
+  "total_features": 459,
+  "overall_null_percentage": 37.28,
+  "duplicate_records": 0,
+  "duplicate_percentage": 0.0,
+  "infinite_values": 0,
+  "features_with_missing_values": 411,
+  "top_missing_features": [
+    {
+      "feature": "id_24",
+      "missing_count": 29525,
+      "missing_pct": 98.42
+    },
+    {
+      "feature": "id_25",
+      "missing_count": 29505,
+      "missing_pct": 98.35
+    },
+    {
+      "feature": "id_07",
+      "missing_count": 29496,
+      "missing_pct": 98.32
+    },
+    {
+      "feature": "id_08",
+      "missing_count": 29496,
+      "missing_pct": 98.32
+    },
+    {
+      "feature": "id_21",
+      "missing_count": 29497,
+      "missing_pct": 98.32
+    },
+    {
+      "feature": "id_22",
+      "missing_count": 29496,
+      "missing_pct": 98.32
+    },
+    {
+      "feature": "id_23",
+      "missing_count": 29496,
+      "missing_pct": 98.32
+    },
+    {
+      "feature": "id_26",
+      "missing_count": 29497,
+      "missing_pct": 98.32
+    },
+    {
+      "feature": "id_27",
+      "missing_count": 29496,
+      "missing_pct": 98.32
+    },
+    {
+      "feature": "dist2",
+      "missing_count": 25693,
+      "missing_pct": 85.64
+    },
+    {
+      "feature": "id_18",
+      "missing_count": 25584,
+      "missing_pct": 85.28
+    },
+    {
+      "feature": "id_33",
+      "missing_count": 25476,
+      "missing_pct": 84.92
+    }
+  ],
+  "missing_value_matrix": {
+    "columns": [
+      "TransactionAmt",
+      "ProductCD",
+      "card1",
+      "card4",
+      "card6",
+      "P_emaildomain",
+      "R_emaildomain",
+      "DeviceInfo",
+      "DeviceType",
+      "id_01",
+      "id_30",
+      "id_31"
+    ],
+    "rows": [
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        1,
+        1
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        1,
+        1
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        1,
+        1
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        1,
+        1
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        1,
+        1
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        1,
+        1
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        1,
+        1
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        1,
+        1
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        1,
+        1
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0
+      ]
+    ]
+  }
+}

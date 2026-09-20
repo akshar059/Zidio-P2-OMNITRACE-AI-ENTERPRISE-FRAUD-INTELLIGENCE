@@ -1,0 +1,128 @@
+{
+  "top_devices": [
+    {
+      "DeviceInfo": "Unknown",
+      "count": 19523,
+      "sum": 12056,
+      "fraud_rate": 61.8
+    },
+    {
+      "DeviceInfo": "Windows",
+      "count": 3871,
+      "sum": 3121,
+      "fraud_rate": 80.6
+    },
+    {
+      "DeviceInfo": "iOS Device",
+      "count": 1544,
+      "sum": 1240,
+      "fraud_rate": 80.3
+    },
+    {
+      "DeviceInfo": "MacOS",
+      "count": 481,
+      "sum": 278,
+      "fraud_rate": 57.8
+    },
+    {
+      "DeviceInfo": "hi6210sft Build/MRA58K",
+      "count": 181,
+      "sum": 180,
+      "fraud_rate": 99.4
+    },
+    {
+      "DeviceInfo": "SM-A300H Build/LRX22G",
+      "count": 169,
+      "sum": 169,
+      "fraud_rate": 100.0
+    },
+    {
+      "DeviceInfo": "rv:57.0",
+      "count": 122,
+      "sum": 103,
+      "fraud_rate": 84.4
+    },
+    {
+      "DeviceInfo": "Trident/7.0",
+      "count": 222,
+      "sum": 96,
+      "fraud_rate": 43.2
+    }
+  ],
+  "card_types": [
+    {
+      "card4": "visa",
+      "count": 19389,
+      "sum": 13373,
+      "fraud_rate": 69.0
+    },
+    {
+      "card4": "mastercard",
+      "count": 9542,
+      "sum": 6496,
+      "fraud_rate": 68.1
+    },
+    {
+      "card4": "discover",
+      "count": 635,
+      "sum": 514,
+      "fraud_rate": 80.9
+    },
+    {
+      "card4": "american express",
+      "count": 372,
+      "sum": 239,
+      "fraud_rate": 64.2
+    }
+  ],
+  "top_email_domains": [
+    {
+      "P_emaildomain": "gmail.com",
+      "count": 13467,
+      "sum": 9943,
+      "fraud_rate": 73.8
+    },
+    {
+      "P_emaildomain": "Unknown",
+      "count": 4293,
+      "sum": 2790,
+      "fraud_rate": 65.0
+    },
+    {
+      "P_emaildomain": "hotmail.com",
+      "count": 3151,
+      "sum": 2396,
+      "fraud_rate": 76.0
+    },
+    {
+      "P_emaildomain": "yahoo.com",
+      "count": 3917,
+      "sum": 2297,
+      "fraud_rate": 58.6
+    },
+    {
+      "P_emaildomain": "anonymous.com",
+      "count": 1440,
+      "sum": 859,
+      "fraud_rate": 59.7
+    },
+    {
+      "P_emaildomain": "aol.com",
+      "count": 1092,
+      "sum": 617,
+      "fraud_rate": 56.5
+    },
+    {
+      "P_emaildomain": "outlook.com",
+      "count": 562,
+      "sum": 482,
+      "fraud_rate": 85.8
+    },
+    {
+      "P_emaildomain": "comcast.net",
+      "count": 367,
+      "sum": 246,
+      "fraud_rate": 67.0
+    }
+  ]
+}

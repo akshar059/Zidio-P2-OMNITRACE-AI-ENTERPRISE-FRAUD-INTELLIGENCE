@@ -1,0 +1,1357 @@
+[
+  {
+    "alert_id": "ALT-LIVE-3008237",
+    "transaction_id": "3008237",
+    "amount": 11331.11,
+    "risk_score": 74,
+    "risk_level": "HIGH",
+    "fraud_probability": 0.767,
+    "reason": "Repeated 2FA Challenge Failures prior to approval",
+    "timestamp": "2026-09-20T18:02:21.253305+00:00",
+    "status": "NEW",
+    "triggered_rules": [
+      "Repeated 2FA Challenge Failures prior to approval"
+    ]
+  },
+  {
+    "alert_id": "ALT-LIVE-3008235",
+    "transaction_id": "3008235",
+    "amount": 5625.39,
+    "risk_score": 62,
+    "risk_level": "HIGH",
+    "fraud_probability": 0.771,
+    "reason": "Elevated Card Activity: 4 transactions in 24 hours",
+    "timestamp": "2026-09-20T18:02:18.235598+00:00",
+    "status": "NEW",
+    "triggered_rules": [
+      "Elevated Card Activity: 4 transactions in 24 hours"
+    ]
+  },
+  {
+    "alert_id": "ALT-LIVE-3008233",
+    "transaction_id": "3008233",
+    "amount": 16753.62,
+    "risk_score": 79,
+    "risk_level": "HIGH",
+    "fraud_probability": 0.79,
+    "reason": "Repeated 2FA Challenge Failures prior to approval",
+    "timestamp": "2026-09-20T18:02:15.210846+00:00",
+    "status": "NEW",
+    "triggered_rules": [
+      "Repeated 2FA Challenge Failures prior to approval"
+    ]
+  },
+  {
+    "alert_id": "ALT-LIVE-3008229",
+    "transaction_id": "3008229",
+    "amount": 13821.52,
+    "risk_score": 62,
+    "risk_level": "HIGH",
+    "fraud_probability": 0.657,
+    "reason": "High-Value Anomaly: Uncharacteristic transaction velocity burst",
+    "timestamp": "2026-09-20T18:02:08.987464+00:00",
+    "status": "NEW",
+    "triggered_rules": [
+      "High-Value Anomaly: Uncharacteristic transaction velocity burst"
+    ]
+  },
+  {
+    "alert_id": "ALT-LIVE-3008228",
+    "transaction_id": "3008228",
+    "amount": 13025.54,
+    "risk_score": 73,
+    "risk_level": "HIGH",
+    "fraud_probability": 0.664,
+    "reason": "Elevated Card Activity: 5 transactions in 24 hours",
+    "timestamp": "2026-09-20T18:02:07.471102+00:00",
+    "status": "NEW",
+    "triggered_rules": [
+      "Elevated Card Activity: 5 transactions in 24 hours"
+    ]
+  },
+  {
+    "alert_id": "ALT-LIVE-3008225",
+    "transaction_id": "3008225",
+    "amount": 9112.16,
+    "risk_score": 64,
+    "risk_level": "HIGH",
+    "fraud_probability": 0.744,
+    "reason": "Device Risk: 11 payment cards recorded on device",
+    "timestamp": "2026-09-20T18:02:02.944156+00:00",
+    "status": "NEW",
+    "triggered_rules": [
+      "Device Risk: 11 payment cards recorded on device"
+    ]
+  },
+  {
+    "alert_id": "ALT-LIVE-3008223",
+    "transaction_id": "3008223",
+    "amount": 10643.13,
+    "risk_score": 71,
+    "risk_level": "HIGH",
+    "fraud_probability": 0.802,
+    "reason": "Cross-Border Geolocation Mismatch: Card issuing country differs from IP",
+    "timestamp": "2026-09-20T18:01:59.929889+00:00",
+    "status": "NEW",
+    "triggered_rules": [
+      "Cross-Border Geolocation Mismatch: Card issuing country differs from IP"
+    ]
+  },
+  {
+    "alert_id": "ALT-LIVE-3008221",
+    "transaction_id": "3008221",
+    "amount": 19251.41,
+    "risk_score": 83,
+    "risk_level": "CRITICAL",
+    "fraud_probability": 0.852,
+    "reason": "Device Risk: 47 payment cards associated with this device",
+    "timestamp": "2026-09-20T18:01:56.909104+00:00",
+    "status": "NEW",
+    "triggered_rules": [
+      "Device Risk: 47 payment cards associated with this device"
+    ]
+  },
+  {
+    "alert_id": "ALT-LIVE-3008216",
+    "transaction_id": "3008216",
+    "amount": 321.26,
+    "risk_score": 88,
+    "risk_level": "CRITICAL",
+    "fraud_probability": 0.887,
+    "reason": "Syndicated Attack Ring: Coordinated multi-merchant card cycling",
+    "timestamp": "2026-09-20T18:01:49.346807+00:00",
+    "status": "NEW",
+    "triggered_rules": [
+      "Syndicated Attack Ring: Coordinated multi-merchant card cycling"
+    ]
+  },
+  {
+    "alert_id": "ALT-LIVE-3008215",
+    "transaction_id": "3008215",
+    "amount": 8254.43,
+    "risk_score": 65,
+    "risk_level": "HIGH",
+    "fraud_probability": 0.829,
+    "reason": "High-Value Anomaly: Uncharacteristic transaction velocity burst",
+    "timestamp": "2026-09-20T18:01:47.830401+00:00",
+    "status": "NEW",
+    "triggered_rules": [
+      "High-Value Anomaly: Uncharacteristic transaction velocity burst"
+    ]
+  },
+  {
+    "alert_id": "ALT-LIVE-3008214",
+    "transaction_id": "3008214",
+    "amount": 16301.84,
+    "risk_score": 91,
+    "risk_level": "CRITICAL",
+    "fraud_probability": 0.904,
+    "reason": "Synthetic Identity Anomaly: High-velocity velocity burst on fresh account",
+    "timestamp": "2026-09-20T18:01:46.326799+00:00",
+    "status": "NEW",
+    "triggered_rules": [
+      "Synthetic Identity Anomaly: High-velocity velocity burst on fresh account"
+    ]
+  },
+  {
+    "alert_id": "ALT-LIVE-3008213",
+    "transaction_id": "3008213",
+    "amount": 199.86,
+    "risk_score": 85,
+    "risk_level": "CRITICAL",
+    "fraud_probability": 0.908,
+    "reason": "3D Secure 2.0 Challenge Bypass & Tor Anonymizer Routing",
+    "timestamp": "2026-09-20T18:01:44.818493+00:00",
+    "status": "NEW",
+    "triggered_rules": [
+      "3D Secure 2.0 Challenge Bypass & Tor Anonymizer Routing"
+    ]
+  },
+  {
+    "alert_id": "ALT-LIVE-3008212",
+    "transaction_id": "3008212",
+    "amount": 12323.14,
+    "risk_score": 67,
+    "risk_level": "HIGH",
+    "fraud_probability": 0.72,
+    "reason": "Repeated 2FA Challenge Failures prior to approval",
+    "timestamp": "2026-09-20T18:01:43.308644+00:00",
+    "status": "NEW",
+    "triggered_rules": [
+      "Repeated 2FA Challenge Failures prior to approval"
+    ]
+  },
+  {
+    "alert_id": "ALT-LIVE-3008208",
+    "transaction_id": "3008208",
+    "amount": 11792.02,
+    "risk_score": 69,
+    "risk_level": "HIGH",
+    "fraud_probability": 0.626,
+    "reason": "Cross-Border Geolocation Mismatch: Card issuing country differs from IP",
+    "timestamp": "2026-09-20T18:01:37.277609+00:00",
+    "status": "NEW",
+    "triggered_rules": [
+      "Cross-Border Geolocation Mismatch: Card issuing country differs from IP"
+    ]
+  },
+  {
+    "alert_id": "ALT-LIVE-3008206",
+    "transaction_id": "3008206",
+    "amount": 13513.78,
+    "risk_score": 75,
+    "risk_level": "HIGH",
+    "fraud_probability": 0.694,
+    "reason": "Repeated 2FA Challenge Failures prior to approval",
+    "timestamp": "2026-09-20T18:01:34.252195+00:00",
+    "status": "NEW",
+    "triggered_rules": [
+      "Repeated 2FA Challenge Failures prior to approval"
+    ]
+  },
+  {
+    "alert_id": "ALT-LIVE-3008192",
+    "transaction_id": "3008192",
+    "amount": 15825.16,
+    "risk_score": 78,
+    "risk_level": "HIGH",
+    "fraud_probability": 0.687,
+    "reason": "Cross-Border Geolocation Mismatch: Card issuing country differs from IP",
+    "timestamp": "2026-09-20T18:01:13.116594+00:00",
+    "status": "NEW",
+    "triggered_rules": [
+      "Cross-Border Geolocation Mismatch: Card issuing country differs from IP"
+    ]
+  },
+  {
+    "alert_id": "ALT-LIVE-3008190",
+    "transaction_id": "3008190",
+    "amount": 8677.47,
+    "risk_score": 79,
+    "risk_level": "HIGH",
+    "fraud_probability": 0.69,
+    "reason": "High-Value Anomaly: Uncharacteristic transaction velocity burst",
+    "timestamp": "2026-09-20T18:01:10.090385+00:00",
+    "status": "NEW",
+    "triggered_rules": [
+      "High-Value Anomaly: Uncharacteristic transaction velocity burst"
+    ]
+  },
+  {
+    "alert_id": "ALT-LIVE-3008188",
+    "transaction_id": "3008188",
+    "amount": 10607.06,
+    "risk_score": 73,
+    "risk_level": "HIGH",
+    "fraud_probability": 0.627,
+    "reason": "Cross-Border Geolocation Mismatch: Card issuing country differs from IP",
+    "timestamp": "2026-09-20T18:01:07.066689+00:00",
+    "status": "NEW",
+    "triggered_rules": [
+      "Cross-Border Geolocation Mismatch: Card issuing country differs from IP"
+    ]
+  },
+  {
+    "alert_id": "ALT-LIVE-3008185",
+    "transaction_id": "3008185",
+    "amount": 14051.56,
+    "risk_score": 80,
+    "risk_level": "HIGH",
+    "fraud_probability": 0.753,
+    "reason": "Repeated 2FA Challenge Failures prior to approval",
+    "timestamp": "2026-09-20T18:01:02.537796+00:00",
+    "status": "NEW",
+    "triggered_rules": [
+      "Repeated 2FA Challenge Failures prior to approval"
+    ]
+  },
+  {
+    "alert_id": "ALT-LIVE-3008184",
+    "transaction_id": "3008184",
+    "amount": 9236.45,
+    "risk_score": 73,
+    "risk_level": "HIGH",
+    "fraud_probability": 0.751,
+    "reason": "Cross-Border Geolocation Mismatch: Card issuing country differs from IP",
+    "timestamp": "2026-09-20T18:01:01.024128+00:00",
+    "status": "NEW",
+    "triggered_rules": [
+      "Cross-Border Geolocation Mismatch: Card issuing country differs from IP"
+    ]
+  },
+  {
+    "alert_id": "ALT-LIVE-3008179",
+    "transaction_id": "3008179",
+    "amount": 4590.46,
+    "risk_score": 61,
+    "risk_level": "HIGH",
+    "fraud_probability": 0.654,
+    "reason": "Cross-Border Geolocation Mismatch: Card issuing country differs from IP",
+    "timestamp": "2026-09-20T18:00:53.474876+00:00",
+    "status": "NEW",
+    "triggered_rules": [
+      "Cross-Border Geolocation Mismatch: Card issuing country differs from IP"
+    ]
+  },
+  {
+    "alert_id": "ALT-LIVE-3008176",
+    "transaction_id": "3008176",
+    "amount": 12712.98,
+    "risk_score": 95,
+    "risk_level": "CRITICAL",
+    "fraud_probability": 0.88,
+    "reason": "Synthetic Identity Anomaly: High-velocity velocity burst on fresh account",
+    "timestamp": "2026-09-20T18:00:48.940966+00:00",
+    "status": "NEW",
+    "triggered_rules": [
+      "Synthetic Identity Anomaly: High-velocity velocity burst on fresh account"
+    ]
+  },
+  {
+    "alert_id": "ALT-LIVE-3008173",
+    "transaction_id": "3008173",
+    "amount": 14205.53,
+    "risk_score": 69,
+    "risk_level": "HIGH",
+    "fraud_probability": 0.819,
+    "reason": "High-Value Anomaly: Uncharacteristic transaction velocity burst",
+    "timestamp": "2026-09-20T18:00:44.429303+00:00",
+    "status": "NEW",
+    "triggered_rules": [
+      "High-Value Anomaly: Uncharacteristic transaction velocity burst"
+    ]
+  },
+  {
+    "alert_id": "ALT-LIVE-3008170",
+    "transaction_id": "3008170",
+    "amount": 9084.8,
+    "risk_score": 72,
+    "risk_level": "HIGH",
+    "fraud_probability": 0.781,
+    "reason": "Repeated 2FA Challenge Failures prior to approval",
+    "timestamp": "2026-09-20T18:00:39.909953+00:00",
+    "status": "NEW",
+    "triggered_rules": [
+      "Repeated 2FA Challenge Failures prior to approval"
+    ]
+  },
+  {
+    "alert_id": "ALT-LIVE-3008155",
+    "transaction_id": "3008155",
+    "amount": 113.81,
+    "risk_score": 93,
+    "risk_level": "CRITICAL",
+    "fraud_probability": 0.916,
+    "reason": "Syndicated Attack Ring: Coordinated multi-merchant card cycling",
+    "timestamp": "2026-09-20T18:00:17.272483+00:00",
+    "status": "NEW",
+    "triggered_rules": [
+      "Syndicated Attack Ring: Coordinated multi-merchant card cycling"
+    ]
+  },
+  {
+    "alert_id": "ALT-LIVE-3008151",
+    "transaction_id": "3008151",
+    "amount": 6821.66,
+    "risk_score": 62,
+    "risk_level": "HIGH",
+    "fraud_probability": 0.624,
+    "reason": "Device Risk: 11 payment cards recorded on device",
+    "timestamp": "2026-09-20T18:00:11.245769+00:00",
+    "status": "NEW",
+    "triggered_rules": [
+      "Device Risk: 11 payment cards recorded on device"
+    ]
+  },
+  {
+    "alert_id": "ALT-LIVE-3008148",
+    "transaction_id": "3008148",
+    "amount": 15670.41,
+    "risk_score": 72,
+    "risk_level": "HIGH",
+    "fraud_probability": 0.798,
+    "reason": "Cross-Border Geolocation Mismatch: Card issuing country differs from IP",
+    "timestamp": "2026-09-20T18:00:06.717471+00:00",
+    "status": "NEW",
+    "triggered_rules": [
+      "Cross-Border Geolocation Mismatch: Card issuing country differs from IP"
+    ]
+  },
+  {
+    "alert_id": "ALT-LIVE-3008146",
+    "transaction_id": "3008146",
+    "amount": 92929.68,
+    "risk_score": 94,
+    "risk_level": "CRITICAL",
+    "fraud_probability": 0.937,
+    "reason": "Device Risk: 45 payment cards associated with this device",
+    "timestamp": "2026-09-20T18:00:03.694968+00:00",
+    "status": "NEW",
+    "triggered_rules": [
+      "Device Risk: 45 payment cards associated with this device"
+    ]
+  },
+  {
+    "alert_id": "ALT-LIVE-3008143",
+    "transaction_id": "3008143",
+    "amount": 4823.32,
+    "risk_score": 68,
+    "risk_level": "HIGH",
+    "fraud_probability": 0.754,
+    "reason": "Repeated 2FA Challenge Failures prior to approval",
+    "timestamp": "2026-09-20T17:59:59.150306+00:00",
+    "status": "NEW",
+    "triggered_rules": [
+      "Repeated 2FA Challenge Failures prior to approval"
+    ]
+  },
+  {
+    "alert_id": "ALT-LIVE-3008134",
+    "transaction_id": "3008134",
+    "amount": 35083.58,
+    "risk_score": 88,
+    "risk_level": "CRITICAL",
+    "fraud_probability": 0.947,
+    "reason": "Synthetic Identity Anomaly: High-velocity velocity burst on fresh account",
+    "timestamp": "2026-09-20T17:59:45.592410+00:00",
+    "status": "NEW",
+    "triggered_rules": [
+      "Synthetic Identity Anomaly: High-velocity velocity burst on fresh account"
+    ]
+  },
+  {
+    "alert_id": "ALT-LIVE-3008131",
+    "transaction_id": "3008131",
+    "amount": 11251.81,
+    "risk_score": 69,
+    "risk_level": "HIGH",
+    "fraud_probability": 0.76,
+    "reason": "Cross-Border Geolocation Mismatch: Card issuing country differs from IP",
+    "timestamp": "2026-09-20T17:59:41.077076+00:00",
+    "status": "NEW",
+    "triggered_rules": [
+      "Cross-Border Geolocation Mismatch: Card issuing country differs from IP"
+    ]
+  },
+  {
+    "alert_id": "ALT-LIVE-3008128",
+    "transaction_id": "3008128",
+    "amount": 10701.84,
+    "risk_score": 67,
+    "risk_level": "HIGH",
+    "fraud_probability": 0.725,
+    "reason": "Elevated Card Activity: 4 transactions in 24 hours",
+    "timestamp": "2026-09-20T17:59:36.566888+00:00",
+    "status": "NEW",
+    "triggered_rules": [
+      "Elevated Card Activity: 4 transactions in 24 hours"
+    ]
+  },
+  {
+    "alert_id": "ALT-LIVE-3008127",
+    "transaction_id": "3008127",
+    "amount": 14819.99,
+    "risk_score": 69,
+    "risk_level": "HIGH",
+    "fraud_probability": 0.805,
+    "reason": "Cross-Border Geolocation Mismatch: Card issuing country differs from IP",
+    "timestamp": "2026-09-20T17:59:35.060800+00:00",
+    "status": "NEW",
+    "triggered_rules": [
+      "Cross-Border Geolocation Mismatch: Card issuing country differs from IP"
+    ]
+  },
+  {
+    "alert_id": "ALT-LIVE-3008124",
+    "transaction_id": "3008124",
+    "amount": 15054.28,
+    "risk_score": 62,
+    "risk_level": "HIGH",
+    "fraud_probability": 0.812,
+    "reason": "Repeated 2FA Challenge Failures prior to approval",
+    "timestamp": "2026-09-20T17:59:30.517328+00:00",
+    "status": "NEW",
+    "triggered_rules": [
+      "Repeated 2FA Challenge Failures prior to approval"
+    ]
+  },
+  {
+    "alert_id": "ALT-LIVE-3008113",
+    "transaction_id": "3008113",
+    "amount": 6405.63,
+    "risk_score": 68,
+    "risk_level": "HIGH",
+    "fraud_probability": 0.811,
+    "reason": "Cross-Border Geolocation Mismatch: Card issuing country differs from IP",
+    "timestamp": "2026-09-20T17:59:13.910781+00:00",
+    "status": "NEW",
+    "triggered_rules": [
+      "Cross-Border Geolocation Mismatch: Card issuing country differs from IP"
+    ]
+  },
+  {
+    "alert_id": "ALT-LIVE-3008112",
+    "transaction_id": "3008112",
+    "amount": 12541.56,
+    "risk_score": 64,
+    "risk_level": "HIGH",
+    "fraud_probability": 0.706,
+    "reason": "High-Value Anomaly: Uncharacteristic transaction velocity burst",
+    "timestamp": "2026-09-20T17:59:12.402023+00:00",
+    "status": "NEW",
+    "triggered_rules": [
+      "High-Value Anomaly: Uncharacteristic transaction velocity burst"
+    ]
+  },
+  {
+    "alert_id": "ALT-LIVE-3008111",
+    "transaction_id": "3008111",
+    "amount": 11782.81,
+    "risk_score": 97,
+    "risk_level": "CRITICAL",
+    "fraud_probability": 0.891,
+    "reason": "Velocity Surge: 9 transactions linked to card in 10 minutes",
+    "timestamp": "2026-09-20T17:59:10.895694+00:00",
+    "status": "NEW",
+    "triggered_rules": [
+      "Velocity Surge: 9 transactions linked to card in 10 minutes"
+    ]
+  },
+  {
+    "alert_id": "ALT-LIVE-3008104",
+    "transaction_id": "3008104",
+    "amount": 9634.38,
+    "risk_score": 72,
+    "risk_level": "HIGH",
+    "fraud_probability": 0.663,
+    "reason": "Cross-Border Geolocation Mismatch: Card issuing country differs from IP",
+    "timestamp": "2026-09-20T17:59:00.306684+00:00",
+    "status": "NEW",
+    "triggered_rules": [
+      "Cross-Border Geolocation Mismatch: Card issuing country differs from IP"
+    ]
+  },
+  {
+    "alert_id": "ALT-LIVE-3008099",
+    "transaction_id": "3008099",
+    "amount": 6027.64,
+    "risk_score": 80,
+    "risk_level": "HIGH",
+    "fraud_probability": 0.661,
+    "reason": "Elevated Card Activity: 7 transactions in 24 hours",
+    "timestamp": "2026-09-20T17:58:52.761968+00:00",
+    "status": "NEW",
+    "triggered_rules": [
+      "Elevated Card Activity: 7 transactions in 24 hours"
+    ]
+  },
+  {
+    "alert_id": "ALT-LIVE-3008095",
+    "transaction_id": "3008095",
+    "amount": 6823.86,
+    "risk_score": 80,
+    "risk_level": "HIGH",
+    "fraud_probability": 0.77,
+    "reason": "Device Risk: 6 payment cards recorded on device",
+    "timestamp": "2026-09-20T17:58:46.726575+00:00",
+    "status": "NEW",
+    "triggered_rules": [
+      "Device Risk: 6 payment cards recorded on device"
+    ]
+  },
+  {
+    "alert_id": "ALT-LIVE-3008088",
+    "transaction_id": "3008088",
+    "amount": 13947.77,
+    "risk_score": 64,
+    "risk_level": "HIGH",
+    "fraud_probability": 0.741,
+    "reason": "High-Value Anomaly: Uncharacteristic transaction velocity burst",
+    "timestamp": "2026-09-20T17:58:36.111584+00:00",
+    "status": "UNDER REVIEW",
+    "triggered_rules": [
+      "High-Value Anomaly: Uncharacteristic transaction velocity burst"
+    ],
+    "updated_at": "2026-09-20T18:03:11.678551+00:00"
+  },
+  {
+    "alert_id": "ALT-LIVE-3008086",
+    "transaction_id": "3008086",
+    "amount": 2893.15,
+    "risk_score": 80,
+    "risk_level": "HIGH",
+    "fraud_probability": 0.826,
+    "reason": "High-Value Anomaly: Uncharacteristic transaction velocity burst",
+    "timestamp": "2026-09-20T17:58:33.077228+00:00",
+    "status": "NEW",
+    "triggered_rules": [
+      "High-Value Anomaly: Uncharacteristic transaction velocity burst"
+    ]
+  },
+  {
+    "alert_id": "ALT-LIVE-3008074",
+    "transaction_id": "3008074",
+    "amount": 98.34,
+    "risk_score": 98,
+    "risk_level": "CRITICAL",
+    "fraud_probability": 0.935,
+    "reason": "Device Risk: 54 payment cards associated with this device",
+    "timestamp": "2026-09-20T17:58:14.948731+00:00",
+    "status": "NEW",
+    "triggered_rules": [
+      "Device Risk: 54 payment cards associated with this device"
+    ]
+  },
+  {
+    "alert_id": "ALT-LIVE-3008069",
+    "transaction_id": "3008069",
+    "amount": 5966.12,
+    "risk_score": 64,
+    "risk_level": "HIGH",
+    "fraud_probability": 0.784,
+    "reason": "Cross-Border Geolocation Mismatch: Card issuing country differs from IP",
+    "timestamp": "2026-09-20T17:58:07.394063+00:00",
+    "status": "NEW",
+    "triggered_rules": [
+      "Cross-Border Geolocation Mismatch: Card issuing country differs from IP"
+    ]
+  },
+  {
+    "alert_id": "ALT-LIVE-3008066",
+    "transaction_id": "3008066",
+    "amount": 10160.56,
+    "risk_score": 62,
+    "risk_level": "HIGH",
+    "fraud_probability": 0.839,
+    "reason": "Device Risk: 9 payment cards recorded on device",
+    "timestamp": "2026-09-20T17:58:02.856273+00:00",
+    "status": "NEW",
+    "triggered_rules": [
+      "Device Risk: 9 payment cards recorded on device"
+    ]
+  },
+  {
+    "alert_id": "ALT-LIVE-3008064",
+    "transaction_id": "3008064",
+    "amount": 17316.7,
+    "risk_score": 90,
+    "risk_level": "CRITICAL",
+    "fraud_probability": 0.948,
+    "reason": "Topological Outlier: Graph Clustering Coefficient Exceeds 99.8th Percentile",
+    "timestamp": "2026-09-20T17:57:59.825150+00:00",
+    "status": "NEW",
+    "triggered_rules": [
+      "Topological Outlier: Graph Clustering Coefficient Exceeds 99.8th Percentile"
+    ]
+  },
+  {
+    "alert_id": "ALT-LIVE-3008063",
+    "transaction_id": "3008063",
+    "amount": 2320.61,
+    "risk_score": 73,
+    "risk_level": "HIGH",
+    "fraud_probability": 0.642,
+    "reason": "Device Risk: 11 payment cards recorded on device",
+    "timestamp": "2026-09-20T17:57:58.320992+00:00",
+    "status": "NEW",
+    "triggered_rules": [
+      "Device Risk: 11 payment cards recorded on device"
+    ]
+  },
+  {
+    "alert_id": "ALT-LIVE-3008062",
+    "transaction_id": "3008062",
+    "amount": 77303.93,
+    "risk_score": 92,
+    "risk_level": "CRITICAL",
+    "fraud_probability": 0.939,
+    "reason": "Synthetic Identity Anomaly: High-velocity velocity burst on fresh account",
+    "timestamp": "2026-09-20T17:57:56.809417+00:00",
+    "status": "NEW",
+    "triggered_rules": [
+      "Synthetic Identity Anomaly: High-velocity velocity burst on fresh account"
+    ]
+  },
+  {
+    "alert_id": "ALT-LIVE-3008058",
+    "transaction_id": "3008058",
+    "amount": 10518.43,
+    "risk_score": 64,
+    "risk_level": "HIGH",
+    "fraud_probability": 0.722,
+    "reason": "Device Risk: 9 payment cards recorded on device",
+    "timestamp": "2026-09-20T17:57:50.769957+00:00",
+    "status": "NEW",
+    "triggered_rules": [
+      "Device Risk: 9 payment cards recorded on device"
+    ]
+  },
+  {
+    "alert_id": "ALT-LIVE-3008054",
+    "transaction_id": "3008054",
+    "amount": 12473.21,
+    "risk_score": 76,
+    "risk_level": "HIGH",
+    "fraud_probability": 0.791,
+    "reason": "High-Value Anomaly: Uncharacteristic transaction velocity burst",
+    "timestamp": "2026-09-20T17:57:44.720189+00:00",
+    "status": "NEW",
+    "triggered_rules": [
+      "High-Value Anomaly: Uncharacteristic transaction velocity burst"
+    ]
+  },
+  {
+    "alert_id": "ALT-LIVE-3008052",
+    "transaction_id": "3008052",
+    "amount": 4978.93,
+    "risk_score": 72,
+    "risk_level": "HIGH",
+    "fraud_probability": 0.628,
+    "reason": "Repeated 2FA Challenge Failures prior to approval",
+    "timestamp": "2026-09-20T17:57:41.708217+00:00",
+    "status": "NEW",
+    "triggered_rules": [
+      "Repeated 2FA Challenge Failures prior to approval"
+    ]
+  },
+  {
+    "alert_id": "ALT-LIVE-3008037",
+    "transaction_id": "3008037",
+    "amount": 11580.52,
+    "risk_score": 78,
+    "risk_level": "HIGH",
+    "fraud_probability": 0.726,
+    "reason": "Repeated 2FA Challenge Failures prior to approval",
+    "timestamp": "2026-09-20T17:57:19.074264+00:00",
+    "status": "NEW",
+    "triggered_rules": [
+      "Repeated 2FA Challenge Failures prior to approval"
+    ]
+  },
+  {
+    "alert_id": "ALT-LIVE-3008031",
+    "transaction_id": "3008031",
+    "amount": 10176.54,
+    "risk_score": 67,
+    "risk_level": "HIGH",
+    "fraud_probability": 0.64,
+    "reason": "Elevated Card Activity: 5 transactions in 24 hours",
+    "timestamp": "2026-09-20T17:57:10.017530+00:00",
+    "status": "NEW",
+    "triggered_rules": [
+      "Elevated Card Activity: 5 transactions in 24 hours"
+    ]
+  },
+  {
+    "alert_id": "ALT-LIVE-3008028",
+    "transaction_id": "3008028",
+    "amount": 4302.04,
+    "risk_score": 69,
+    "risk_level": "HIGH",
+    "fraud_probability": 0.785,
+    "reason": "High-Value Anomaly: Uncharacteristic transaction velocity burst",
+    "timestamp": "2026-09-20T17:57:05.490003+00:00",
+    "status": "NEW",
+    "triggered_rules": [
+      "High-Value Anomaly: Uncharacteristic transaction velocity burst"
+    ]
+  },
+  {
+    "alert_id": "ALT-LIVE-3008020",
+    "transaction_id": "3008020",
+    "amount": 12155.24,
+    "risk_score": 65,
+    "risk_level": "HIGH",
+    "fraud_probability": 0.702,
+    "reason": "Elevated Card Activity: 9 transactions in 24 hours",
+    "timestamp": "2026-09-20T17:56:53.427443+00:00",
+    "status": "NEW",
+    "triggered_rules": [
+      "Elevated Card Activity: 9 transactions in 24 hours"
+    ]
+  },
+  {
+    "alert_id": "ALT-LIVE-3008017",
+    "transaction_id": "3008017",
+    "amount": 4196.96,
+    "risk_score": 61,
+    "risk_level": "HIGH",
+    "fraud_probability": 0.754,
+    "reason": "High-Value Anomaly: Uncharacteristic transaction velocity burst",
+    "timestamp": "2026-09-20T17:56:48.902865+00:00",
+    "status": "NEW",
+    "triggered_rules": [
+      "High-Value Anomaly: Uncharacteristic transaction velocity burst"
+    ]
+  },
+  {
+    "alert_id": "ALT-LIVE-3008016",
+    "transaction_id": "3008016",
+    "amount": 125.94,
+    "risk_score": 92,
+    "risk_level": "CRITICAL",
+    "fraud_probability": 0.942,
+    "reason": "Synthetic Identity Anomaly: High-velocity velocity burst on fresh account",
+    "timestamp": "2026-09-20T17:56:47.388084+00:00",
+    "status": "NEW",
+    "triggered_rules": [
+      "Synthetic Identity Anomaly: High-velocity velocity burst on fresh account"
+    ]
+  },
+  {
+    "alert_id": "ALT-LIVE-3008013",
+    "transaction_id": "3008013",
+    "amount": 13041.89,
+    "risk_score": 61,
+    "risk_level": "HIGH",
+    "fraud_probability": 0.735,
+    "reason": "High-Value Anomaly: Uncharacteristic transaction velocity burst",
+    "timestamp": "2026-09-20T17:56:42.854315+00:00",
+    "status": "NEW",
+    "triggered_rules": [
+      "High-Value Anomaly: Uncharacteristic transaction velocity burst"
+    ]
+  },
+  {
+    "alert_id": "ALT-LIVE-3008009",
+    "transaction_id": "3008009",
+    "amount": 16138.92,
+    "risk_score": 62,
+    "risk_level": "HIGH",
+    "fraud_probability": 0.675,
+    "reason": "Cross-Border Geolocation Mismatch: Card issuing country differs from IP",
+    "timestamp": "2026-09-20T17:56:36.822717+00:00",
+    "status": "NEW",
+    "triggered_rules": [
+      "Cross-Border Geolocation Mismatch: Card issuing country differs from IP"
+    ]
+  },
+  {
+    "alert_id": "ALT-LIVE-3008007",
+    "transaction_id": "3008007",
+    "amount": 15370.81,
+    "risk_score": 65,
+    "risk_level": "HIGH",
+    "fraud_probability": 0.749,
+    "reason": "Elevated Card Activity: 4 transactions in 24 hours",
+    "timestamp": "2026-09-20T17:56:33.805452+00:00",
+    "status": "NEW",
+    "triggered_rules": [
+      "Elevated Card Activity: 4 transactions in 24 hours"
+    ]
+  },
+  {
+    "alert_id": "ALT-LIVE-3008002",
+    "transaction_id": "3008002",
+    "amount": 11621.56,
+    "risk_score": 65,
+    "risk_level": "HIGH",
+    "fraud_probability": 0.813,
+    "reason": "Repeated 2FA Challenge Failures prior to approval",
+    "timestamp": "2026-09-20T17:56:26.273538+00:00",
+    "status": "NEW",
+    "triggered_rules": [
+      "Repeated 2FA Challenge Failures prior to approval"
+    ]
+  },
+  {
+    "alert_id": "ALT-1001",
+    "transaction_id": "2992749",
+    "amount": 83.74199676513672,
+    "risk_score": 82,
+    "risk_level": "CRITICAL",
+    "reason": "Velocity Surge: 11 transactions linked to card in 24 hours",
+    "status": "NEW",
+    "timestamp": 1540003600
+  },
+  {
+    "alert_id": "ALT-1002",
+    "transaction_id": "2990876",
+    "amount": 527.0,
+    "risk_score": 61,
+    "risk_level": "HIGH",
+    "reason": "Device Risk: 2356 payment cards associated with this device",
+    "status": "NEW",
+    "timestamp": 1540007200
+  },
+  {
+    "alert_id": "ALT-1003",
+    "transaction_id": "2997390",
+    "amount": 33.534000396728516,
+    "risk_score": 61,
+    "risk_level": "HIGH",
+    "reason": "Elevated Card Activity: 4 transactions in 24 hours",
+    "status": "NEW",
+    "timestamp": 1540010800
+  },
+  {
+    "alert_id": "ALT-1004",
+    "transaction_id": "2998745",
+    "amount": 24.167999267578125,
+    "risk_score": 64,
+    "risk_level": "HIGH",
+    "reason": "Elevated Card Activity: 6 transactions in 24 hours",
+    "status": "NEW",
+    "timestamp": 1540014400
+  },
+  {
+    "alert_id": "ALT-1005",
+    "transaction_id": "2994121",
+    "amount": 83.74199676513672,
+    "risk_score": 66,
+    "risk_level": "HIGH",
+    "reason": "Device Risk: 833 payment cards associated with this device",
+    "status": "NEW",
+    "timestamp": 1540018000
+  },
+  {
+    "alert_id": "ALT-1006",
+    "transaction_id": "3000368",
+    "amount": 213.0,
+    "risk_score": 64,
+    "risk_level": "HIGH",
+    "reason": "Elevated Card Activity: 4 transactions in 24 hours",
+    "status": "NEW",
+    "timestamp": 1540021600
+  },
+  {
+    "alert_id": "ALT-1007",
+    "transaction_id": "2995395",
+    "amount": 667.5399780273438,
+    "risk_score": 76,
+    "risk_level": "HIGH",
+    "reason": "Elevated Card Activity: 6 transactions in 24 hours",
+    "status": "NEW",
+    "timestamp": 1540025200
+  },
+  {
+    "alert_id": "ALT-1008",
+    "transaction_id": "2992760",
+    "amount": 186.0,
+    "risk_score": 62,
+    "risk_level": "HIGH",
+    "reason": "Elevated Card Activity: 4 transactions in 24 hours",
+    "status": "NEW",
+    "timestamp": 1540028800
+  },
+  {
+    "alert_id": "ALT-1009",
+    "transaction_id": "3000338",
+    "amount": 500.0,
+    "risk_score": 67,
+    "risk_level": "HIGH",
+    "reason": "Elevated Card Activity: 4 transactions in 24 hours",
+    "status": "NEW",
+    "timestamp": 1540032400
+  },
+  {
+    "alert_id": "ALT-1010",
+    "transaction_id": "2991645",
+    "amount": 250.0,
+    "risk_score": 62,
+    "risk_level": "HIGH",
+    "reason": "Device Risk: 5 payment cards associated with this device",
+    "status": "NEW",
+    "timestamp": 1540036000
+  },
+  {
+    "alert_id": "ALT-1011",
+    "transaction_id": "2997352",
+    "amount": 33.534000396728516,
+    "risk_score": 61,
+    "risk_level": "HIGH",
+    "reason": "Device Risk: 2356 payment cards associated with this device",
+    "status": "NEW",
+    "timestamp": 1540039600
+  },
+  {
+    "alert_id": "ALT-1012",
+    "transaction_id": "2995387",
+    "amount": 667.5399780273438,
+    "risk_score": 76,
+    "risk_level": "HIGH",
+    "reason": "Elevated Card Activity: 6 transactions in 24 hours",
+    "status": "NEW",
+    "timestamp": 1540043200
+  },
+  {
+    "alert_id": "ALT-1013",
+    "transaction_id": "2990704",
+    "amount": 10.0,
+    "risk_score": 68,
+    "risk_level": "HIGH",
+    "reason": "Elevated Card Activity: 5 transactions in 24 hours",
+    "status": "NEW",
+    "timestamp": 1540046800
+  },
+  {
+    "alert_id": "ALT-1014",
+    "transaction_id": "3003433",
+    "amount": 78.78800201416016,
+    "risk_score": 64,
+    "risk_level": "HIGH",
+    "reason": "Device Risk: 9 payment cards associated with this device",
+    "status": "NEW",
+    "timestamp": 1540050400
+  },
+  {
+    "alert_id": "ALT-1015",
+    "transaction_id": "2988348",
+    "amount": 405.0,
+    "risk_score": 75,
+    "risk_level": "HIGH",
+    "reason": "Velocity Surge: 15 transactions linked to card in 24 hours",
+    "status": "NEW",
+    "timestamp": 1540054000
+  },
+  {
+    "alert_id": "ALT-1016",
+    "transaction_id": "2993839",
+    "amount": 59.0,
+    "risk_score": 63,
+    "risk_level": "HIGH",
+    "reason": "Elevated Card Activity: 4 transactions in 24 hours",
+    "status": "NEW",
+    "timestamp": 1540057600
+  },
+  {
+    "alert_id": "ALT-1017",
+    "transaction_id": "2991092",
+    "amount": 83.74199676513672,
+    "risk_score": 63,
+    "risk_level": "HIGH",
+    "reason": "Device Risk: 833 payment cards associated with this device",
+    "status": "NEW",
+    "timestamp": 1540061200
+  },
+  {
+    "alert_id": "ALT-1018",
+    "transaction_id": "3002903",
+    "amount": 281.79998779296875,
+    "risk_score": 66,
+    "risk_level": "HIGH",
+    "reason": "Elevated Card Activity: 4 transactions in 24 hours",
+    "status": "NEW",
+    "timestamp": 1540064800
+  },
+  {
+    "alert_id": "ALT-1019",
+    "transaction_id": "3003347",
+    "amount": 32.32500076293945,
+    "risk_score": 61,
+    "risk_level": "HIGH",
+    "reason": "Device Risk: 2356 payment cards associated with this device",
+    "status": "NEW",
+    "timestamp": 1540068400
+  },
+  {
+    "alert_id": "ALT-1020",
+    "transaction_id": "2995499",
+    "amount": 41.32699966430664,
+    "risk_score": 79,
+    "risk_level": "HIGH",
+    "reason": "Velocity Surge: 11 transactions linked to card in 24 hours",
+    "status": "NEW",
+    "timestamp": 1540072000
+  },
+  {
+    "alert_id": "ALT-1021",
+    "transaction_id": "2990858",
+    "amount": 58.00400161743164,
+    "risk_score": 69,
+    "risk_level": "HIGH",
+    "reason": "Elevated Card Activity: 6 transactions in 24 hours",
+    "status": "UNDER REVIEW",
+    "timestamp": 1540075600
+  },
+  {
+    "alert_id": "ALT-1022",
+    "transaction_id": "3003819",
+    "amount": 19.333999633789062,
+    "risk_score": 75,
+    "risk_level": "HIGH",
+    "reason": "Velocity Surge: 8 transactions linked to card in 24 hours",
+    "status": "UNDER REVIEW",
+    "timestamp": 1540079200
+  },
+  {
+    "alert_id": "ALT-1023",
+    "transaction_id": "2998622",
+    "amount": 554.0,
+    "risk_score": 64,
+    "risk_level": "HIGH",
+    "reason": "Device Risk: 2356 payment cards associated with this device",
+    "status": "UNDER REVIEW",
+    "timestamp": 1540082800
+  },
+  {
+    "alert_id": "ALT-1024",
+    "transaction_id": "2992056",
+    "amount": 75.10199737548828,
+    "risk_score": 62,
+    "risk_level": "HIGH",
+    "reason": "Device Risk: 833 payment cards associated with this device",
+    "status": "UNDER REVIEW",
+    "timestamp": 1540086400
+  },
+  {
+    "alert_id": "ALT-1025",
+    "transaction_id": "3005127",
+    "amount": 171.0,
+    "risk_score": 64,
+    "risk_level": "HIGH",
+    "reason": "Elevated Card Activity: 6 transactions in 24 hours",
+    "status": "UNDER REVIEW",
+    "timestamp": 1540090000
+  },
+  {
+    "alert_id": "ALT-1026",
+    "transaction_id": "2992755",
+    "amount": 83.74199676513672,
+    "risk_score": 66,
+    "risk_level": "HIGH",
+    "reason": "Device Risk: 2356 payment cards associated with this device",
+    "status": "UNDER REVIEW",
+    "timestamp": 1540093600
+  },
+  {
+    "alert_id": "ALT-1027",
+    "transaction_id": "2995369",
+    "amount": 600.0,
+    "risk_score": 75,
+    "risk_level": "HIGH",
+    "reason": "Elevated Card Activity: 6 transactions in 24 hours",
+    "status": "UNDER REVIEW",
+    "timestamp": 1540097200
+  },
+  {
+    "alert_id": "ALT-1028",
+    "transaction_id": "2990559",
+    "amount": 69.78500366210938,
+    "risk_score": 65,
+    "risk_level": "HIGH",
+    "reason": "Device Risk: 7 payment cards associated with this device",
+    "status": "UNDER REVIEW",
+    "timestamp": 1540100800
+  },
+  {
+    "alert_id": "ALT-1029",
+    "transaction_id": "2992794",
+    "amount": 226.0,
+    "risk_score": 66,
+    "risk_level": "HIGH",
+    "reason": "Elevated Card Activity: 4 transactions in 24 hours",
+    "status": "UNDER REVIEW",
+    "timestamp": 1540104400
+  },
+  {
+    "alert_id": "ALT-1030",
+    "transaction_id": "3011443",
+    "amount": 38.790000915527344,
+    "risk_score": 75,
+    "risk_level": "HIGH",
+    "reason": "Velocity Surge: 9 transactions linked to card in 24 hours",
+    "status": "UNDER REVIEW",
+    "timestamp": 1540108000
+  },
+  {
+    "alert_id": "ALT-1031",
+    "transaction_id": "2995075",
+    "amount": 52.44499969482422,
+    "risk_score": 65,
+    "risk_level": "HIGH",
+    "reason": "Device Risk: 2356 payment cards associated with this device",
+    "status": "UNDER REVIEW",
+    "timestamp": 1540111600
+  },
+  {
+    "alert_id": "ALT-1032",
+    "transaction_id": "3002881",
+    "amount": 250.0,
+    "risk_score": 65,
+    "risk_level": "HIGH",
+    "reason": "Elevated Card Activity: 4 transactions in 24 hours",
+    "status": "UNDER REVIEW",
+    "timestamp": 1540115200
+  },
+  {
+    "alert_id": "ALT-1033",
+    "transaction_id": "2991070",
+    "amount": 83.74199676513672,
+    "risk_score": 74,
+    "risk_level": "HIGH",
+    "reason": "Elevated Card Activity: 6 transactions in 24 hours",
+    "status": "UNDER REVIEW",
+    "timestamp": 1540118800
+  },
+  {
+    "alert_id": "ALT-1034",
+    "transaction_id": "3001689",
+    "amount": 160.47500610351562,
+    "risk_score": 74,
+    "risk_level": "HIGH",
+    "reason": "Elevated Card Activity: 6 transactions in 24 hours",
+    "status": "UNDER REVIEW",
+    "timestamp": 1540122400
+  },
+  {
+    "alert_id": "ALT-1035",
+    "transaction_id": "2998861",
+    "amount": 50.0,
+    "risk_score": 63,
+    "risk_level": "HIGH",
+    "reason": "Elevated Card Activity: 4 transactions in 24 hours",
+    "status": "UNDER REVIEW",
+    "timestamp": 1540126000
+  },
+  {
+    "alert_id": "ALT-1036",
+    "transaction_id": "2991650",
+    "amount": 250.0,
+    "risk_score": 62,
+    "risk_level": "HIGH",
+    "reason": "Device Risk: 5 payment cards associated with this device",
+    "status": "CONFIRMED FRAUD",
+    "timestamp": 1540129600
+  },
+  {
+    "alert_id": "ALT-1037",
+    "transaction_id": "3000080",
+    "amount": 56.31100082397461,
+    "risk_score": 67,
+    "risk_level": "HIGH",
+    "reason": "Elevated Card Activity: 5 transactions in 24 hours",
+    "status": "CONFIRMED FRAUD",
+    "timestamp": 1540133200
+  },
+  {
+    "alert_id": "ALT-1038",
+    "transaction_id": "3001010",
+    "amount": 23.56399917602539,
+    "risk_score": 63,
+    "risk_level": "HIGH",
+    "reason": "Elevated Card Activity: 4 transactions in 24 hours",
+    "status": "CONFIRMED FRAUD",
+    "timestamp": 1540136800
+  },
+  {
+    "alert_id": "ALT-1039",
+    "transaction_id": "2995720",
+    "amount": 1248.949951171875,
+    "risk_score": 61,
+    "risk_level": "HIGH",
+    "reason": "Elevated Amount: $1,248.95 requires extra verification",
+    "status": "CONFIRMED FRAUD",
+    "timestamp": 1540140400
+  },
+  {
+    "alert_id": "ALT-1040",
+    "transaction_id": "3004730",
+    "amount": 47.731998443603516,
+    "risk_score": 66,
+    "risk_level": "HIGH",
+    "reason": "Device Risk: 2356 payment cards associated with this device",
+    "status": "CONFIRMED FRAUD",
+    "timestamp": 1540144000
+  },
+  {
+    "alert_id": "ALT-1041",
+    "transaction_id": "2995095",
+    "amount": 52.44499969482422,
+    "risk_score": 80,
+    "risk_level": "HIGH",
+    "reason": "Velocity Surge: 11 transactions linked to card in 24 hours",
+    "status": "CONFIRMED FRAUD",
+    "timestamp": 1540147600
+  },
+  {
+    "alert_id": "ALT-1042",
+    "transaction_id": "2996016",
+    "amount": 750.0,
+    "risk_score": 71,
+    "risk_level": "HIGH",
+    "reason": "Elevated Card Activity: 4 transactions in 24 hours",
+    "status": "CONFIRMED FRAUD",
+    "timestamp": 1540151200
+  },
+  {
+    "alert_id": "ALT-1043",
+    "transaction_id": "3003410",
+    "amount": 78.78800201416016,
+    "risk_score": 64,
+    "risk_level": "HIGH",
+    "reason": "Device Risk: 9 payment cards associated with this device",
+    "status": "CONFIRMED FRAUD",
+    "timestamp": 1540154800
+  },
+  {
+    "alert_id": "ALT-1044",
+    "transaction_id": "2995715",
+    "amount": 41.32699966430664,
+    "risk_score": 80,
+    "risk_level": "HIGH",
+    "reason": "Velocity Surge: 11 transactions linked to card in 24 hours",
+    "status": "CONFIRMED FRAUD",
+    "timestamp": 1540158400
+  },
+  {
+    "alert_id": "ALT-1045",
+    "transaction_id": "3003867",
+    "amount": 140.0,
+    "risk_score": 78,
+    "risk_level": "HIGH",
+    "reason": "Velocity Surge: 10 transactions linked to card in 24 hours",
+    "status": "CONFIRMED FRAUD",
+    "timestamp": 1540162000
+  },
+  {
+    "alert_id": "ALT-1046",
+    "transaction_id": "3000145",
+    "amount": 53.7130012512207,
+    "risk_score": 68,
+    "risk_level": "HIGH",
+    "reason": "Elevated Card Activity: 5 transactions in 24 hours",
+    "status": "CONFIRMED FRAUD",
+    "timestamp": 1540165600
+  },
+  {
+    "alert_id": "ALT-1047",
+    "transaction_id": "2991937",
+    "amount": 308.5,
+    "risk_score": 61,
+    "risk_level": "HIGH",
+    "reason": "Velocity Surge: 15 transactions linked to card in 24 hours",
+    "status": "CONFIRMED FRAUD",
+    "timestamp": 1540169200
+  },
+  {
+    "alert_id": "ALT-1048",
+    "transaction_id": "2988810",
+    "amount": 40.0,
+    "risk_score": 62,
+    "risk_level": "HIGH",
+    "reason": "Velocity Surge: 8 transactions linked to card in 24 hours",
+    "status": "CONFIRMED FRAUD",
+    "timestamp": 1540172800
+  },
+  {
+    "alert_id": "ALT-1049",
+    "transaction_id": "3003439",
+    "amount": 47.731998443603516,
+    "risk_score": 64,
+    "risk_level": "HIGH",
+    "reason": "Device Risk: 2356 payment cards associated with this device",
+    "status": "CONFIRMED FRAUD",
+    "timestamp": 1540176400
+  },
+  {
+    "alert_id": "ALT-1050",
+    "transaction_id": "3004648",
+    "amount": 38.66899871826172,
+    "risk_score": 77,
+    "risk_level": "HIGH",
+    "reason": "Velocity Surge: 8 transactions linked to card in 24 hours",
+    "status": "CONFIRMED FRAUD",
+    "timestamp": 1540180000
+  }
+]

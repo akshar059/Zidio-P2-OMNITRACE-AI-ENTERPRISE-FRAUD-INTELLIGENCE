@@ -1,0 +1,153 @@
+{
+  "fraud_distribution": {
+    "legitimate": 59337,
+    "fraud": 20663,
+    "fraud_rate": 25.83
+  },
+  "fraud_by_hour": {
+    "0": {
+      "total": 4978,
+      "fraud": 1186
+    },
+    "1": {
+      "total": 4436,
+      "fraud": 1027
+    },
+    "2": {
+      "total": 3669,
+      "fraud": 1002
+    },
+    "3": {
+      "total": 2853,
+      "fraud": 797
+    },
+    "4": {
+      "total": 2223,
+      "fraud": 770
+    },
+    "5": {
+      "total": 1648,
+      "fraud": 682
+    },
+    "6": {
+      "total": 1064,
+      "fraud": 467
+    },
+    "7": {
+      "total": 740,
+      "fraud": 393
+    },
+    "8": {
+      "total": 487,
+      "fraud": 241
+    },
+    "9": {
+      "total": 460,
+      "fraud": 223
+    },
+    "10": {
+      "total": 509,
+      "fraud": 193
+    },
+    "11": {
+      "total": 960,
+      "fraud": 265
+    },
+    "12": {
+      "total": 1641,
+      "fraud": 379
+    },
+    "13": {
+      "total": 2503,
+      "fraud": 465
+    },
+    "14": {
+      "total": 3507,
+      "fraud": 686
+    },
+    "15": {
+      "total": 4275,
+      "fraud": 860
+    },
+    "16": {
+      "total": 5135,
+      "fraud": 1142
+    },
+    "17": {
+      "total": 5397,
+      "fraud": 1284
+    },
+    "18": {
+      "total": 5719,
+      "fraud": 1467
+    },
+    "19": {
+      "total": 5628,
+      "fraud": 1463
+    },
+    "20": {
+      "total": 5677,
+      "fraud": 1432
+    },
+    "21": {
+      "total": 5576,
+      "fraud": 1416
+    },
+    "22": {
+      "total": 5502,
+      "fraud": 1345
+    },
+    "23": {
+      "total": 5413,
+      "fraud": 1478
+    }
+  },
+  "fraud_by_product": {
+    "C": {
+      "total": 14341,
+      "fraud": 8008
+    },
+    "H": {
+      "total": 4902,
+      "fraud": 1574
+    },
+    "R": {
+      "total": 5213,
+      "fraud": 1426
+    },
+    "S": {
+      "total": 1793,
+      "fraud": 686
+    },
+    "W": {
+      "total": 53751,
+      "fraud": 8969
+    }
+  },
+  "fraud_by_card_type": {
+    "american express": {
+      "total": 1080,
+      "fraud": 239
+    },
+    "discover": {
+      "total": 1149,
+      "fraud": 514
+    },
+    "mastercard": {
+      "total": 25496,
+      "fraud": 6496
+    },
+    "visa": {
+      "total": 52076,
+      "fraud": 13373
+    }
+  },
+  "amount_distribution": {
+    "legitimate_mean": 134.27,
+    "fraud_mean": 149.24,
+    "median": 70.69,
+    "p75": 141.0,
+    "p95": 445.0,
+    "max": 31937.39
+  }
+}
